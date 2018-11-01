@@ -75,6 +75,7 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="HomePageMenu.ascx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -120,6 +121,13 @@
     </Compile>
     <Compile Include="HomePageTemplate.Master.designer.cs">
       <DependentUpon>HomePageTemplate.Master</DependentUpon>
+    </Compile>
+    <Compile Include="HomePageMenu.ascx.cs">
+      <DependentUpon>HomePageMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomePageMenu.ascx.designer.cs">
+      <DependentUpon>HomePageMenu.ascx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
