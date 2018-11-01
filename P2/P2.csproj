@@ -75,7 +75,9 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="HomePageMain.aspx" />
+    <Content Include="CoordinatorMenu.ascx" />
+    <Content Include="Coordinator\CoordinatorMain.aspx" />
+    <Content Include="Home\HomePageMain.aspx" />
     <Content Include="HomePageMenu.ascx" />
     <Content Include="Login.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -101,6 +103,7 @@
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="HomePageTemplate.Master" />
+    <Content Include="CoordinatorTemplate.Master" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />
@@ -117,11 +120,32 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HomePageMain.aspx.cs">
+    <Compile Include="CoordinatorMenu.ascx.cs">
+      <DependentUpon>CoordinatorMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CoordinatorMenu.ascx.designer.cs">
+      <DependentUpon>CoordinatorMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CoordinatorTemplate.Master.cs">
+      <DependentUpon>CoordinatorTemplate.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CoordinatorTemplate.Master.designer.cs">
+      <DependentUpon>CoordinatorTemplate.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Coordinator\CoordinatorMain.aspx.cs">
+      <DependentUpon>CoordinatorMain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Coordinator\CoordinatorMain.aspx.designer.cs">
+      <DependentUpon>CoordinatorMain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\HomePageMain.aspx.cs">
       <DependentUpon>HomePageMain.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="HomePageMain.aspx.designer.cs">
+    <Compile Include="Home\HomePageMain.aspx.designer.cs">
       <DependentUpon>HomePageMain.aspx</DependentUpon>
     </Compile>
     <Compile Include="HomePageTemplate.Master.cs">
@@ -173,6 +197,7 @@
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

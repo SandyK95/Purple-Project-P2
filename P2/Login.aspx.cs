@@ -19,61 +19,16 @@ namespace P2
             // Read inputs from textboxes
             string loginID = txtLoginID.Text.ToLower(); //Textbox: txtLoginID
             string password = txtPassword.Text; //Textbox: txtPassword
-            Student objStudent = new Student();
-            //Get the email of student
-            objStudent.eMail = loginID;
-            //Get the password of student
-            objStudent.password = password;
-            string SerrorCode = objStudent.getLogin();
-
-            Mentor objMentor = new Mentor();
-            //Get the email of mentor
-            objMentor.eMail = loginID;
-            //Get the password of mentor
-            objMentor.password = password;
-            string MerrorCode = objMentor.getLogin();
-
-            Parent objParent = new Parent();
-            //Get the email of mentor
-            objParent.eMail = loginID;
-            //Get the password of mentor
-            objParent.password = password;
-            string PerrorCode = objParent.getLogin();
-
-
-            if (loginID == "admin@ap.edu.sg" && password == "passAdmin")
+         
+            if (loginID == "coordinator@ap.edu.sg" && password == "passCoordi")
             {
                 //Save the Login id and time in the Session
                 Session["LoginID"] = loginID;
                 Session["LoggedInTime"] = DateTime.Now.ToString();
                 //Redirect user to AdminMain.aspx page
-                Response.Redirect("Admin/AdminMain.aspx");
+                Response.Redirect("Coordinator/CoordinatorMain.aspx");
             }
-            else if(SerrorCode == "Student")
-            {
-                //Save the Login id and time in the Session
-                Session["LoginID"] = loginID;
-                Session["LoggedInTime"] = DateTime.Now.ToString();
-                //Redirect user to StudentMain.aspx page
-                Response.Redirect("Student/StudentMain.aspx");
-            }
-            else if (MerrorCode == "Mentor")
-            {
-                //Save the Login id and time in the Session
-                Session["LoginID"] = loginID;
-                Session["LoggedInTime"] = DateTime.Now.ToString();
-                //Redirect user to StudentMain.aspx page
-                Response.Redirect("Mentor/MentorMain.aspx");
-            }
-            else if (PerrorCode == "Parent")
-            {
-                //Save the Login id and time in the Session
-                Session["LoginID"] = loginID;
-                Session["LoggedInTime"] = DateTime.Now.ToString();
-                //Redirect user to StudentMain.aspx page
-                Response.Redirect("Parent/ParentMain.aspx");
-            }
-
+            
             else
             {
                 //Display error message

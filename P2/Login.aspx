@@ -38,12 +38,11 @@
         }
     </style>
 </head>
-<body bgcolor="white">
+<body>
     <form id="form1" runat="server" style="font-family: Arial, Helvetica, sans-serif">
     <div>
         <table style="border: 0px solid #000000; margin: auto; width: auto">
             <tr>
-
                 <td class="auto-style2"><span class="auto-style3"><span class="auto-style5">
                     <img alt="" class="auto-style6" src="Images/logo.png" /><br />
                     Login ID:</span><br class="auto-style5" />

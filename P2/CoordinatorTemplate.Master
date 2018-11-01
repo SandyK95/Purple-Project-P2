@@ -1,13 +1,13 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="HomePageTemplate.master.cs" Inherits="P2.HomePageTemplate" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="CoordinatorTemplate.master.cs" Inherits="P2.CoordinatorTemplate" %>
 
-<%@ Register Src="~/HomePageMenu.ascx" TagPrefix="uc1" TagName="HomePageMenu" %>
+<%@ Register Src="~/CoordinatorMenu.ascx" TagPrefix="uc1" TagName="CoordinatorMenu" %>
 
 
 <!DOCTYPE html>
 
 <html>
 <head runat="server">
-    <title>Purple Project</title>
+    <title>Purple Project Coordinator </title>
     <!-- Specify character encoding for the web pages -->
     <meta charset="utf-8" />
     <!-- Set the initial view zooming scale for mobile device to 1 -->
@@ -26,7 +26,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-        <style type="text/css">
+    <style type="text/css">
         .auto-style2 {
             position: relative;
             width: 100%;
@@ -43,19 +43,20 @@
 <body>
     <form id="form1" runat="server">
         <div class="container" style="margin:auto;">
-            <!-- 1st row-->
+             <!-- 1st row-->
             <div class="row">
                 <div class="col-sm-12">
-                    <uc1:HomePageMenu runat="server" id="HomePageMenu" />
+                    <uc1:CoordinatorMenu runat="server" id="CoordinatorMenu" />
                 </div>
             </div>
             <!-- 2nd row-->
             <div class="row">
                 <div class="col-sm-12">
-                  <asp:Label ID="lblLoginID" runat="server" Text=""></asp:Label>
+                    Welcome back,
+                <asp:Label ID="lblLoginID" runat="server" Text=""></asp:Label>
                 </div>
             </div>
-            <!-- 3rd row-->
+            <!-- 3rd row -->
             <div class="row">
                 <div class="col-sm-12">
                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
@@ -65,7 +66,6 @@
             <!-- 4th row-->
             <div class="row">
                 <div class="auto-style2">
-                    <asp:Label ID="lblCurrentUsers" runat="server" Text=""></asp:Label>
                 </div>
             </div>
         </div>
