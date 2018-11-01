@@ -1,10 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/HomePageTemplate.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="P2.Login" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <!DOCTYPE html>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="P2.Login" %>
 
-<html>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Digital Portfoilo</title>
     <style type="text/css">
@@ -40,7 +38,7 @@
         }
     </style>
 </head>
-<body>
+<body bgcolor="white">
     <form id="form1" runat="server" style="font-family: Arial, Helvetica, sans-serif">
     <div>
         <table style="border: 0px solid #000000; margin: auto; width: auto">
@@ -59,7 +57,7 @@
                     <br class="auto-style5" />
                     <br class="auto-style5" />
                     </span>
-                    <asp:Button ID="btnLogin" runat="server" Text="Login" BackColor="#66CCFF" Font-Bold="True" ForeColor="White" Height="46px" Width="109px" BorderColor="White" BorderWidth="1px" CssClass="auto-style4" />
+                    <asp:Button ID="btnLogin" runat="server" Text="Login" BackColor="#66CCFF" Font-Bold="True" ForeColor="White" Height="46px" Width="109px" OnClick="BtnLogin_Click" BorderColor="White" BorderWidth="1px" CssClass="auto-style4" />
 &nbsp;<asp:Label ID="lblMessage" runat="server" ForeColor="Red" CssClass="auto-style4"></asp:Label>
                 </td>
             </tr>
@@ -74,5 +72,3 @@
     </form>
 </body>
 </html>
-
-</asp:Content>
