@@ -75,7 +75,9 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="HomePageMain.aspx" />
     <Content Include="HomePageMenu.ascx" />
+    <Content Include="Login.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -115,6 +117,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HomePageMain.aspx.cs">
+      <DependentUpon>HomePageMain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomePageMain.aspx.designer.cs">
+      <DependentUpon>HomePageMain.aspx</DependentUpon>
+    </Compile>
     <Compile Include="HomePageTemplate.Master.cs">
       <DependentUpon>HomePageTemplate.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -128,6 +137,13 @@
     </Compile>
     <Compile Include="HomePageMenu.ascx.designer.cs">
       <DependentUpon>HomePageMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
