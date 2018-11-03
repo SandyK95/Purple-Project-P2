@@ -76,8 +76,8 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="CoordinatorMenu.ascx" />
+    <Content Include="Coordinator\CoordinatorElder.aspx" />
     <Content Include="Coordinator\CoordinatorMain.aspx" />
-    <Content Include="Coordinator\ViewElder.aspx" />
     <Content Include="Home\HomePageMain.aspx" />
     <Content Include="HomePageMenu.ascx" />
     <Content Include="Login.aspx" />
@@ -118,6 +118,9 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="VolunteerMenu.ascx" />
+    <Content Include="Volunteer\ViewElder.aspx" />
+    <Content Include="Volunteer\VolunteerMain.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -128,6 +131,7 @@
     <Compile Include="CoordinatorMenu.ascx.designer.cs">
       <DependentUpon>CoordinatorMenu.ascx</DependentUpon>
     </Compile>
+    <Compile Include="App_Code\Coordinators.cs" />
     <Compile Include="CoordinatorTemplate.Master.cs">
       <DependentUpon>CoordinatorTemplate.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -135,19 +139,19 @@
     <Compile Include="CoordinatorTemplate.Master.designer.cs">
       <DependentUpon>CoordinatorTemplate.Master</DependentUpon>
     </Compile>
+    <Compile Include="Coordinator\CoordinatorElder.aspx.cs">
+      <DependentUpon>CoordinatorElder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Coordinator\CoordinatorElder.aspx.designer.cs">
+      <DependentUpon>CoordinatorElder.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Coordinator\CoordinatorMain.aspx.cs">
       <DependentUpon>CoordinatorMain.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Coordinator\CoordinatorMain.aspx.designer.cs">
       <DependentUpon>CoordinatorMain.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Coordinator\ViewElder.aspx.cs">
-      <DependentUpon>ViewElder.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Coordinator\ViewElder.aspx.designer.cs">
-      <DependentUpon>ViewElder.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Code\Elderlies.cs" />
     <Compile Include="Home\HomePageMain.aspx.cs">
@@ -179,7 +183,35 @@
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Volunteers.cs" />
+    <Compile Include="App_Code\Volunteers.cs" />
+    <Compile Include="VolunteerMenu.ascx.cs">
+      <DependentUpon>VolunteerMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VolunteerMenu.ascx.designer.cs">
+      <DependentUpon>VolunteerMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="VolunteerTemplate.Master.cs">
+      <DependentUpon>VolunteerTemplate.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VolunteerTemplate.Master.designer.cs">
+      <DependentUpon>VolunteerTemplate.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Volunteer\ViewElder.aspx.cs">
+      <DependentUpon>ViewElder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Volunteer\ViewElder.aspx.designer.cs">
+      <DependentUpon>ViewElder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Volunteer\VolunteerMain.aspx.cs">
+      <DependentUpon>VolunteerMain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Volunteer\VolunteerMain.aspx.designer.cs">
+      <DependentUpon>VolunteerMain.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -194,6 +226,7 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="VolunteerTemplate.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

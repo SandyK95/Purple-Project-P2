@@ -1,0 +1,76 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="VolunteerTemplate.master.cs" Inherits="P2.Volunteer.VolunteerTemplate" %>
+
+<%@ Register Src="~/VolunteerMenu.ascx" TagPrefix="uc1" TagName="VolunteerMenu" %>
+
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Volunteer</title>
+        <!-- Specify character encoding for the web pages -->
+    <meta charset="utf-8" />
+    <!-- Set the initial view zooming scale for mobile device to 1 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Reference to Bootstrap CSS, JavaScript/JQuery files -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+        <style type="text/css">
+        .auto-style2 {
+            position: relative;
+            width: 100%;
+            min-height: 1px;
+            -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+            max-width: 100%;
+            text-align: center;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="container" style="margin:auto;">
+        <!--1st row -->
+        <div class="row">
+            <div class="col-sm-12">
+                <uc1:VolunteerMenu runat="server" id="VolunteerMenu" />
+            </div>
+        </div>
+        <!-- 2nd row-->
+        <div class="row">
+            <div class="col-sm-12">
+                Welcome back,
+              <asp:Label ID="lblLoginID" runat="server" Text=""></asp:Label>
+            </div>
+        </div>
+        <!--3rd row-->
+        <div class="row">
+            <div class="col-sm-12">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+
+        <!--4th row-->
+        <div class="row">
+            <div class="auto-style2">
+
+            </div>
+        </div>
+        </div>
+    </form>
+</body>
+</html>

@@ -20,17 +20,26 @@ namespace P2
             string loginID = txtLoginID.Text.ToLower(); //Textbox: txtLoginID
             string password = txtPassword.Text; //Textbox: txtPassword
 
+            Coordinators objCoordinator = new Coordinators();
+            objCoordinator.EmailAdd = loginID;
+            objCoordinator.Password = password;
+            string CerrorCode = objCoordinator.getLogin();
 
-         
-            if (loginID == "coordinator@ap.edu.sg" && password == "passCoordi")
+            Volunteers objVolunteer = new Volunteers();
+            objVolunteer.EmailAddr = loginID;
+            objVolunteer.Password = password;
+            string VerrorCode = objVolunteer.getLogin();
+
+            if (CerrorCode == "Coordinator")
             {
-                //Save the Login id and time in the Session
-                Session["LoginID"] = loginID;
-                Session["LoggedInTime"] = DateTime.Now.ToString();
-                //Redirect user to CoordinatorMain.aspx page
                 Response.Redirect("Coordinator/CoordinatorMain.aspx");
             }
-            
+
+            else if (VerrorCode == "Volunteer")
+            {
+                Response.Redirect("Volunteer/VolunteerMain.aspx");
+            }
+
             else
             {
                 //Display error message

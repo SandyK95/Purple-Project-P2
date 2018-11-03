@@ -10,7 +10,7 @@
 namespace P2.Coordinator {
     
     
-    public partial class ViewElder {
+    public partial class CoordinatorElder {
         
         /// <summary>
         /// gvElderY control.
