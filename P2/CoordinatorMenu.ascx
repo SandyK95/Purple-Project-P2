@@ -15,19 +15,19 @@
                 <!-- Links that are aligned to the left, mr-autoL right margin auto-adjuusted -->
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="CreateMentor.aspx">Create Mentor Account</a>
+                        <a class="nav-link" href="ViewElder.aspx">View Elder</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="CreateStudent.aspx">Create Student Account</a>
+                        <a class="nav-link" href="CreateStudent.aspx">A</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="CreateSkill.aspx">Create Choices of Skill Sets</a>
+                        <a class="nav-link" href="CreateSkill.aspx">B</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="StudentImage.aspx">Upload Image</a>
+                        <a class="nav-link" href="StudentImage.aspx">C</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="ViewRequest.aspx">Approve Viewing Request</a>
+                        <a class="nav-link" href="ViewRequest.aspx">D</a>
                     </li>
                 </ul>
                 <!-- Links that are alighed to the right, ml-auto: left margin auto-adjusted -->

@@ -19,13 +19,15 @@ namespace P2
             // Read inputs from textboxes
             string loginID = txtLoginID.Text.ToLower(); //Textbox: txtLoginID
             string password = txtPassword.Text; //Textbox: txtPassword
+
+
          
             if (loginID == "coordinator@ap.edu.sg" && password == "passCoordi")
             {
                 //Save the Login id and time in the Session
                 Session["LoginID"] = loginID;
                 Session["LoggedInTime"] = DateTime.Now.ToString();
-                //Redirect user to AdminMain.aspx page
+                //Redirect user to CoordinatorMain.aspx page
                 Response.Redirect("Coordinator/CoordinatorMain.aspx");
             }
             
