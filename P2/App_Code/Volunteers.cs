@@ -129,8 +129,7 @@ namespace P2
                 ["P2ConnectionString"].ToString();
 
             SqlConnection conn = new SqlConnection(strConn);
-            SqlCommand cmd = new SqlCommand("SELECT SerialNo, Name, ElderAddress, ContactNo, Dietary, " +
-                "HealthCondition FROM Elder WHERE VolunteerID = @VolunteerID AND Status = 'N' ORDER BY ElderID", conn);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Elder WHERE VolunteerID = @VolunteerID AND Status = 'N' ORDER BY ElderID", conn);
 
             cmd.Parameters.AddWithValue("@VolunteerID", VolunteerID);
 
