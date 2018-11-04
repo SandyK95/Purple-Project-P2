@@ -32,11 +32,15 @@ namespace P2
 
             if (CerrorCode == "Coordinator")
             {
+                Session["LoginID"] = loginID;
+                Session["LoggedInTime"] = DateTime.Now.ToString();
                 Response.Redirect("Coordinator/CoordinatorMain.aspx");
             }
 
             else if (VerrorCode == "Volunteer")
             {
+                Session["LoginID"] = loginID;
+                Session["LoggedInTime"] = DateTime.Now.ToString();
                 Response.Redirect("Volunteer/VolunteerMain.aspx");
             }
 

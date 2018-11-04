@@ -23,8 +23,9 @@
             </td>
         </tr>
         <tr>
-            <td>&nbsp;</td>
-            <td>
+            <td colspan="2">
+                <asp:Label ID="lblSearchedElder" runat="server" Visible="False"></asp:Label>
+                <br />
                 <asp:GridView ID="gvElderN" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Width="600px">
                     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                     <EditRowStyle BackColor="#999999" />
