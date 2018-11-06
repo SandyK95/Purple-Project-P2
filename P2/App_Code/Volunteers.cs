@@ -14,6 +14,7 @@ namespace P2
         public string Name { get; set; }
         public string EmailAddr { get; set; }
         public string Password { get; set; }
+        public string Day { get; set; }
         public int ContactNo { get; set; }
         public DateTime DateJoin { get; set; }
 
