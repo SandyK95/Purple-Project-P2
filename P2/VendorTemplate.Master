@@ -1,13 +1,13 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="VolunteerTemplate.master.cs" Inherits="P2.Volunteer.VolunteerTemplate" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="VendorTemplate.master.cs" Inherits="P2.VendorTemplate" %>
 
-<%@ Register Src="~/VolunteerMenu.ascx" TagPrefix="uc1" TagName="VolunteerMenu" %>
+<%@ Register Src="~/VendorMenu.ascx" TagPrefix="uc1" TagName="VendorMenu" %>
 
 
 <!DOCTYPE html>
 
 <html>
 <head runat="server">
-    <title>Volunteer</title>
+    <title>Vendor</title>
     <!-- Specify character encoding for the web pages -->
     <meta charset="utf-8" />
     <!-- Set the initial view zooming scale for mobile device to 1 -->
@@ -26,7 +26,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-        <style type="text/css">
+            <style type="text/css">
         .auto-style2 {
             position: relative;
             width: 100%;
@@ -42,18 +42,18 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div class="container" style="margin:auto;">
         <!--1st row -->
         <div class="row">
             <div class="col-sm-12">
-                <uc1:VolunteerMenu runat="server" id="VolunteerMenu" />
+                <uc1:VendorMenu runat="server" id="VendorMenu" />
             </div>
         </div>
-        <!-- 2nd row-->
+
+        <!--2nd row-->
         <div class="row">
             <div class="col-sm-12">
                 Welcome back,
-              <asp:Label ID="lblLoginID" runat="server" Text=""></asp:Label>
+                <asp:Label ID="lblLoginID" runat="server" Text=""></asp:Label>
             </div>
         </div>
         <!--3rd row-->
@@ -65,11 +65,8 @@
         </div>
 
         <!--4th row-->
-        <div class="row">
-            <div class="auto-style2">
+        <div class="auto-style2">
 
-            </div>
-        </div>
         </div>
     </form>
 </body>
