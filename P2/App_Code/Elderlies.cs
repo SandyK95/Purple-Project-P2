@@ -19,6 +19,7 @@ namespace P2
         public string Dietary { get; set; }
         public string HealthCondition { get; set; }
         public string Meal { get; set; }
+        public string Prepare { get; set; }
         public string status { get; set; }
         public string volunteer { get; set; }
 
@@ -95,6 +96,8 @@ namespace P2
                     HealthCondition = table.Rows[0]["HealthCondition"].ToString();
                 if (!DBNull.Value.Equals(table.Rows[0]["Meal"]))
                     Meal = table.Rows[0]["Meal"].ToString();
+                if (!DBNull.Value.Equals(table.Rows[0]["Prepare"]))
+                    Prepare = table.Rows[0]["Prepare"].ToString();
                 if (!DBNull.Value.Equals(table.Rows[0]["VolunteerID"]))
                     volunteer = table.Rows[0]["VolunteerID"].ToString();
 
@@ -123,6 +126,30 @@ namespace P2
             DataTable table = result.Tables["ElderDetails"];
             if (!DBNull.Value.Equals(table.Rows[0]["Status"]))
                 status = (table.Rows[0]["Status"].ToString());
+            conn.Close();
+
+            return status;
+        }
+
+        public string getPrepare()
+        {
+            string strConn = ConfigurationManager.ConnectionStrings
+                ["P2ConnectionString"].ToString();
+
+            SqlConnection conn = new SqlConnection(strConn);
+            SqlCommand cmd = new SqlCommand("SELECT Prepare from Elder WHERE ElderID =@selectedElderID", conn);
+
+            cmd.Parameters.AddWithValue("@selectedElderID", ElderID);
+
+            SqlDataAdapter daElder = new SqlDataAdapter(cmd);
+
+            DataSet result = new DataSet();
+
+            conn.Open();
+            daElder.Fill(result, "ElderDetails");
+            DataTable table = result.Tables["ElderDetails"];
+            if (!DBNull.Value.Equals(table.Rows[0]["Prepare"]))
+                Prepare = (table.Rows[0]["Prepare"].ToString());
             conn.Close();
 
             return status;

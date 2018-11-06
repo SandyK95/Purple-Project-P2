@@ -11,7 +11,23 @@ namespace P2.Volunteer
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Elderlies objElder = new Elderlies();
+            Volunteers objVolunteer = new Volunteers();
 
+            objVolunteer.EmailAddr = Session["LoginID"].ToString();
+            objVolunteer.getPass();
+            objVolunteer.getId();
+
+            objElder.Prepare = objElder.getPrepare();
+
+            if (objElder.getPrepare() == "Y")
+            {
+                lblStatus.Text = "Delivered!";
+            }
+            else
+            {
+                lblStatus.Text = "Still progresing!";
+            }
         }
     }
 }
