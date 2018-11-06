@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace P2.Volunteer
 {
@@ -55,9 +58,45 @@ namespace P2.Volunteer
             {
                 lblChanges.Text = objElder.setUnsuccess();
                 txtFeedback.Visible = true;
-                //Feedback coding
-            }
 
+                //Feedback coding
+
+                if (txtFeedback.Text.Length > 1)
+                {
+                    Volunteers objVolunteer = new Volunteers();
+                    objVolunteer.EmailAddr = Session["LoginID"].ToString();
+                    objVolunteer.Password = objVolunteer.getPass();
+                    objVolunteer.getDetails();
+                    string feedbacktext = txtFeedback.Text;
+                    string strConn = ConfigurationManager.ConnectionStrings["P2ConnectionString"].ToString();
+
+                    SqlConnection conn = new SqlConnection(strConn);
+
+                    SqlCommand cmd = new SqlCommand("INSERT INTO Feedback(VolunteerID, ElderID, Feedback, DateCreated) Output inserted.FeedbackID " +
+                        "Values(@volunteerid, @ElderID, @feedbacktext, GetDate())", conn);
+
+                    string elderid = Request.QueryString["ElderID"];
+                    cmd.Parameters.AddWithValue("@volunteerid", objVolunteer.VolunteerID);
+                    cmd.Parameters.AddWithValue("@ElderID", elderid);
+                    cmd.Parameters.AddWithValue("@feedbacktext", feedbacktext);
+
+                    SqlDataAdapter daFeedback = new SqlDataAdapter(cmd);
+
+                    DataSet result = new DataSet();
+
+                    conn.Open();
+
+                    int id = cmd.ExecuteNonQuery();
+
+                    conn.Close();
+                    lblFeedback.Text = "Success Sent!";
+                }
+
+                else
+                {
+                    lblFeedback.Text = "Error!";
+                }
+            }
         }
     }
 }

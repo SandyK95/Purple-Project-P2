@@ -15,8 +15,8 @@ namespace P2
         public string EmailAddr { get; set; }
         public string Password { get; set; }
         public string Day { get; set; }
-        public int ContactNo { get; set; }
-        public DateTime DateJoin { get; set; }
+        public string ContactNo { get; set; }
+        public string DateJoin { get; set; }
 
         public string getLogin()
         {
@@ -142,6 +142,42 @@ namespace P2
             conn.Close();
 
             return 0;
+        }
+
+        public int getDetails()
+        {
+            string strConn = ConfigurationManager.ConnectionStrings
+    ["P2ConnectionString"].ToString();
+
+            SqlConnection conn = new SqlConnection(strConn);
+            SqlCommand cmd = new SqlCommand
+                ("SELECT * FROM VOLUNTEER WHERE VolunteerID =@selectedVolunteerID", conn);
+            cmd.Parameters.AddWithValue("@selectedVolunteerID", VolunteerID);
+            SqlDataAdapter daVolunteer = new SqlDataAdapter(cmd);
+            DataSet result = new DataSet();
+
+            conn.Open();
+            daVolunteer.Fill(result, "VolunteerDetails");
+            conn.Close();
+
+            if (result.Tables["VolunteerDetails"].Rows.Count > 0)
+            {
+                DataTable table = result.Tables["VolunteerDetails"];
+                if (!DBNull.Value.Equals(table.Rows[0]["Name"]))
+                    Name = table.Rows[0]["Name"].ToString();
+                if (!DBNull.Value.Equals(table.Rows[0]["EmailAddr"]))
+                    EmailAddr = table.Rows[0]["EmailAddr"].ToString();
+                if (!DBNull.Value.Equals(table.Rows[0]["Password"]))
+                    Password = table.Rows[0]["Password"].ToString();
+                if (!DBNull.Value.Equals(table.Rows[0]["ContactNo"]))
+                    ContactNo = table.Rows[0]["ContactNo"].ToString();
+                if (!DBNull.Value.Equals(table.Rows[0]["DateJoin"]))
+                    DateJoin = table.Rows[0]["DateJoin"].ToString();
+
+                return 0;
+            }
+            else
+                return -2;
         }
     }
 }

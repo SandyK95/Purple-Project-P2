@@ -47,7 +47,7 @@
             <td class="auto-style7">&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:RadioButtonList ID="rblSuccess" runat="server" Width="167px">
                     <asp:ListItem>Success</asp:ListItem>
-                    <asp:ListItem>Not Sucess</asp:ListItem>
+                    <asp:ListItem>Not Success</asp:ListItem>
                 </asp:RadioButtonList>
             </td>
         </tr>
@@ -73,6 +73,8 @@
             <td class="auto-style4">&nbsp;</td>
             <td class="auto-style5">
                 <asp:Label ID="lblChanges" runat="server" CssClass="auto-style8"></asp:Label>
+                <br />
+                <asp:Label ID="lblFeedback" runat="server" CssClass="auto-style8"></asp:Label>
             </td>
         </tr>
     </table>
