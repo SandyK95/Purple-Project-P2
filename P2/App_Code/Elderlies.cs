@@ -18,6 +18,7 @@ namespace P2
         public string Contact { get; set; }
         public string Dietary { get; set; }
         public string HealthCondition { get; set; }
+        public string Meal { get; set; }
         public string status { get; set; }
         public string volunteer { get; set; }
 
@@ -92,6 +93,8 @@ namespace P2
                     Dietary = table.Rows[0]["Dietary"].ToString();
                 if (!DBNull.Value.Equals(table.Rows[0]["HealthCondition"]))
                     HealthCondition = table.Rows[0]["HealthCondition"].ToString();
+                if (!DBNull.Value.Equals(table.Rows[0]["Meal"]))
+                    Meal = table.Rows[0]["Meal"].ToString();
                 if (!DBNull.Value.Equals(table.Rows[0]["VolunteerID"]))
                     volunteer = table.Rows[0]["VolunteerID"].ToString();
 

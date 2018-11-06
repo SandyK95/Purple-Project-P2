@@ -24,6 +24,7 @@ namespace P2.Volunteer
                 lblElderName.Text = objElder.FullName;
                 lblElderID.Text = objElder.SerialNo;
                 lblAddress.Text = objElder.Address;
+                lblMeal.Text = objElder.Meal;
 
                 if (objElder.getStatus() == "Y")
                 {
@@ -90,11 +91,13 @@ namespace P2.Volunteer
 
                     conn.Close();
                     lblFeedback.Text = "Success Sent!";
+                    lblFeedback.ForeColor = System.Drawing.Color.Green;
                 }
 
                 else
                 {
                     lblFeedback.Text = "Error!";
+                    lblFeedback.ForeColor = System.Drawing.Color.Red;
                 }
             }
         }

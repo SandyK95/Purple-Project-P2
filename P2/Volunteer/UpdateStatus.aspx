@@ -39,8 +39,10 @@
             </td>
         </tr>
         <tr>
-            <td class="auto-style3">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td class="auto-style3"><strong>Meal:</strong></td>
+            <td>
+                <asp:Label ID="lblMeal" runat="server"></asp:Label>
+            </td>
         </tr>
         <tr>
             <td class="auto-style6"><strong>Status:</strong></td>
