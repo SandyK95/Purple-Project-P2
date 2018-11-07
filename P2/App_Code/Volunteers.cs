@@ -186,7 +186,7 @@ namespace P2
                 ["P2ConnectionString"].ToString();
 
             SqlConnection conn = new SqlConnection(strConn);
-            SqlCommand cmd = new SqlCommand("SELECT Name, Prepare from Elder WHERE VolunteerID =@VolunteerID", conn);
+            SqlCommand cmd = new SqlCommand("SELECT Name, Prepare from Elder WHERE VolunteerID =@VolunteerID AND Prepare = 'Completed'", conn);
 
             cmd.Parameters.AddWithValue("@VolunteerID", VolunteerID);
 
