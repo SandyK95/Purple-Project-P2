@@ -131,29 +131,7 @@ namespace P2
             return status;
         }
 
-        public string getPrepare()
-        {
-            string strConn = ConfigurationManager.ConnectionStrings
-                ["P2ConnectionString"].ToString();
 
-            SqlConnection conn = new SqlConnection(strConn);
-            SqlCommand cmd = new SqlCommand("SELECT Prepare from Elder WHERE ElderID =@selectedElderID", conn);
-
-            cmd.Parameters.AddWithValue("@selectedElderID", ElderID);
-
-            SqlDataAdapter daElder = new SqlDataAdapter(cmd);
-
-            DataSet result = new DataSet();
-
-            conn.Open();
-            daElder.Fill(result, "ElderDetails");
-            DataTable table = result.Tables["ElderDetails"];
-            if (!DBNull.Value.Equals(table.Rows[0]["Prepare"]))
-                Prepare = (table.Rows[0]["Prepare"].ToString());
-            conn.Close();
-
-            return status;
-        }
 
         public string setSuccess()
         {

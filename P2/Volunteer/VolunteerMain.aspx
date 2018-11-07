@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <p>
-        Status :
-        <asp:Label ID="lblStatus" runat="server"></asp:Label>
+        <asp:GridView ID="gvElderPrepare" runat="server">
+        </asp:GridView>
     </p>
 </asp:Content>

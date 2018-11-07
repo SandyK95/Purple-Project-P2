@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
+using System.Configuration;
+using System.Data.SqlClient;
 
 namespace P2.Volunteer
 {
@@ -11,6 +14,7 @@ namespace P2.Volunteer
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            DataSet result = new DataSet();
             Elderlies objElder = new Elderlies();
             Volunteers objVolunteer = new Volunteers();
 
@@ -18,16 +22,14 @@ namespace P2.Volunteer
             objVolunteer.getPass();
             objVolunteer.getId();
 
-            objElder.Prepare = objElder.getPrepare();
-
-            if (objElder.getPrepare() == "Y")
+            int errorCode = objVolunteer.getPrepare(ref result);
+            if (errorCode == 0)
             {
-                lblStatus.Text = "Delivered!";
+                gvElderPrepare.DataSource = result.Tables["ElderDetails"];
+                gvElderPrepare.DataBind();
             }
-            else
-            {
-                lblStatus.Text = "Still progresing!";
-            }
+           
         }
     }
 }
+

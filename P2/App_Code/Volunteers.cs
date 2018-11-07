@@ -179,5 +179,24 @@ namespace P2
             else
                 return -2;
         }
+
+        public int getPrepare(ref DataSet result)
+        {
+            string strConn = ConfigurationManager.ConnectionStrings
+                ["P2ConnectionString"].ToString();
+
+            SqlConnection conn = new SqlConnection(strConn);
+            SqlCommand cmd = new SqlCommand("SELECT Name, Prepare from Elder WHERE VolunteerID =@VolunteerID", conn);
+
+            cmd.Parameters.AddWithValue("@VolunteerID", VolunteerID);
+
+            SqlDataAdapter daElder = new SqlDataAdapter(cmd);
+
+            conn.Open();
+            daElder.Fill(result, "ElderDetails");
+            conn.Close();
+
+            return 0;
+        }
     }
 }
