@@ -2,8 +2,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <p>
-        <asp:GridView ID="gvElderPrepare" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Height="242px" Width="485px">
+    <div>
+            <asp:GridView ID="gvElderPrepare" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Height="242px" Width="485px">
             <AlternatingRowStyle BackColor="White" />
             <EditRowStyle BackColor="#2461BF" />
             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -16,5 +16,5 @@
             <SortedDescendingCellStyle BackColor="#E9EBEF" />
             <SortedDescendingHeaderStyle BackColor="#4870BE" />
         </asp:GridView>
-    </p>
+    </div>
 </asp:Content>
