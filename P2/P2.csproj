@@ -78,6 +78,7 @@
     <Content Include="CoordinatorMenu.ascx" />
     <Content Include="Coordinator\CoordinatorElder.aspx" />
     <Content Include="Coordinator\CoordinatorMain.aspx" />
+    <Content Include="Global.asax" />
     <Content Include="Home\HomePageMain.aspx" />
     <Content Include="HomePageMenu.ascx" />
     <Content Include="Login.aspx" />
@@ -158,6 +159,9 @@
       <DependentUpon>CoordinatorMain.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Code\Elderlies.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
     <Compile Include="Home\HomePageMain.aspx.cs">
       <DependentUpon>HomePageMain.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
