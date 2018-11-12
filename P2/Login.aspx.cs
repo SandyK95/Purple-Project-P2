@@ -30,6 +30,11 @@ namespace P2
             objVolunteer.Password = password;
             string VerrorCode = objVolunteer.getLogin();
 
+            Vendor1 objVendor = new Vendor1();
+            objVendor.EmailAdd = loginID;
+            objVendor.Password = password;
+            string ZerrorCode = objVendor.getLogin();
+
             if (CerrorCode == "Coordinator")
             {
                 Session["LoginID"] = loginID;
@@ -43,6 +48,14 @@ namespace P2
                 Session["LoggedInTime"] = DateTime.Now.ToString();
                 Response.Redirect("Volunteer/VolunteerMain.aspx");
             }
+
+            else if (ZerrorCode == "Vendor")
+            {
+                Session["LoginID"] = loginID;
+                Session["LoggedInTime"] = DateTime.Now.ToString();
+                Response.Redirect("Vendor/VendorMain.aspx");
+            }
+
 
             else
             {

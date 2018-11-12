@@ -19,6 +19,12 @@ GO
 /***           Delete tables before creating                 ***/
 /***************************************************************/
 
+/* Table: dbo.Feedback */
+if exists (select * from sysobjects 
+  where id = object_id('dbo.Feedback') and sysstat & 0xf = 3)
+  drop table dbo.Feedback
+GO
+
 /* Table: dbo.Elder */
 if exists (select * from sysobjects 
   where id = object_id('dbo.Elder') and sysstat & 0xf = 3)
@@ -82,7 +88,7 @@ CREATE TABLE dbo.Volunteer
   [Day]					char(3)			NOT NULL DEFAULT ('MON') CHECK ([Day] IN ('MON','TUE','WED','THU','FRI')),
   DateJoin				smalldatetime 	NOT NULL DEFAULT (GETDATE()) 
 						CHECK (DateJoin <= GETDATE()),
-  CoordinatorID 				int  			NOT NULL,
+  CoordinatorID 		int  			NOT NULL,
   CONSTRAINT PK_Volunteer PRIMARY KEY NONCLUSTERED (VolunteerID),
   CONSTRAINT FK_Volunteer_CoordinatorID FOREIGN KEY (CoordinatorID) 
   REFERENCES dbo.Coordinator(CoordinatorID)
@@ -100,6 +106,7 @@ CREATE TABLE dbo.Elder
   [Dietary]				varchar(3000) 	NULL,
   [HealthCondition]		varchar(255) 	NULL,
   [Meal]				varchar (10)	NOT NULL Default ('Lunch') CHECK ([Meal] IN ('Lunch','Dinner')),
+  [Prepare]				varchar(30)			NOT NULL DEFAULT ('Still Progressing') CHECK ([Prepare] IN ('Completed','Still Progressing')),
   [Status]				char(1)			NOT NULL DEFAULT ('N') CHECK ([Status] IN ('Y','N')), 
   VolunteerID 			int  			NOT NULL,
   CONSTRAINT PK_Elder PRIMARY KEY NONCLUSTERED (ElderID),
@@ -108,6 +115,19 @@ CREATE TABLE dbo.Elder
 )
 GO
 
+CREATE TABLE dbo.Feedback
+(
+	FeedbackID			int IDENTITY(1,1),
+	VolunteerID			int				NOT NULL,
+	ElderID				int				NOT NULL,
+	[Feedback]			varchar(3000)	NULL,
+	DateCreated			datetime		NOT NULL DEFAULT(getdate()),
+	CONSTRAINT PK_Feedback PRIMARY KEY NONCLUSTERED (FeedbackID),
+	CONSTRAINT FK_Feedback_VolunteerID FOREIGN KEY (VolunteerID)
+	REFERENCES dbo.Volunteer(VolunteerID),
+	CONSTRAINT FK_Feedback_ElderID FOREIGN KEY (ElderID)
+	REFERENCES dbo.Elder(ElderID)
+)
 
 
 
@@ -127,10 +147,10 @@ INSERT [dbo].[Volunteer]([VolunteerID],[Name],[EmailAddr],[Password],[ContactNo]
 SET IDENTITY_INSERT [dbo].[Volunteer] OFF
 
 SET IDENTITY_INSERT [dbo].[Elder] ON
-INSERT [dbo].[Elder]([ElderID],[SerialNo],[Name],[ElderAddress],[ContactNo],[Dietary],[HealthCondition],[Meal],[Status],[VolunteerID]) VALUES (1, 'S001','Sandy Kee','BLK 123 Clementi Ave 1','65553789','Vegan','High Cholesterol','Lunch','N',1)
-INSERT [dbo].[Elder]([ElderID],[SerialNo],[Name],[ElderAddress],[ContactNo],[Dietary],[HealthCondition],[Meal],[Status],[VolunteerID]) VALUES (2, 'S002','Felicia Tan','BLK 890 Jurong West Ave 1','64443789','less Oil','High Blood Pressure','Lunch','N',2)
-INSERT [dbo].[Elder]([ElderID],[SerialNo],[Name],[ElderAddress],[ContactNo],[Dietary],[HealthCondition],[Meal],[Status],[VolunteerID]) VALUES (3, 'S003','Adam Tan','BLK 300 Clementi Ave 5','65553789','Halal','arthritis','Lunch','N',1)
-INSERT [dbo].[Elder]([ElderID],[SerialNo],[Name],[ElderAddress],[ContactNo],[Dietary],[HealthCondition],[Meal],[Status],[VolunteerID]) VALUES (4, 'S004','Ng Weng','BLK 222 Yew Tee Ave 1','61233789','No Seafood','Dementia','Lunch','N',3)
+INSERT [dbo].[Elder]([ElderID],[SerialNo],[Name],[ElderAddress],[ContactNo],[Dietary],[HealthCondition],[Meal],[Prepare],[Status],[VolunteerID]) VALUES (1, 'S001','Sandy Kee','BLK 123 Clementi Ave 1','65553789','Vegan','High Cholesterol','Lunch','Completed','N',1)
+INSERT [dbo].[Elder]([ElderID],[SerialNo],[Name],[ElderAddress],[ContactNo],[Dietary],[HealthCondition],[Meal],[Prepare],[Status],[VolunteerID]) VALUES (2, 'S002','Felicia Tan','BLK 890 Jurong West Ave 1','64443789','less Oil','High Blood Pressure','Lunch','Still Progressing','N',2)
+INSERT [dbo].[Elder]([ElderID],[SerialNo],[Name],[ElderAddress],[ContactNo],[Dietary],[HealthCondition],[Meal],[Prepare],[Status],[VolunteerID]) VALUES (3, 'S003','Adam Tan','BLK 300 Clementi Ave 5','65553789','Halal','arthritis','Lunch','Completed','N',1)
+INSERT [dbo].[Elder]([ElderID],[SerialNo],[Name],[ElderAddress],[ContactNo],[Dietary],[HealthCondition],[Meal],[Prepare],[Status],[VolunteerID]) VALUES (4, 'S004','Ng Weng','BLK 222 Yew Tee Ave 1','61233789','No Seafood','Dementia','Lunch','Completed','N',3)
 SET IDENTITY_INSERT [dbo].[Elder] OFF
 
 
@@ -138,3 +158,6 @@ SELECT * FROM Vendor
 SELECT * FROM Volunteer
 SELECT * FROM Elder
 SELECT * FROM Coordinator
+select * from Feedback
+
+SELECT Prepare from Elder WHERE VolunteerID = 1
