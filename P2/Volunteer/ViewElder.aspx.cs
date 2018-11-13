@@ -22,6 +22,7 @@ namespace P2.Volunteer
             objVolunteer.getPass();
             objVolunteer.getId();
 
+
             int errorCode2 = objVolunteer.displayElderListStatus(ref result);
             if (errorCode2 == 0)
             {
@@ -38,6 +39,7 @@ namespace P2.Volunteer
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
+
             if (searchElders() == 1)
             {
                 gvElderN.Visible = true;
@@ -56,6 +58,13 @@ namespace P2.Volunteer
             string searchColumn = "";
             string searchValue = "";
             string sqlCommand = "";
+
+            Volunteers objVolunteer = new Volunteers();
+            objVolunteer.EmailAddr = Session["LoginID"].ToString();
+            objVolunteer.getPass();
+            objVolunteer.getId();
+            string VolID = objVolunteer.getId();
+
 
             if (rdoSerial.Checked)
             {
@@ -86,9 +95,10 @@ namespace P2.Volunteer
 
             SqlConnection conn = new SqlConnection(strConn);
 
-            SqlCommand cmd = new SqlCommand("SELECT * FROM Elder WHERE " + searchColumn + sqlCommand + " @value", conn);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Elder WHERE " + searchColumn + sqlCommand + " @value AND VolunteerID = @VolunteerID", conn);
 
             cmd.Parameters.AddWithValue("@value", searchValue);
+            cmd.Parameters.AddWithValue("@VolunteerID", VolID);
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
 
@@ -122,12 +132,18 @@ namespace P2.Volunteer
             searchColumn = "Name";
             searchValue = txtSearchElderInput.Text;
 
+            Volunteers objVolunteer = new Volunteers();
+            objVolunteer.EmailAddr = Session["LoginID"].ToString();
+            objVolunteer.getPass();
+            objVolunteer.getId();
+            string VolID = objVolunteer.getId();
+
             string strConn = ConfigurationManager.ConnectionStrings
                 ["P2ConnectionString"].ToString();
 
             SqlConnection conn = new SqlConnection(strConn);
 
-            SqlCommand cmd = new SqlCommand("SELECT * FROM Elder WHERE " + searchColumn + " =@value", conn);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Elder WHERE " + searchColumn + " =@value AND VolunteerID = @VolunteerID", conn);
 
             cmd.Parameters.AddWithValue("@value", txtSearchElderInput.Text);
 

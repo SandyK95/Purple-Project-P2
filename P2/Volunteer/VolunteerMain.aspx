@@ -16,7 +16,7 @@
                     <asp:HyperLinkField DataNavigateUrlFields="ElderID" DataNavigateUrlFormatString="UpdateStatus.aspx?ElderID={0}" DataTextField="ElderID" HeaderText="Elder ID" />
                     <asp:BoundField DataField="Name" HeaderText="Name" />
                     <asp:BoundField DataField="Prepare" HeaderText="Prepare Status" />
-                    <asp:BoundField DataField="NameLocation" HeaderText="Area" />
+                    <asp:BoundField DataField="NameLocation" HeaderText="Collective Place" />
                 </Columns>
             <EditRowStyle BackColor="#2461BF" />
                 <EmptyDataTemplate>
