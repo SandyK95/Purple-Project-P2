@@ -15,7 +15,7 @@
                 <!-- Links that are aligned to the left, mr-autoL right margin auto-adjuusted -->
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="ViewElder.aspx">View Elder</a>
+                        <a class="nav-link" href="ViewElder.aspx">View Elder contact details</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="CreateStudent.aspx">A</a>

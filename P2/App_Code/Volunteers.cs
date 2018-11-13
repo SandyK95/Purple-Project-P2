@@ -17,6 +17,7 @@ namespace P2
         public string Day { get; set; }
         public string ContactNo { get; set; }
         public string DateJoin { get; set; }
+        public string coordinatorID { get; set; }
 
         public string getLogin()
         {
@@ -124,6 +125,7 @@ namespace P2
                 return "Nil";
         }
 
+
         public int displayElderListStatus(ref DataSet result)
         {
             string strConn = ConfigurationManager.ConnectionStrings
@@ -200,5 +202,6 @@ namespace P2
 
             return 0;
         }
+        
     }
 }

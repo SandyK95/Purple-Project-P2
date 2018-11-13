@@ -15,10 +15,10 @@
                 <!-- Links that are aligned to the left, mr-autoL right margin auto-adjuusted -->
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="CoordinatorElder.aspx">View Elder</a>
+                        <a class="nav-link" href="CoordinatorElder.aspx">View Elder Details</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="CreateStudent.aspx">A</a>
+                        <a class="nav-link" href="ViewVolunteers.aspx">View Volunteer Details</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="CreateSkill.aspx">B</a>
