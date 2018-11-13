@@ -11,7 +11,12 @@ namespace P2.Volunteer
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["LoginID"] != null)
+            {
+                lblLoginID.Text = (string)Session["LoginID"];
+                lblCurrentUsers.Text = "There are currently \t" + Application["CurrentUsers"] + "\t users";
 
+            }
         }
     }
 }
