@@ -55,6 +55,10 @@ namespace P2
                 Session["LoggedInTime"] = DateTime.Now.ToString();
                 Response.Redirect("Vendor/VendorMain.aspx");
             }
+            else if (loginID == "bethesdacare_admin@org.com"&& password == "bethesdacare1234")
+            {
+                Response.Redirect("");
+            }
 
 
             else
