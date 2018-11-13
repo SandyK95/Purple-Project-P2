@@ -19,6 +19,12 @@ GO
 /***           Delete tables before creating                 ***/
 /***************************************************************/
 
+/* Table: dbo.Location */
+if exists (select * from sysobjects 
+  where id = object_id('dbo.Location') and sysstat & 0xf = 3)
+  drop table dbo.Location
+GO
+
 /* Table: dbo.Feedback */
 if exists (select * from sysobjects 
   where id = object_id('dbo.Feedback') and sysstat & 0xf = 3)
@@ -129,6 +135,19 @@ CREATE TABLE dbo.Feedback
 	REFERENCES dbo.Elder(ElderID)
 )
 
+CREATE TABLE dbo.Location
+(
+	LocationID		int IDENTITY(1,1),
+	NameLocation	varchar(30)		NOT NULL,
+	ElderID			int				NOT NULL,
+	VolunteerID		int				NOT NULL,
+	CONSTRAINT PK_Location Primary KEY NONCLUSTERED (LocationID),
+	CONSTRAINT FK_Location_ElderID FOREIGN KEY (ElderID)
+	REFERENCES dbo.Elder(ElderID),
+	CONSTRAINT FK_Location_VolunteerID FOREIGN KEY (VolunteerID)
+	REFERENCES dbo.Volunteer(VolunteerID)
+)
+
 
 
 SET IDENTITY_INSERT [dbo].[Vendor] ON 
@@ -153,11 +172,31 @@ INSERT [dbo].[Elder]([ElderID],[SerialNo],[Name],[ElderAddress],[ContactNo],[Die
 INSERT [dbo].[Elder]([ElderID],[SerialNo],[Name],[ElderAddress],[ContactNo],[Dietary],[HealthCondition],[Meal],[Prepare],[Status],[VolunteerID]) VALUES (4, 'S004','Ng Weng','BLK 222 Yew Tee Ave 1','61233789','No Seafood','Dementia','Lunch','Completed','N',3)
 SET IDENTITY_INSERT [dbo].[Elder] OFF
 
+SET IDENTITY_INSERT [dbo].[Location] ON
+INSERT [dbo].[Location]([LocationID],[NameLocation],[ElderID],[VolunteerID]) VALUES (1,'Clementi',1,1)
+INSERT [dbo].[Location]([LocationID],[NameLocation],[ElderID],[VolunteerID]) VALUES (2,'Jurong West',2,2)
+INSERT [dbo].[Location]([LocationID],[NameLocation],[ElderID],[VolunteerID]) VALUES (3,'Clementi',3,1)
+INSERT [dbo].[Location]([LocationID],[NameLocation],[ElderID],[VolunteerID]) VALUES (4, 'Yew Tee',4,3)
+SET IDENTITY_INSERT [dbo].[Location] OFF
+
 
 SELECT * FROM Vendor
 SELECT * FROM Volunteer
 SELECT * FROM Elder
 SELECT * FROM Coordinator
 select * from Feedback
+select * from Location
 
 SELECT Prepare from Elder WHERE VolunteerID = 1
+select * from Location where ElderID = 1
+SELECT E.Name FROM Elder E INNER JOIN Location L ON E.ElderID = L.ElderID 
+WHERE E.VolunteerID = 1 AND E.Prepare = 'Completed' group by L.NameLocation
+
+select NameLocation, COUNT(ElderID) from Location group by NameLocation
+
+select e.Name,l.NameLocation, e.Prepare from Location l inner join Elder e on l.ElderID = e.ElderID
+
+SELECT * FROM Elder E inner join Location L ON E.ElderID = L.ElderID 
+WHERE E.VolunteerID = 1 AND E.Prepare = 'Completed' AND E.Status = 'N' 
+Order by L.NameLocation
+
