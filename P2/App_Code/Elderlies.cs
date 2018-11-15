@@ -83,7 +83,7 @@ namespace P2
             {
                 DataTable table = result.Tables["ElderDetails"];
                 if (!DBNull.Value.Equals(table.Rows[0]["SerialNo"]))
-                    SerialNo = table.Rows[0]["Name"].ToString();
+                    SerialNo = table.Rows[0]["SerialNo"].ToString();
                 if (!DBNull.Value.Equals(table.Rows[0]["Name"]))
                     FullName = table.Rows[0]["Name"].ToString();
                 if (!DBNull.Value.Equals(table.Rows[0]["ElderAddress"]))
@@ -103,6 +103,43 @@ namespace P2
 
                 return 0;
             }
+            else
+                return -2;
+        }
+
+        public int update()
+        {
+            //Read connection string "NPBookConnectionString" from web.config file
+            string strConn = ConfigurationManager.ConnectionStrings["P2ConnectionString"].ToString();
+
+            //Instantiate a SqlCommand object with the Connection String read
+            SqlConnection conn = new SqlConnection(strConn);
+
+            //Instantiate a SqlCommand object,supply it with SQL statement UPDATE
+            // and the connection object for connecting to the database
+            SqlCommand cmd = new SqlCommand("UPDATE Elder SET Prepare=@prepare WHERE ElderID=@selectedElderID", conn);
+
+            //Define the parameters used in SQL statement ,value for each parameters
+            //is retrieved from respective class's property
+            cmd.Parameters.AddWithValue("@prepare", Prepare);
+
+           // if (Prepare != "Completed" || Prepare != "Still Progressing") // A branch is assigned
+           //     cmd.Parameters.AddWithValue("@prepare", Prepare);
+           //else // No branch is assigned
+           //    cmd.Parameters.AddWithValue("@prepare", DBNull.Value);
+
+
+            cmd.Parameters.AddWithValue("@selectedElderID", ElderID);
+
+            //A connection to database must be opened before any operations made
+            conn.Open();
+            //ExecuteNonQuery is used for UPDATE and DELETE
+            int count = cmd.ExecuteNonQuery();
+            //A connection should be close after operations
+            conn.Close();
+
+            if (count > 0) // at least 1 row updated
+                return 0; //update successfully
             else
                 return -2;
         }
@@ -172,5 +209,7 @@ namespace P2
             else
                 return "Unsuccessful!";
         }
+
+        
     }
 }

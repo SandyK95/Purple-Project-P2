@@ -124,6 +124,7 @@
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
     <Content Include="VendorMenu.ascx" />
+    <Content Include="Vendor\Edit_DietaryNeeds.aspx" />
     <Content Include="Vendor\VendorMain.aspx" />
     <Content Include="Vendor\View_DietaryNeeds.aspx" />
     <Content Include="VolunteerMenu.ascx" />
@@ -238,6 +239,13 @@
     </Compile>
     <Compile Include="VendorTemplate.Master.designer.cs">
       <DependentUpon>VendorTemplate.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Vendor\Edit_DietaryNeeds.aspx.cs">
+      <DependentUpon>Edit_DietaryNeeds.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vendor\Edit_DietaryNeeds.aspx.designer.cs">
+      <DependentUpon>Edit_DietaryNeeds.aspx</DependentUpon>
     </Compile>
     <Compile Include="Vendor\VendorMain.aspx.cs">
       <DependentUpon>VendorMain.aspx</DependentUpon>
