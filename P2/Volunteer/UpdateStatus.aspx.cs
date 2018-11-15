@@ -30,9 +30,14 @@ namespace P2.Volunteer
                 {
                     rblSuccess.SelectedIndex = 0;
                 }
-                else
+                else if (objElder.getStatus() == "P")
                 {
                     rblSuccess.SelectedIndex = 1;
+                    txtFeedback.Visible = true;
+                }
+                else
+                {
+                    rblSuccess.SelectedIndex = 2;
                     txtFeedback.Visible = true;
                 }
             }
@@ -55,6 +60,7 @@ namespace P2.Volunteer
                 lblChanges.Text = objElder.setSuccess();
                 txtFeedback.Visible = false;
             }
+
             else
             {
                 lblChanges.Text = objElder.setUnsuccess();

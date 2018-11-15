@@ -47,9 +47,10 @@
         <tr>
             <td class="auto-style6"><strong>Status:</strong></td>
             <td class="auto-style7">&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:RadioButtonList ID="rblSuccess" runat="server" Width="167px">
-                    <asp:ListItem>Success</asp:ListItem>
-                    <asp:ListItem>Not Success</asp:ListItem>
+                <asp:RadioButtonList ID="rblSuccess" runat="server" Width="195px">
+                    <asp:ListItem>Delivered</asp:ListItem>
+                    <asp:ListItem>Pending</asp:ListItem>
+                    <asp:ListItem>Not Delivered</asp:ListItem>
                 </asp:RadioButtonList>
             </td>
         </tr>
