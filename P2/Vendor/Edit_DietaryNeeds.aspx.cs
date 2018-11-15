@@ -51,7 +51,7 @@ namespace P2.Vendor
             }
 
 
-            }
+        }
 
             protected void btn_Submit_Click(object sender, EventArgs e)
             {
