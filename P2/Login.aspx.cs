@@ -57,7 +57,7 @@ namespace P2
             }
             else if (loginID == "bethesdacare_admin@org.com"&& password == "bethesdacare1234")
             {
-                Response.Redirect("");
+                Response.Redirect("Admin/AdminMain.aspx");
             }
 
 

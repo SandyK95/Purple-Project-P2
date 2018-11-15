@@ -1,0 +1,40 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminTemplate.master.cs" Inherits="P2.AdminTemplate" %>
+
+<%@ Register Src="~/adminMenu.ascx" TagPrefix="uc1" TagName="adminMenu" %>
+
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="row">
+            <div class="col-sm-12">
+                <uc1:adminMenu runat="server" id="adminMenu" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                Welcome back,
+              <asp:Label ID="lblLoginID" runat="server" Text=""></asp:Label>
+            </div>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="row">
+            <div class="auto-style2">
+
+                <asp:Label ID="lblCurrentUsers" runat="server"></asp:Label>
+
+            </div>
+        </div>
+    </form>
+</body>
+</html>
