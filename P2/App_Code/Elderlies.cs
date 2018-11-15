@@ -42,19 +42,39 @@ namespace P2
             return 0;
         }
 
-        public int displayElderListStatusNo(ref DataSet result)
+        public int displayElderListStatusP(ref DataSet result)
         {
             string strConn = ConfigurationManager.ConnectionStrings
                 ["P2ConnectionString"].ToString();
 
             SqlConnection conn = new SqlConnection(strConn);
             SqlCommand cmd = new SqlCommand("SELECT SerialNo, Name, ElderAddress, ContactNo, Dietary, " +
-                "HealthCondition FROM Elder WHERE Status = 'N' ORDER BY ElderID", conn);
+                "HealthCondition FROM Elder WHERE Status = 'P' ORDER BY ElderID", conn);
 
             SqlDataAdapter daElders = new SqlDataAdapter(cmd);
 
             conn.Open();
             daElders.Fill(result, "ElderDetails2");
+
+            conn.Close();
+
+            return 0;
+        }
+
+        public int displayElderListStatusNoWithRemarks(ref DataSet result)
+        {
+            string strConn = ConfigurationManager.ConnectionStrings
+    ["P2ConnectionString"].ToString();
+
+            SqlConnection conn = new SqlConnection(strConn);
+
+            SqlCommand cmd = new SqlCommand("SELECT E.SerialNo, E.Name, E.ElderAddress, E.ContactNo, E.Dietary, " +
+                "E.HealthCondition,F.Feedback FROM Elder E INNER JOIN Feedback F ON E.ElderID = F.ElderID WHERE Status = 'N'", conn);
+
+            SqlDataAdapter daElders = new SqlDataAdapter(cmd);
+
+            conn.Open();
+            daElders.Fill(result, "ElderDetails3");
 
             conn.Close();
 

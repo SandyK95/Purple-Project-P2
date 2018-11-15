@@ -132,7 +132,7 @@ namespace P2
                 ["P2ConnectionString"].ToString();
 
             SqlConnection conn = new SqlConnection(strConn);
-            SqlCommand cmd = new SqlCommand("SELECT * FROM Elder WHERE VolunteerID = @VolunteerID AND Status = 'N' ORDER BY ElderID", conn);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Elder WHERE VolunteerID = @VolunteerID AND Status = 'P' ORDER BY ElderID", conn);
 
             cmd.Parameters.AddWithValue("@VolunteerID", VolunteerID);
 
@@ -190,7 +190,7 @@ namespace P2
             SqlConnection conn = new SqlConnection(strConn);
             SqlCommand cmd = new SqlCommand("SELECT E.ElderID, E.Name, E.Prepare, L.NameLocation from Elder E INNER JOIN Location " +
                 "L ON E.ElderID = L.ElderID WHERE " +
-                "E.VolunteerID =@VolunteerID AND E.Prepare = 'Completed' AND E.Status = 'N' ORDER BY L.NameLocation", conn);
+                "E.VolunteerID =@VolunteerID AND E.Prepare = 'Completed' AND E.Status = 'P' ORDER BY L.NameLocation", conn);
 
             cmd.Parameters.AddWithValue("@VolunteerID", VolunteerID);
 

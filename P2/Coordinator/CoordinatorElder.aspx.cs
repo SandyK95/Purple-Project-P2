@@ -22,11 +22,18 @@ namespace P2.Coordinator
                 gvElderY.DataBind();
             }
 
-            int errorCode2 = objElder.displayElderListStatusNo(ref result);
+            int errorCode2 = objElder.displayElderListStatusNoWithRemarks(ref result);
             if (errorCode2 == 0)
             {
-                gvElderN.DataSource = result.Tables["ElderDetails2"];
+                gvElderN.DataSource = result.Tables["ElderDetails3"];
                 gvElderN.DataBind();
+            }
+
+            int errorCode3 = objElder.displayElderListStatusP(ref result);
+            if (errorCode3 == 0)
+            {
+                gvElderP.DataSource = result.Tables["ElderDetails2"];
+                gvElderP.DataBind();
             }
         }
     }
