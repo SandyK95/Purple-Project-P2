@@ -103,7 +103,7 @@ namespace P2
             {
                 DataTable table = result.Tables["ElderDetails"];
                 if (!DBNull.Value.Equals(table.Rows[0]["SerialNo"]))
-                    SerialNo = table.Rows[0]["Name"].ToString();
+                    SerialNo = table.Rows[0]["SerialNo"].ToString();
                 if (!DBNull.Value.Equals(table.Rows[0]["Name"]))
                     FullName = table.Rows[0]["Name"].ToString();
                 if (!DBNull.Value.Equals(table.Rows[0]["ElderAddress"]))
