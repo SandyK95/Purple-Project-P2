@@ -25,11 +25,10 @@
             <asp:GridView ID="gv_volunteer" runat="server" Height="100%" Width="100%" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None">
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
-                    <asp:BoundField DataField="VolunteerID" HeaderText="ID">
-                    <HeaderStyle Width="15%" />
-                    </asp:BoundField>
+                    <asp:BoundField DataField="VolunteerID" HeaderText="ID" />
                     <asp:BoundField DataField="Name" HeaderText="Name" />
                     <asp:BoundField DataField="ContactNo" HeaderText="Contact No" />
+                    <asp:HyperLinkField DataNavigateUrlFields="VolunteerID,Name" DataNavigateUrlFormatString="DeleteSend.aspx?volunteerid={0}&amp;name={1}" Text="Delete" />
                 </Columns>
                 <EditRowStyle BackColor="#2461BF" />
                 <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />

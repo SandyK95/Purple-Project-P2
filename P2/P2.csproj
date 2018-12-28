@@ -80,6 +80,7 @@
     <Content Include="CoordinatorMenu.ascx" />
     <Content Include="Coordinator\CoordinatorElder.aspx" />
     <Content Include="Coordinator\CoordinatorMain.aspx" />
+    <Content Include="Coordinator\DeleteSend.aspx" />
     <Content Include="Coordinator\Remarks.aspx" />
     <Content Include="Coordinator\ViewVolunteers.aspx" />
     <Content Include="Global.asax" />
@@ -186,6 +187,13 @@
       <DependentUpon>CoordinatorMain.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Code\Elderlies.cs" />
+    <Compile Include="Coordinator\DeleteSend.aspx.cs">
+      <DependentUpon>DeleteSend.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Coordinator\DeleteSend.aspx.designer.cs">
+      <DependentUpon>DeleteSend.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Coordinator\Remarks.aspx.cs">
       <DependentUpon>Remarks.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
