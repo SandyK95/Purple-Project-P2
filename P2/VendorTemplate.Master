@@ -42,7 +42,8 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <!--1st row -->
+        <div class="container" style="margin:auto;">
+             <!--1st row -->
         <div class="row">
             <div class="col-sm-12">
                 <uc1:VendorMenu runat="server" id="VendorMenu" />
@@ -68,6 +69,7 @@
         <div class="auto-style2">
 
         </div>
+        </div>       
     </form>
 </body>
 </html>

@@ -49,6 +49,8 @@
             <td class="auto-style8">Preparation Status:</td>
             <td class="auto-style9">
                 <asp:DropDownList ID="dd_Prepare" runat="server">
+                    <asp:ListItem>Completed</asp:ListItem>
+                    <asp:ListItem>Still Progressing</asp:ListItem>
                 </asp:DropDownList>
             </td>
         </tr>

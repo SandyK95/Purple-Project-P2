@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-md bg-light navbar-light">
             <!-- The brand (or icon) of the navbar -->
             <a class="navbar-brand" href="VolunteerMain.aspx" style="font-size: 32px; font-weight:bold; color:#3399FF;">
-                    Admin 
+                    Admin Menu
                 </a>
             <!-- Toggle/collapsible Button, also known as hamburger button -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#VolunteerMenu">
@@ -14,19 +14,19 @@
                 <!-- Links that are aligned to the left, mr-autoL right margin auto-adjuusted -->
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="">A</a>
+                        <a class="nav-link" href="Requests.aspx">Requests</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">B</a>
+                        <a class="nav-link" href="//">B</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">C</a>
+                        <a class="nav-link" href="//">C</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">D</a>
+                        <a class="nav-link" href="//">D</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">E</a>
+                        <a class="nav-link" href="//">E</a>
                     </li>
                 </ul>
                 <!-- Links that are alighed to the right, ml-auto: left margin auto-adjusted -->
