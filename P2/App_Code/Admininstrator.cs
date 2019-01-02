@@ -75,11 +75,11 @@ namespace P2
             SqlCommand cmd3 = new SqlCommand("DELETE FROM Location WHERE VolunteerID = @selectedVolunteerID3", conn);
             cmd3.Parameters.AddWithValue("@selectedVolunteerID3", volunteerid);
 
-            SqlCommand cmd4 = new SqlCommand("DELETE FROM Request WHERE VolunteerID = @selectedVolunteerID4", conn);
-            cmd4.Parameters.AddWithValue("@selectedVolunteerID4", volunteerid);
+            //SqlCommand cmd4 = new SqlCommand("DELETE FROM Request WHERE VolunteerID = @selectedVolunteerID4", conn);
+            //cmd4.Parameters.AddWithValue("@selectedVolunteerID4", volunteerid);
 
-            SqlCommand cmd5 = new SqlCommand("DELETE FROM Volunteer WHERE VolunteerID = @selectedVolunteerID5", conn);
-            cmd5.Parameters.AddWithValue("@selectedVolunteerID5", volunteerid);
+            SqlCommand cmd4 = new SqlCommand("DELETE FROM Volunteer WHERE VolunteerID = @selectedVolunteerID4", conn);
+            cmd4.Parameters.AddWithValue("@selectedVolunteerID4", volunteerid);
 
             conn.Open();
 
@@ -87,7 +87,7 @@ namespace P2
             cmd2.ExecuteNonQuery();
             cmd3.ExecuteNonQuery();
             cmd4.ExecuteNonQuery();
-            cmd5.ExecuteNonQuery();
+
 
             conn.Close();
 

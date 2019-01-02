@@ -28,7 +28,7 @@ namespace P2.Coordinator
                 Admininstrator objAdmin = new Admininstrator();
                 objAdmin.volunteerid = volunteerid;
                 objAdmin.dateCreated = DateTime.Today;
-                int errorCode = objAdmin.add();
+                int errorCode = objAdmin.delete();
 
                 if (errorCode == 0)
                 {
