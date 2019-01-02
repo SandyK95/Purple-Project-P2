@@ -81,6 +81,24 @@ namespace P2
             return 0;
         }
 
+        public int getDetailsOnly(ref DataSet result)
+        {
+            string strConn = ConfigurationManager.ConnectionStrings
+                ["P2ConnectionString"].ToString();
+
+            SqlConnection conn = new SqlConnection(strConn);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Elder", conn);
+
+            SqlDataAdapter daElders = new SqlDataAdapter(cmd);
+
+            conn.Open();
+            daElders.Fill(result, "ElderDetails");
+
+            conn.Close();
+
+            return 0;
+        }
+
         public int getDetails()
         {
             string strConn = ConfigurationManager.ConnectionStrings
@@ -188,8 +206,6 @@ namespace P2
             return status;
         }
 
-
-
         public string setSuccess()
         {
             string strConn = ConfigurationManager.ConnectionStrings
@@ -230,6 +246,33 @@ namespace P2
                 return "Unsuccessful!";
         }
 
-        
+        public int updateVol()
+        {
+            string strConn = ConfigurationManager.ConnectionStrings
+    ["P2ConnectionString"].ToString();
+
+            SqlConnection conn = new SqlConnection(strConn);
+
+            SqlCommand cmd = new SqlCommand
+                ("UPDATE Elder SET VolunteerID = @volunteerid WHERE ElderID = @selectedElderID", conn);
+
+            if (volunteer != null)
+                cmd.Parameters.AddWithValue("@volunteerid", volunteer);
+            else
+                cmd.Parameters.AddWithValue("@volunteerid", DBNull.Value);
+
+            cmd.Parameters.AddWithValue("@selectedElderID", ElderID);
+
+            conn.Open();
+
+            int count = cmd.ExecuteNonQuery();
+
+            conn.Close();
+
+            if (count > 0)
+                return 0;
+            else
+                return -2;
+        }
     }
 }

@@ -14,7 +14,7 @@
                 <!-- Links that are aligned to the left, mr-autoL right margin auto-adjuusted -->
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="Requests.aspx">Requests</a>
+                        <a class="nav-link" href="//">Requests</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="//">B</a>
