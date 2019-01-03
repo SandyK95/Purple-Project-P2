@@ -86,6 +86,8 @@
     <Content Include="Coordinator\Remarks.aspx" />
     <Content Include="Coordinator\ViewVolunteers.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Home\AboutUs.aspx" />
+    <Content Include="Home\ContactUs.aspx" />
     <Content Include="Home\HomePageMain.aspx" />
     <Content Include="HomePageMenu.ascx" />
     <Content Include="Login.aspx" />
@@ -227,6 +229,20 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Home\AboutUs.aspx.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\AboutUs.aspx.designer.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\ContactUs.aspx.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\ContactUs.aspx.designer.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
     </Compile>
     <Compile Include="Home\HomePageMain.aspx.cs">
       <DependentUpon>HomePageMain.aspx</DependentUpon>

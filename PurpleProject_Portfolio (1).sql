@@ -19,7 +19,18 @@ GO
 /***           Delete tables before creating                 ***/
 /***************************************************************/
 
+if exists (select * from sysobjects 
+  where id = object_id('dbo.Remark') and sysstat & 0xf = 3)
+  drop table dbo.Remark
+GO
+
 /* Table: dbo.Location */
+
+if exists (select * from sysobjects 
+  where id = object_id('dbo.Location') and sysstat & 0xf = 3)
+  drop table dbo.Location
+GO
+
 if exists (select * from sysobjects 
   where id = object_id('dbo.Location') and sysstat & 0xf = 3)
   drop table dbo.Location
@@ -112,9 +123,9 @@ CREATE TABLE dbo.Elder
   [Dietary]				varchar(3000) 	NULL,
   [HealthCondition]		varchar(255) 	NULL,
   [Meal]				varchar (10)	NOT NULL Default ('Lunch') CHECK ([Meal] IN ('Lunch','Dinner')),
-  [Prepare]				varchar(30)			NOT NULL DEFAULT ('Still Progressing') CHECK ([Prepare] IN ('Completed','Still Progressing')),
-  [Status]				char(1)			NOT NULL DEFAULT ('N') CHECK ([Status] IN ('Y','N')), 
-  VolunteerID 			int  			NOT NULL,
+  [Prepare]				varchar(30)		NOT NULL DEFAULT ('Still Progressing') CHECK ([Prepare] IN ('Completed','Still Progressing')),
+  [Status]				char(1)			NOT NULL DEFAULT ('P') CHECK ([Status] IN ('Y','N','P')), 
+  VolunteerID 			int  			NULL,
   CONSTRAINT PK_Elder PRIMARY KEY NONCLUSTERED (ElderID),
   CONSTRAINT FK_Elder_VolunteerID FOREIGN KEY (VolunteerID) 
   REFERENCES dbo.Volunteer(VolunteerID)
@@ -148,28 +159,46 @@ CREATE TABLE dbo.Location
 	REFERENCES dbo.Volunteer(VolunteerID)
 )
 
+CREATE TABLE dbo.Remark
+(
+	RemarkID		int IDENTITY(1,1),
+	FoodRemark		varchar(255)		NOT NULL,
+	VendorID		int                 NOT NULL,
+	ElderID			int					NOT NULL,
+
+	CONSTRAINT PK_Remark Primary KEY NONCLUSTERED (RemarkID),
+	CONSTRAINT FK_Remark_VendorID FOREIGN KEY (VendorID)
+	REFERENCES dbo.Vendor(VendorID),
+	CONSTRAINT FK_Remark_ElderID FOREIGN KEY (ElderID)
+	REFERENCES dbo.Elder(ElderID)
+
+
+	
+)
+
 
 
 SET IDENTITY_INSERT [dbo].[Vendor] ON 
-INSERT [dbo].[Vendor] ([VendorID], [Name], [EmailAddr],[Password]) VALUES (1, 'Peter Ghim', 'Peter_Ghim@ap.edu.sg', 'p@55Vendor')
+INSERT [dbo].[Vendor] ([VendorID], [Name], [EmailAddr],[Password]) VALUES (1, 'Peter Ghim', 'Vendor@ap.edu.sg', 'p@55Vendor')
 SET IDENTITY_INSERT [dbo].[Vendor] OFF
 
 SET IDENTITY_INSERT [dbo].Coordinator ON 
-INSERT [dbo].[Coordinator] ([CoordinatorID], [Name], [EmailAddr],[Password]) VALUES (1, 'Jennifier Ghim', 'Jennifier_Ghim@ap.edu.sg', 'p@55Coordi')
-INSERT [dbo].[Coordinator] ([CoordinatorID], [Name], [EmailAddr],[Password]) VALUES (2, 'Brandon Goh', 'Brandon_Goh@ap.edu.sg', 'p@55Coordi')
+INSERT [dbo].[Coordinator] ([CoordinatorID], [Name], [EmailAddr],[Password]) VALUES (1, 'Jennifier Ghim', 'Coordinator1@ap.edu.sg', 'p@55Coordi')
+INSERT [dbo].[Coordinator] ([CoordinatorID], [Name], [EmailAddr],[Password]) VALUES (2, 'Brandon Goh', 'Coordinator2@ap.edu.sg', 'p@55Coordi')
 SET IDENTITY_INSERT [dbo].[Coordinator] OFF
 
 SET IDENTITY_INSERT [dbo].[Volunteer] ON
-INSERT [dbo].[Volunteer]([VolunteerID],[Name],[EmailAddr],[Password],[ContactNo],[Day],[DateJoin],[CoordinatorID]) VALUES (1,'Kelly Tan','Kelly_Tan@pp.edu.sg','p@55Volunteer','98989898','MON','30-Apr-2017',1)
-INSERT [dbo].[Volunteer]([VolunteerID],[Name],[EmailAddr],[Password],[ContactNo],[Day],[DateJoin],[CoordinatorID]) VALUES (2,'Ahmad Sarah','Ahmad_Sarah@pp.edu.sg','p@55Volunteer','98765432','TUE','10-Oct-2015',2)
-INSERT [dbo].[Volunteer]([VolunteerID],[Name],[EmailAddr],[Password],[ContactNo],[Day],[DateJoin],[CoordinatorID]) VALUES (3,'Nurul Fatin','Nurul_Fatin@pp.edu.sg','p@55Volunteer','91234567','WED','20-May-2016',1)
+INSERT [dbo].[Volunteer]([VolunteerID],[Name],[EmailAddr],[Password],[ContactNo],[Day],[DateJoin],[CoordinatorID]) VALUES (1,'Kelly Tan','Volunteer1@pp.edu.sg','p@55Volunteer','98989898','MON','30-Apr-2017',1)
+INSERT [dbo].[Volunteer]([VolunteerID],[Name],[EmailAddr],[Password],[ContactNo],[Day],[DateJoin],[CoordinatorID]) VALUES (2,'Ahmad Sarah','Volunteer2@pp.edu.sg','p@55Volunteer','98765432','TUE','10-Oct-2015',2)
+INSERT [dbo].[Volunteer]([VolunteerID],[Name],[EmailAddr],[Password],[ContactNo],[Day],[DateJoin],[CoordinatorID]) VALUES (3,'Nurul Fatin','Volunteer3@pp.edu.sg','p@55Volunteer','91234567','WED','20-May-2016',1)
 SET IDENTITY_INSERT [dbo].[Volunteer] OFF
 
 SET IDENTITY_INSERT [dbo].[Elder] ON
-INSERT [dbo].[Elder]([ElderID],[SerialNo],[Name],[ElderAddress],[ContactNo],[Dietary],[HealthCondition],[Meal],[Prepare],[Status],[VolunteerID]) VALUES (1, 'S001','Sandy Kee','BLK 123 Clementi Ave 1','65553789','Vegan','High Cholesterol','Lunch','Completed','N',1)
-INSERT [dbo].[Elder]([ElderID],[SerialNo],[Name],[ElderAddress],[ContactNo],[Dietary],[HealthCondition],[Meal],[Prepare],[Status],[VolunteerID]) VALUES (2, 'S002','Felicia Tan','BLK 890 Jurong West Ave 1','64443789','less Oil','High Blood Pressure','Lunch','Still Progressing','N',2)
-INSERT [dbo].[Elder]([ElderID],[SerialNo],[Name],[ElderAddress],[ContactNo],[Dietary],[HealthCondition],[Meal],[Prepare],[Status],[VolunteerID]) VALUES (3, 'S003','Adam Tan','BLK 300 Clementi Ave 5','65553789','Halal','arthritis','Lunch','Completed','N',1)
-INSERT [dbo].[Elder]([ElderID],[SerialNo],[Name],[ElderAddress],[ContactNo],[Dietary],[HealthCondition],[Meal],[Prepare],[Status],[VolunteerID]) VALUES (4, 'S004','Ng Weng','BLK 222 Yew Tee Ave 1','61233789','No Seafood','Dementia','Lunch','Completed','N',3)
+INSERT [dbo].[Elder]([ElderID],[SerialNo],[Name],[ElderAddress],[ContactNo],[Dietary],[HealthCondition],[Meal],[Prepare],[Status],[VolunteerID]) VALUES (1, 'S001','Lim Chaing Khoo','BLK 123 Clementi Ave 1','65553789','Vegan','High Cholesterol','Lunch','Completed','P',1)
+INSERT [dbo].[Elder]([ElderID],[SerialNo],[Name],[ElderAddress],[ContactNo],[Dietary],[HealthCondition],[Meal],[Prepare],[Status],[VolunteerID]) VALUES (2, 'S002','Khu Soon Leong','BLK 890 Jurong West Ave 1','64443789','less Oil','High Blood Pressure','Lunch','Still Progressing','P',2)
+INSERT [dbo].[Elder]([ElderID],[SerialNo],[Name],[ElderAddress],[ContactNo],[Dietary],[HealthCondition],[Meal],[Prepare],[Status],[VolunteerID]) VALUES (3, 'S003','Poon Sze Yun','BLK 300 Clementi Ave 5','65553789','No Dairy','arthritis','Lunch','Completed','P',1)
+INSERT [dbo].[Elder]([ElderID],[SerialNo],[Name],[ElderAddress],[ContactNo],[Dietary],[HealthCondition],[Meal],[Prepare],[Status],[VolunteerID]) VALUES (4, 'S004','Stacy Lim','BLK 222 Yew Tee Ave 1','61233789','No Seafood','Dementia','Lunch','Completed','P',3)
+INSERT [dbo].[Elder]([ElderID],[SerialNo],[Name],[ElderAddress],[ContactNo],[Dietary],[HealthCondition],[Meal],[Prepare],[Status],[VolunteerID]) VALUES (5, 'S005','Abdul Rahman','BLK 516 Yew Tee Ave 1','67934248','No Seafood','Dementia','Lunch','Completed','P',3)
 SET IDENTITY_INSERT [dbo].[Elder] OFF
 
 SET IDENTITY_INSERT [dbo].[Location] ON
@@ -179,13 +208,20 @@ INSERT [dbo].[Location]([LocationID],[NameLocation],[ElderID],[VolunteerID]) VAL
 INSERT [dbo].[Location]([LocationID],[NameLocation],[ElderID],[VolunteerID]) VALUES (4, 'Yew Tee',4,3)
 SET IDENTITY_INSERT [dbo].[Location] OFF
 
+SET IDENTITY_INSERT [dbo].[Remark] ON
+INSERT [dbo].[Remark]([RemarkID],[FoodRemark] VALUES (1,',1,1)
+INSERT [dbo].[Remark]([NameLocation],[ElderID],[VolunteerID]) VALUES (2,'Jurong West',2,2)
+SET IDENTITY_INSERT [dbo].[Location] OFF
+
 
 SELECT * FROM Vendor
 SELECT * FROM Volunteer
-SELECT * FROM Elder
+select * from Elder order by Dietary
 SELECT * FROM Coordinator
 select * from Feedback
 select * from Location
+
+select * from elder
 
 SELECT Prepare from Elder WHERE VolunteerID = 1
 select * from Location where ElderID = 1
@@ -200,3 +236,6 @@ SELECT * FROM Elder E inner join Location L ON E.ElderID = L.ElderID
 WHERE E.VolunteerID = 1 AND E.Prepare = 'Completed' AND E.Status = 'N' 
 Order by L.NameLocation
 
+select COUNT(*), Dietary from Elder group by Dietary
+
+select count (*), NameLocation from Location group by NameLocation

@@ -6,6 +6,7 @@
                     style="font-size: 32px; font-weight:bold; color:#3399FF;">
                     Purple Project
                 </a>
+                
                 <!-- Toggle/collapsible Button, also known as hamburger button -->
                 <button class="navbar-toggler" type="button"
                         data-toggle="collapse" data-target="#HomeNavbar">
@@ -17,15 +18,26 @@
                     <!-- Links that are aligned to the left,
                         mr-autoL right margin auto-adjuusted -->
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="../Home/Message.aspx">A</a>
+                        <!--<li class="nav-item">
+                            <a class="nav-link" href="../Home/Message.aspx">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../Home/ViewStudent.aspx">B</a>
+                            <a class="nav-link" href="../Home/ViewStudent.aspx">About US</a>
                         </li>
                        
                         <li class="nav-item">
-                            <a class="nav-link" href="../Home/ViewProjects.aspx">C</a>
+                            <a class="nav-link" href="../Home/ViewProjects.aspx">Contact Us</a>
+                        </li>-->
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Home/HomePageMain.aspx">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Home/AboutUS.aspx">About US</a>
+                        </li>
+                       
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Home/ContactUs.aspx">Contact Us</a>
                         </li>
                     </ul>
                     <!-- Links that are alighed to the right,
