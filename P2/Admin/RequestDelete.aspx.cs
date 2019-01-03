@@ -33,20 +33,20 @@ namespace P2.Admin
             }
         }
 
-        protected void btnNo_Click(object sender, EventArgs e)
-        {
-            if (Request.QueryString["volunteerid"] != null)
-            {
-                int volunteerid = Convert.ToInt32(Request.QueryString["volunteerid"]);
-                objAdmin.volunteerid = volunteerid;
+//        protected void btnNo_Click(object sender, EventArgs e)
+//        {
+//            if (Request.QueryString["volunteerid"] != null)
+//            {
+//                int volunteerid = Convert.ToInt32(Request.QueryString["volunteerid"]);
+//                objAdmin.volunteerid = volunteerid;
 
-                int errorCode = objAdmin.notdelete();
-                if (errorCode == 0)
-                {
-                    ClientScript.RegisterStartupScript(this.GetType(),
-"Success", "<script type='text/javascript'>alert('Cancel request');window.location='Requests.aspx';</script>'");
-                }
-            }
-        }
+//                int errorCode = objAdmin.notdelete();
+//                if (errorCode == 0)
+//                {
+//                    ClientScript.RegisterStartupScript(this.GetType(),
+//"Success", "<script type='text/javascript'>alert('Cancel request');window.location='Requests.aspx';</script>'");
+//                }
+//            }
+//        }
     }
 }

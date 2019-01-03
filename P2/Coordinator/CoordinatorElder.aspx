@@ -7,7 +7,7 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td>View Elderlies</td>
+            <td>View Delivery Status</td>
         </tr>
         <tr>
             <td>Status: Delivered</td>

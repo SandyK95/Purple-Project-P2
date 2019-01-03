@@ -14,17 +14,17 @@ namespace P2.Admin
     {
         Admininstrator objAdmin = new Admininstrator();
 
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            DataSet result = new DataSet();
-            int errorCode = objAdmin.displayRequest(ref result);
-            if (errorCode == 0)
-            {
-                gv_RequestLists_Volunteer.DataSource = result.Tables["RequestsList"];
-                gv_RequestLists_Volunteer.DataBind();
-            }
+        //protected void Page_Load(object sender, EventArgs e)
+        //{
+        //    DataSet result = new DataSet();
+        //    int errorCode = objAdmin.displayRequest(ref result);
+        //    if (errorCode == 0)
+        //    {
+        //        gv_RequestLists_Volunteer.DataSource = result.Tables["RequestsList"];
+        //        gv_RequestLists_Volunteer.DataBind();
+        //    }
 
-            //Vendor Request Lists
-        }
+        //    //Vendor Request Lists
+        //}
     }
 }

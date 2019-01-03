@@ -10,55 +10,54 @@ namespace P2
 {
     public class Admininstrator
     {
-        public int requestId { get; set; }
         public int volunteerid { get; set; }
-        public DateTime dateCreated { get; set; }
 
-        //Volunteer Delete Request
-        public int add()
-        {
-            string strConn = ConfigurationManager.ConnectionStrings["P2ConnectionString"].ToString();
+        ////Volunteer Delete Request
+        //public int add()
+        //{
+        //    string strConn = ConfigurationManager.ConnectionStrings["P2ConnectionString"].ToString();
 
-            SqlConnection conn = new SqlConnection(strConn);
+        //    SqlConnection conn = new SqlConnection(strConn);
 
-            SqlCommand cmd = new SqlCommand
-                ("INSERT INTO Request (VolunteerID, DateCreated) " +
-                "OUTPUT INSERTED.RequestID " +
-                "VALUES (@VolunteerID, @DateCreated)", conn);
+        //    SqlCommand cmd = new SqlCommand
+        //        ("INSERT INTO Request (VolunteerID, DateCreated) " +
+        //        "OUTPUT INSERTED.RequestID " +
+        //        "VALUES (@VolunteerID, @DateCreated)", conn);
 
-            cmd.Parameters.AddWithValue("@VolunteerID", volunteerid);
-            cmd.Parameters.AddWithValue("@DateCreated", dateCreated);
+        //    cmd.Parameters.AddWithValue("@VolunteerID", volunteerid);
+        //    cmd.Parameters.AddWithValue("@DateCreated", dateCreated);
 
-            conn.Open();
+        //    conn.Open();
 
-            int id = (int)cmd.ExecuteScalar();
+        //    int id = (int)cmd.ExecuteScalar();
 
-            conn.Close();
+        //    conn.Close();
 
-            return 0;
-        }
+        //    return 0;
+        //}
 
         //Vendor Delete Request
 
-        public int displayRequest(ref DataSet result)
-        {
-            string strConn = ConfigurationManager.ConnectionStrings
-    ["P2ConnectionString"].ToString();
+        //    public int displayRequest(ref DataSet result)
+        //    {
+        //        string strConn = ConfigurationManager.ConnectionStrings
+        //["P2ConnectionString"].ToString();
 
-            SqlConnection conn = new SqlConnection(strConn);
-            SqlCommand cmd = new SqlCommand("SELECT * FROM Request R INNER JOIN Volunteer V ON R.VolunteerID = V.VolunteerID", conn);
+        //        SqlConnection conn = new SqlConnection(strConn);
+        //        SqlCommand cmd = new SqlCommand("SELECT * FROM Request R INNER JOIN Volunteer V ON R.VolunteerID = V.VolunteerID", conn);
 
-            SqlDataAdapter daRequests = new SqlDataAdapter(cmd);
+        //        SqlDataAdapter daRequests = new SqlDataAdapter(cmd);
 
-            conn.Open();
-            daRequests.Fill(result, "RequestsList");
+        //        conn.Open();
+        //        daRequests.Fill(result, "RequestsList");
 
-            conn.Close();
+        //        conn.Close();
 
-            return 0;
-        }
+        //        return 0;
+        //    }
 
         //Volunteer Delete
+
         public int delete()
         {
             string strConn = ConfigurationManager.ConnectionStrings
@@ -94,24 +93,24 @@ namespace P2
             return 0;
         }
 
-        public int notdelete()
-        {
-            string strConn = ConfigurationManager.ConnectionStrings
-                ["P2ConnectionString"].ToString();
+        //public int notdelete()
+        //{
+        //    string strConn = ConfigurationManager.ConnectionStrings
+        //        ["P2ConnectionString"].ToString();
 
-            SqlConnection conn = new SqlConnection(strConn);
+        //    SqlConnection conn = new SqlConnection(strConn);
 
-            SqlCommand cmd = new SqlCommand("DELETE FROM Request WHERE VolunteerID = @selectedVolunteerID", conn);
-            cmd.Parameters.AddWithValue("@selectedVolunteerID", volunteerid);
+        //    SqlCommand cmd = new SqlCommand("DELETE FROM Request WHERE VolunteerID = @selectedVolunteerID", conn);
+        //    cmd.Parameters.AddWithValue("@selectedVolunteerID", volunteerid);
 
-            conn.Open();
+        //    conn.Open();
 
-            cmd.ExecuteNonQuery();
+        //    cmd.ExecuteNonQuery();
 
-            conn.Close();
+        //    conn.Close();
 
-            return 0;
-        }
+        //    return 0;
+        //}
 
         //Vendor Delete
     }

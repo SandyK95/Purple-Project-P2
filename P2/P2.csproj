@@ -83,6 +83,8 @@
     <Content Include="Coordinator\CoordinatorElder.aspx" />
     <Content Include="Coordinator\CoordinatorMain.aspx" />
     <Content Include="Coordinator\DeleteSend.aspx" />
+    <Content Include="Coordinator\ElderDetails.aspx" />
+    <Content Include="Coordinator\ElderUpdate.aspx" />
     <Content Include="Coordinator\Remarks.aspx" />
     <Content Include="Coordinator\ViewVolunteers.aspx" />
     <Content Include="Global.asax" />
@@ -212,6 +214,20 @@
     </Compile>
     <Compile Include="Coordinator\DeleteSend.aspx.designer.cs">
       <DependentUpon>DeleteSend.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Coordinator\ElderDetails.aspx.cs">
+      <DependentUpon>ElderDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Coordinator\ElderDetails.aspx.designer.cs">
+      <DependentUpon>ElderDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Coordinator\ElderUpdate.aspx.cs">
+      <DependentUpon>ElderUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Coordinator\ElderUpdate.aspx.designer.cs">
+      <DependentUpon>ElderUpdate.aspx</DependentUpon>
     </Compile>
     <Compile Include="Coordinator\Remarks.aspx.cs">
       <DependentUpon>Remarks.aspx</DependentUpon>
