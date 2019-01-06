@@ -125,7 +125,6 @@ namespace P2
                 return "Nil";
         }
 
-
         public int displayElderListStatus(ref DataSet result)
         {
             string strConn = ConfigurationManager.ConnectionStrings
@@ -175,7 +174,10 @@ namespace P2
                     ContactNo = table.Rows[0]["ContactNo"].ToString();
                 if (!DBNull.Value.Equals(table.Rows[0]["DateJoin"]))
                     DateJoin = table.Rows[0]["DateJoin"].ToString();
-
+                if (!DBNull.Value.Equals(table.Rows[0]["CoordinatorID"]))
+                    coordinatorID = table.Rows[0]["CoordinatorID"].ToString();
+                if (DBNull.Value.Equals(table.Rows[0]["CoordinatorID"]))
+                    coordinatorID = table.Rows[0]["CoordinatorID"].ToString();
                 return 0;
             }
             else
@@ -201,6 +203,55 @@ namespace P2
             conn.Close();
 
             return 0;
+        }
+
+        public int getDetailsOnly(ref DataSet result)
+        {
+            string strConn = ConfigurationManager.ConnectionStrings
+    ["P2ConnectionString"].ToString();
+
+            SqlConnection conn = new SqlConnection(strConn);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Volunteer", conn);
+
+            SqlDataAdapter daElders = new SqlDataAdapter(cmd);
+
+            conn.Open();
+            daElders.Fill(result, "VolunteerDetails");
+
+            conn.Close();
+
+            return 0;
+        }
+
+        public int update()
+        {
+            //Read connection string "NPBookConnectionString" from web.config file
+            string strConn = ConfigurationManager.ConnectionStrings["P2ConnectionString"].ToString();
+
+            //Instantiate a SqlCommand object with the Connection String read
+            SqlConnection conn = new SqlConnection(strConn);
+
+            SqlCommand cmd = new SqlCommand("UPDATE Volunteer SET CoordinatorID = @CoordinatorID WHERE VolunteerID = @selectedVolunteerID", conn);
+
+            if (coordinatorID != null)
+            {
+                cmd.Parameters.AddWithValue("@CoordinatorID", coordinatorID);
+            }
+            else
+                cmd.Parameters.AddWithValue("@CoordinatorID", DBNull.Value);
+
+            cmd.Parameters.AddWithValue("@selectedVolunteerID", VolunteerID);
+
+            conn.Open();
+
+            int count = cmd.ExecuteNonQuery();
+
+            conn.Close();
+
+            if (count > 0)
+                return 0;
+            else
+                return -2;
         }
         
     }

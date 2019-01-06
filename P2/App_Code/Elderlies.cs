@@ -138,6 +138,8 @@ namespace P2
                     Prepare = table.Rows[0]["Prepare"].ToString();
                 if (!DBNull.Value.Equals(table.Rows[0]["VolunteerID"]))
                     volunteer = table.Rows[0]["VolunteerID"].ToString();
+                if (DBNull.Value.Equals(table.Rows[0]["VolunteerID"]))
+                    volunteer = table.Rows[0]["VolunteerID"].ToString();
 
                 return 0;
             }
@@ -274,5 +276,6 @@ namespace P2
             else
                 return -2;
         }
+
     }
 }

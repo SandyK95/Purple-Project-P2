@@ -71,8 +71,11 @@
   <ItemGroup>
     <Content Include="adminMenu.ascx" />
     <Content Include="Admin\AdminMain.aspx" />
-    <Content Include="Admin\RequestDelete.aspx" />
-    <Content Include="Admin\Requests.aspx" />
+    <Content Include="Admin\DeleteCoordinator.aspx" />
+    <Content Include="Admin\DeleteVendor.aspx" />
+    <Content Include="Admin\VolunteerDetails.aspx" />
+    <Content Include="Admin\ViewCoordinatorVendors.aspx" />
+    <Content Include="Admin\VolunteerUpdate.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -140,19 +143,40 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin\RequestDelete.aspx.cs">
-      <DependentUpon>RequestDelete.aspx</DependentUpon>
+    <Compile Include="Admin\DeleteCoordinator.aspx.cs">
+      <DependentUpon>DeleteCoordinator.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\RequestDelete.aspx.designer.cs">
-      <DependentUpon>RequestDelete.aspx</DependentUpon>
+    <Compile Include="Admin\DeleteCoordinator.aspx.designer.cs">
+      <DependentUpon>DeleteCoordinator.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Requests.aspx.cs">
-      <DependentUpon>Requests.aspx</DependentUpon>
+    <Compile Include="Admin\DeleteVendor.aspx.cs">
+      <DependentUpon>DeleteVendor.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\Requests.aspx.designer.cs">
-      <DependentUpon>Requests.aspx</DependentUpon>
+    <Compile Include="Admin\DeleteVendor.aspx.designer.cs">
+      <DependentUpon>DeleteVendor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\VolunteerDetails.aspx.cs">
+      <DependentUpon>VolunteerDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\VolunteerDetails.aspx.designer.cs">
+      <DependentUpon>VolunteerDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ViewCoordinatorVendors.aspx.cs">
+      <DependentUpon>ViewCoordinatorVendors.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ViewCoordinatorVendors.aspx.designer.cs">
+      <DependentUpon>ViewCoordinatorVendors.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\VolunteerUpdate.aspx.cs">
+      <DependentUpon>VolunteerUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\VolunteerUpdate.aspx.designer.cs">
+      <DependentUpon>VolunteerUpdate.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Code\Admininstrator.cs" />
     <Compile Include="adminMenu.ascx.cs">
