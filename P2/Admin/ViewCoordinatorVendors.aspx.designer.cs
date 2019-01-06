@@ -13,12 +13,21 @@ namespace P2.Admin {
     public partial class Requests {
         
         /// <summary>
-        /// gv_RequestLists_Volunteer control.
+        /// gv_Coordinators control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gv_RequestLists_Volunteer;
+        protected global::System.Web.UI.WebControls.GridView gv_Coordinators;
+        
+        /// <summary>
+        /// gv_Vendors control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gv_Vendors;
     }
 }

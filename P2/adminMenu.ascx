@@ -14,10 +14,10 @@
                 <!-- Links that are aligned to the left, mr-autoL right margin auto-adjuusted -->
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="//">Requests</a>
+                        <a class="nav-link" href="ViewCoordinatorVendors.aspx">View Coordinators & Vendors</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="//">B</a>
+                        <a class="nav-link" href="VolunteerDetails.aspx">Update the Volunteers</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="//">C</a>
@@ -33,7 +33,7 @@
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                     <!-- A Web Form Control button for logging out user -->
-                        <asp:Button ID="btn_LogOut" runat="server" Text="LogOut" OnClick="btn_LogOut_Click" />
+                        <asp:Button ID="btn_LogOut" runat="server" Text="Log Out" CssClass="btn btn-link nav-link" CausesValidation="False" OnClick="btn_LogOut_Click" />
 
                     </li>
                 </ul>
