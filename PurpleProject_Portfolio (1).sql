@@ -208,11 +208,6 @@ INSERT [dbo].[Location]([LocationID],[NameLocation],[ElderID],[VolunteerID]) VAL
 INSERT [dbo].[Location]([LocationID],[NameLocation],[ElderID],[VolunteerID]) VALUES (4, 'Yew Tee',4,3)
 SET IDENTITY_INSERT [dbo].[Location] OFF
 
-SET IDENTITY_INSERT [dbo].[Remark] ON
-INSERT [dbo].[Remark]([RemarkID],[FoodRemark] VALUES (1,',1,1)
-INSERT [dbo].[Remark]([NameLocation],[ElderID],[VolunteerID]) VALUES (2,'Jurong West',2,2)
-SET IDENTITY_INSERT [dbo].[Location] OFF
-
 
 SELECT * FROM Vendor
 SELECT * FROM Volunteer
@@ -239,3 +234,5 @@ Order by L.NameLocation
 select COUNT(*), Dietary from Elder group by Dietary
 
 select count (*), NameLocation from Location group by NameLocation
+
+select * from Remark

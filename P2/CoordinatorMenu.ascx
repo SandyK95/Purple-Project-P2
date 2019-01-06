@@ -24,7 +24,7 @@
                         <a class="nav-link" href="ElderDetails.aspx">View Elder Details</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="//">Remarks</a>
+                        <a class="nav-link" href="Remarks.aspx">Remarks</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="ViewRequest.aspx">D</a>

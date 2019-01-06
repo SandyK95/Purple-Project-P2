@@ -4,9 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+
 using System.Data;
-using System.Configuration;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace P2.Coordinator
 {
@@ -14,28 +15,44 @@ namespace P2.Coordinator
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!Page.IsPostBack)
+            if (!Page.IsPostBack)
             {
+                displayFooddetails();
+            }
+        }
+            private void displayFooddetails()
+            {
+               
+                string strConn = ConfigurationManager.ConnectionStrings
+                    ["P2ConnectionString"].ToString();
+               
+                SqlConnection conn = new SqlConnection(strConn);         
+                SqlCommand cmd = new SqlCommand("SELECT * FROM Elder ORDER BY ElderID ", conn);
+                SqlDataAdapter daDetails = new SqlDataAdapter(cmd);        
                 DataSet result = new DataSet();
-                string strConn = ConfigurationManager.ConnectionStrings["P2ConnectionString"].ToString();
-
-                SqlConnection conn = new SqlConnection(strConn);
-
-                SqlCommand cmd = new SqlCommand
-                    ("SELECT * FROM Feedback", conn);
-
-                SqlDataAdapter daRemarks = new SqlDataAdapter(cmd);
-
                 conn.Open();
+                daDetails.Fill(result, "fooddetails");            
+                conn.Close();  
+                GV_ShowDetails.DataSource = result.Tables["fooddetails"];
+                GV_ShowDetails.DataBind();
+            }
 
-                daRemarks.Fill(result, "Remarks");
+        protected void Submit_ID_Click(object sender, EventArgs e)
+        {
+            if (Page.IsValid)
+            {
+                
+                Elderlies objElder = new Elderlies();
+                objElder.name = txt_Remark.Text;
+                int id = objStaff.add();
+                Response.Redirect("ConfirmAddStaff.aspx?name=" + txtName.Text + "&id=" + id.ToString());
 
-                conn.Close();
+        
 
-                gv_Remarks.DataSource = result.Tables["Remarks"];
-                gv_Remarks.DataBind();
 
             }
         }
+
     }
+}
 }

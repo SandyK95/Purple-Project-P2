@@ -13,12 +13,30 @@ namespace P2.Coordinator {
     public partial class Remarks {
         
         /// <summary>
-        /// gv_Remarks control.
+        /// GV_ShowDetails control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gv_Remarks;
+        protected global::System.Web.UI.WebControls.GridView GV_ShowDetails;
+        
+        /// <summary>
+        /// txt_Remark control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_Remark;
+        
+        /// <summary>
+        /// Submit_ID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Submit_ID;
     }
 }

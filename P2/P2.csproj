@@ -136,6 +136,7 @@
     <Content Include="Vendor\VendorMain.aspx" />
     <Content Include="Vendor\View_DietaryNeeds.aspx" />
     <Content Include="VolunteerMenu.ascx" />
+    <Content Include="Volunteer\Remark_Volunteer.aspx" />
     <Content Include="Volunteer\UpdateStatus.aspx" />
     <Content Include="Volunteer\ViewElder.aspx" />
     <Content Include="Volunteer\VolunteerMain.aspx" />
@@ -339,6 +340,13 @@
     </Compile>
     <Compile Include="VolunteerTemplate.Master.designer.cs">
       <DependentUpon>VolunteerTemplate.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Volunteer\Remark_Volunteer.aspx.cs">
+      <DependentUpon>Remark_Volunteer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Volunteer\Remark_Volunteer.aspx.designer.cs">
+      <DependentUpon>Remark_Volunteer.aspx</DependentUpon>
     </Compile>
     <Compile Include="Volunteer\UpdateStatus.aspx.cs">
       <DependentUpon>UpdateStatus.aspx</DependentUpon>
