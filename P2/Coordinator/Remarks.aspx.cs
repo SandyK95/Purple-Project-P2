@@ -15,44 +15,28 @@ namespace P2.Coordinator
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!Page.IsPostBack)
+            DataSet result = new DataSet();
+            Elderlies objElder = new Elderlies();
+
+            int errorCode = objElder.displayRemarks(ref result);
+            if (errorCode == 0)
             {
-                displayFooddetails();
-            }
-        }
-            private void displayFooddetails()
-            {
-               
-                string strConn = ConfigurationManager.ConnectionStrings
-                    ["P2ConnectionString"].ToString();
-               
-                SqlConnection conn = new SqlConnection(strConn);         
-                SqlCommand cmd = new SqlCommand("SELECT * FROM Elder ORDER BY ElderID ", conn);
-                SqlDataAdapter daDetails = new SqlDataAdapter(cmd);        
-                DataSet result = new DataSet();
-                conn.Open();
-                daDetails.Fill(result, "fooddetails");            
-                conn.Close();  
-                GV_ShowDetails.DataSource = result.Tables["fooddetails"];
+                GV_ShowDetails.DataSource = result.Tables["Remarks"];
                 GV_ShowDetails.DataBind();
             }
 
+        }
         protected void Submit_ID_Click(object sender, EventArgs e)
         {
             if (Page.IsValid)
             {
                 
                 Elderlies objElder = new Elderlies();
-                objElder.name = txt_Remark.Text;
-                int id = objStaff.add();
-                Response.Redirect("ConfirmAddStaff.aspx?name=" + txtName.Text + "&id=" + id.ToString());
-
-        
-
-
+                objElder.FullName = txt_Remark.Text;
+                //int id = objStaff.add();
+                //Response.Redirect("ConfirmAddStaff.aspx?name=" + txtName.Text + "&id=" + id.ToString());
             }
         }
 
     }
-}
 }
