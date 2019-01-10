@@ -15,42 +15,28 @@ namespace P2.Coordinator
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //if (!Page.IsPostBack)
-            //{
-            //    displayFooddetails();
-            //}
-
             DataSet result = new DataSet();
-            Elderlies objelderlies = new Elderlies();
+            Elderlies objElder = new Elderlies();
 
-            //objelderlies.EmailAdd = Session["LoginID"].ToString();
-            //objelderlies.getPass();
-            //objelderlies.getId();
-
-            int errorCode = objelderlies.displayRemarks(ref result);
+            int errorCode = objElder.displayRemarks(ref result);
             if (errorCode == 0)
             {
-                GV_ShowDetails.DataSource = result.Tables["ElderDetails"];
+                GV_ShowDetails.DataSource = result.Tables["Remarks"];
                 GV_ShowDetails.DataBind();
             }
-        }
-        
 
+        }
         protected void Submit_ID_Click(object sender, EventArgs e)
         {
-
-
-            Remarks objremarks = new Remarks();
-            //
-           
-         
-
- 
-
-            
+            if (Page.IsValid)
+            {
+                
+                Elderlies objElder = new Elderlies();
+                objElder.FullName = txt_Remark.Text;
+                //int id = objStaff.add();
+                //Response.Redirect("ConfirmAddStaff.aspx?name=" + txtName.Text + "&id=" + id.ToString());
+            }
         }
 
     }
-
-        
 }

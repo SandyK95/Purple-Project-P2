@@ -14,6 +14,8 @@ namespace P2.Vendor
 {
     public partial class View_DietaryNeeds : System.Web.UI.Page
     {
+        Elderlies objElder = new Elderlies();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
@@ -21,7 +23,6 @@ namespace P2.Vendor
                 DisplayElderList();
                 displayData();
             }
-         
 
         }
 
@@ -36,7 +37,7 @@ namespace P2.Vendor
             //Instantiate a Sqlcommand object,supply it with the SQL statement
             //SELECT that operates against the database , and the connection object
             //used for connecting to the database
-            SqlCommand cmd = new SqlCommand("SELECT count(*),Dietary from elder group by Dietary", conn);
+            SqlCommand cmd = new SqlCommand("SELECT count(*) as Count,Dietary from elder group by Dietary", conn);
 
             //Institiate A dataadapter Object and pass the sqlCommand Object
             //Create as parameter
@@ -102,6 +103,37 @@ namespace P2.Vendor
             gv_Elders.DataBind();
         }
 
-        
+        protected void gv_ShowData_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "Select")
+            {
+                int count = Convert.ToInt32(e.CommandArgument);
+                GridViewRow selectedRow = gv_ShowData.Rows[count];
+
+                //lblTest.Text = Convert.ToString(selectedRow);
+                for (int i = 0; i < gv_ShowData.Rows.Count; i++)
+                {
+                    if (gv_ShowData.SelectedIndex == i)
+                    {
+                        string value = gv_ShowData.Rows[i].Cells[2].Text;
+                        objElder.Dietary = value;
+
+                        int errorCode = objElder.updateStatus();
+                        if (errorCode == 0)
+                        {
+                            lblTest.Text = "Success";
+                        }
+                        else if (errorCode == -2)
+                        {
+                            lblTest.Text = "Unable to save record";
+                            lblTest.ForeColor = System.Drawing.Color.Red;
+                        }
+                    }
+                }
+
+                //to get string from gridview
+
+            }
+        }
     }
 }

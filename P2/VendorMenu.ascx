@@ -18,16 +18,16 @@
                         <a class="nav-link" href="View_DietaryNeeds.aspx">View Elder Dietary </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="CreateStudent.aspx">A</a>
+                        <a class="nav-link" href="//">A</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="CreateSkill.aspx">B</a>
+                        <a class="nav-link" href="//">B</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="StudentImage.aspx">C</a>
+                        <a class="nav-link" href="//">C</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="ViewRequest.aspx">D</a>
+                        <a class="nav-link" href="//">D</a>
                     </li>
                 </ul>
                 <!-- Links that are alighed to the right, ml-auto: left margin auto-adjusted -->
