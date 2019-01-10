@@ -1,6 +1,10 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="HomePageMenu.ascx.cs" Inherits="P2.Menu" %>
 <!-- A grey navbar that expands horizontally at medium device -->
-            <nav class="navbar navbar-expand-md bg-light navbar-light">
+
+
+            <%%>
+
+<nav class="navbar navbar-expand-md bg-light navbar-light">
                 <!-- The brand (or icon) of the navbar -->
                 <a class="navbar-brand" href="Main.aspx"
                     style="font-size: 32px; font-weight:bold; color:#3399FF;">
@@ -18,17 +22,7 @@
                     <!-- Links that are aligned to the left,
                         mr-autoL right margin auto-adjuusted -->
                     <ul class="navbar-nav mr-auto">
-                        <!--<li class="nav-item">
-                            <a class="nav-link" href="../Home/Message.aspx">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../Home/ViewStudent.aspx">About US</a>
-                        </li>
-                       
-                        <li class="nav-item">
-                            <a class="nav-link" href="../Home/ViewProjects.aspx">Contact Us</a>
-                        </li>-->
-
+           
                         <li class="nav-item">
                             <a class="nav-link" href="../Home/HomePageMain.aspx">Home</a>
                         </li>
@@ -49,4 +43,6 @@
                         </li>
                     </ul>
                 </div>
-            </nav>
+            </nav>--
+
+<%%>
