@@ -128,7 +128,6 @@
     <Content Include="HomePageTemplate.Master" />
     <Content Include="CoordinatorTemplate.Master" />
     <Content Include="AdminTemplate.Master" />
-    <None Include="Properties\PublishProfiles\purpleproject - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />
@@ -144,7 +143,6 @@
     <Content Include="Scripts\umd\popper.min.js" />
     <Content Include="VendorMenu.ascx" />
     <Content Include="Vendor\Edit_DietaryNeeds.aspx" />
-    <Content Include="Vendor\PreparationStatus.aspx" />
     <Content Include="Vendor\VendorMain.aspx" />
     <Content Include="Vendor\View_DietaryNeeds.aspx" />
     <Content Include="VolunteerMenu.ascx" />
@@ -152,9 +150,7 @@
     <Content Include="Volunteer\UpdateStatus.aspx" />
     <Content Include="Volunteer\ViewElder.aspx" />
     <Content Include="Volunteer\VolunteerMain.aspx" />
-    <Content Include="Web.config">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin\DeleteCoordinator.aspx.cs">
@@ -348,13 +344,6 @@
     </Compile>
     <Compile Include="Vendor\Edit_DietaryNeeds.aspx.designer.cs">
       <DependentUpon>Edit_DietaryNeeds.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Vendor\PreparationStatus.aspx.cs">
-      <DependentUpon>PreparationStatus.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Vendor\PreparationStatus.aspx.designer.cs">
-      <DependentUpon>PreparationStatus.aspx</DependentUpon>
     </Compile>
     <Compile Include="Vendor\VendorMain.aspx.cs">
       <DependentUpon>VendorMain.aspx</DependentUpon>
