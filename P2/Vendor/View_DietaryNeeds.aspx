@@ -42,8 +42,11 @@
     <br />
     <div class="row">
         <div class="col-sm-12">
-            <asp:GridView ID="gv_ShowData" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
+            <asp:GridView ID="gv_ShowData" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" OnRowCommand="gv_ShowData_RowCommand">
                 <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+                <Columns>
+                    <asp:ButtonField ButtonType="Button" Text="Update" CommandName="Select"/>
+                </Columns>
                 <EditRowStyle BackColor="#999999" />
                 <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
                 <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
@@ -56,6 +59,7 @@
                 <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
             </asp:GridView>
             <br />
+            <asp:Label runat="server" ID="lblTest">tt</asp:Label>
         </div>
     </div>
     <br />

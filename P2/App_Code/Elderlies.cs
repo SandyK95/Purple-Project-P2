@@ -296,5 +296,30 @@ namespace P2
                 return -2;
         }
 
+        public int updateStatus()
+        {
+            string strConn = ConfigurationManager.ConnectionStrings
+["P2ConnectionString"].ToString();
+
+            SqlConnection conn = new SqlConnection(strConn);
+
+            SqlCommand cmd = new SqlCommand("UPDATE Elder SET Prepare = 'Completed' WHERE Dietary = @selectedDietary AND Prepare = 'Still Progressing'", conn);
+
+            cmd.Parameters.AddWithValue("@selectedDietary", Dietary);
+
+            conn.Open();
+
+            int count = cmd.ExecuteNonQuery();
+            conn.Close();
+
+            if (count > 0)
+            {
+                return 0;
+            }
+
+            else
+                return -2;
+        }
+
     }
 }
