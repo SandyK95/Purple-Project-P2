@@ -39,6 +39,9 @@
             padding-right: 15px;
         }
     </style>
+
+    <link rel="stylesheet" type="text/css" href="Css/StyleSheet.css" />
+
 </head>
 <body>
     <form id="form1" runat="server">
@@ -70,5 +73,29 @@
             </div>
         </div>
     </form>
+    <%--<header>
+        <div class="main">
+        <div class="logo">
+            
+            <img src="Images/Purple Project 4.png" />"
+        </div>
+        <ul>
+            <li class="active"><a href=""> HOME </a></li>
+            <li><a href=""> ABOUT </a></li>
+            <li><a href=""> CONTACT US </a></li>
+
+        </ul>
+      </div>
+        <div class="title">
+            <h1> Purple Project </h1>
+            <p> INSERT SLOGAN </p>
+        </div>
+        <div class="button">
+            <a href="#" class="btn"> Volunteer Login </a>
+            <a href="#" class="btn"> Admin Login </a>
+            <a href="#" class="btn"> Vendor Login </a>
+        </div>
+    </header>--%>
+     
 </body>
 </html>

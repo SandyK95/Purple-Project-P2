@@ -61,24 +61,40 @@ namespace P2
             return 0;
         }
 
-        public int displayElderListStatusNoWithRemarks(ref DataSet result)
+        public int displayRemarks(ref DataSet result)
         {
-            string strConn = ConfigurationManager.ConnectionStrings
-    ["P2ConnectionString"].ToString();
+            //        string strConn = ConfigurationManager.ConnectionStrings
+            //["P2ConnectionString"].ToString();
 
+            //        SqlConnection conn = new SqlConnection(strConn);
+
+            //        SqlCommand cmd = new SqlCommand("SELECT E.SerialNo, E.Name, E.ElderAddress, E.ContactNo, E.Dietary, " +
+            //            "E.HealthCondition,F.Feedback FROM Elder E INNER JOIN Feedback F ON E.ElderID = F.ElderID WHERE Status = 'N'", conn);
+
+            //        SqlDataAdapter daElders = new SqlDataAdapter(cmd);
+
+            //        conn.Open();
+            //        daElders.Fill(result, "ElderDetails3");
+
+            //        conn.Close();
+
+            //        return 0;
+
+            string strConn = ConfigurationManager.ConnectionStrings["P2ConnectionString"].ToString();
             SqlConnection conn = new SqlConnection(strConn);
 
-            SqlCommand cmd = new SqlCommand("SELECT E.SerialNo, E.Name, E.ElderAddress, E.ContactNo, E.Dietary, " +
-                "E.HealthCondition,F.Feedback FROM Elder E INNER JOIN Feedback F ON E.ElderID = F.ElderID WHERE Status = 'N'", conn);
+            SqlCommand cmd = new SqlCommand("Select * from Remark ", conn);
 
-            SqlDataAdapter daElders = new SqlDataAdapter(cmd);
+            SqlDataAdapter daRemarks = new SqlDataAdapter(cmd);
 
             conn.Open();
-            daElders.Fill(result, "ElderDetails3");
+            daRemarks.Fill(result, "Remarks");
 
             conn.Close();
 
             return 0;
+
+
         }
 
         public int getDetailsOnly(ref DataSet result)

@@ -15,44 +15,42 @@ namespace P2.Coordinator
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!Page.IsPostBack)
+            //if (!Page.IsPostBack)
+            //{
+            //    displayFooddetails();
+            //}
+
+            DataSet result = new DataSet();
+            Elderlies objelderlies = new Elderlies();
+
+            //objelderlies.EmailAdd = Session["LoginID"].ToString();
+            //objelderlies.getPass();
+            //objelderlies.getId();
+
+            int errorCode = objelderlies.displayRemarks(ref result);
+            if (errorCode == 0)
             {
-                displayFooddetails();
-            }
-        }
-            private void displayFooddetails()
-            {
-               
-                string strConn = ConfigurationManager.ConnectionStrings
-                    ["P2ConnectionString"].ToString();
-               
-                SqlConnection conn = new SqlConnection(strConn);         
-                SqlCommand cmd = new SqlCommand("SELECT * FROM Elder ORDER BY ElderID ", conn);
-                SqlDataAdapter daDetails = new SqlDataAdapter(cmd);        
-                DataSet result = new DataSet();
-                conn.Open();
-                daDetails.Fill(result, "fooddetails");            
-                conn.Close();  
-                GV_ShowDetails.DataSource = result.Tables["fooddetails"];
+                GV_ShowDetails.DataSource = result.Tables["ElderDetails"];
                 GV_ShowDetails.DataBind();
             }
+        }
+        
 
         protected void Submit_ID_Click(object sender, EventArgs e)
         {
-            if (Page.IsValid)
-            {
-                
-                Elderlies objElder = new Elderlies();
-                objElder.name = txt_Remark.Text;
-                int id = objStaff.add();
-                Response.Redirect("ConfirmAddStaff.aspx?name=" + txtName.Text + "&id=" + id.ToString());
-
-        
 
 
-            }
+            Remarks objremarks = new Remarks();
+            //
+           
+         
+
+ 
+
+            
         }
 
     }
-}
+
+        
 }

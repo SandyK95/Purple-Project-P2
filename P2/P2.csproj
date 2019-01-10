@@ -91,10 +91,17 @@
     <Content Include="Coordinator\Remarks.aspx" />
     <Content Include="Coordinator\ViewVolunteers.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="HomeMainPage3.html" />
     <Content Include="Home\AboutUs.aspx" />
     <Content Include="Home\ContactUs.aspx" />
     <Content Include="Home\HomePageMain.aspx" />
     <Content Include="HomePageMenu.ascx" />
+    <Content Include="Images\bgimg.jpg" />
+    <Content Include="Images\bgimg1.jpg" />
+    <Content Include="Images\bgimg2.jpg" />
+    <Content Include="Images\bgimg3.jpg" />
+    <Content Include="Images\Purple Project 1.PNG" />
+    <Content Include="Images\Purple Project 4.png" />
     <Content Include="Login.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -203,6 +210,7 @@
     <Compile Include="Admin\AdminMain.aspx.designer.cs">
       <DependentUpon>AdminMain.aspx</DependentUpon>
     </Compile>
+    <Content Include="App_Code\Remarks.cs" />
     <Compile Include="CoordinatorMenu.ascx.cs">
       <DependentUpon>CoordinatorMenu.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
