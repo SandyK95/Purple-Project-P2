@@ -16,11 +16,11 @@
 
     <div class="row">
         <div class="col-sm-12">
-            <asp:GridView ID="gv_Elders" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None">
+            <asp:GridView ID="gv_Elders" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Width="1051px">
                 <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                     <Columns>
-                        <asp:HyperLinkField DataTextField="ElderID" HeaderText="ElderID" DataNavigateUrlFields="ElderID" DataNavigateUrlFormatString="Edit_DietaryNeeds.aspx?ElderID={0} " />
-                        <asp:BoundField DataField="SerialNo" HeaderText="SerialNo" />
+                        <asp:HyperLinkField DataTextField="ElderID" HeaderText="ID" DataNavigateUrlFields="ElderID" DataNavigateUrlFormatString="Edit_DietaryNeeds.aspx?ElderID={0} " />
+                        <asp:BoundField DataField="SerialNo" HeaderText="Serial No" />
                         <asp:BoundField DataField="Dietary" HeaderText="Dietary Needs" />
                         <asp:BoundField DataField="HealthCondition" HeaderText="Health Condition" />
                         <asp:BoundField DataField="Status" HeaderText="Status" />
@@ -59,7 +59,7 @@
                 <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
             </asp:GridView>
             <br />
-            <asp:Label runat="server" ID="lblTest">tt</asp:Label>
+            <asp:Label runat="server" ID="lblTest" Visible="False"></asp:Label>
         </div>
     </div>
     <br />

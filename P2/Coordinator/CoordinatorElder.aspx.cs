@@ -22,7 +22,7 @@ namespace P2.Coordinator
                 gvElderY.DataBind();
             }
 
-            int errorCode2 = objElder.displayElderListStatusP(ref result);
+            int errorCode2 = objElder.displayElderListStatusNoWithRemarks(ref result);
             if (errorCode2 == 0)
             {
                 gvElderN.DataSource = result.Tables["ElderDetails3"];
