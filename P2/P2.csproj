@@ -90,6 +90,8 @@
     <Content Include="Coordinator\ElderUpdate.aspx" />
     <Content Include="Coordinator\Remarks.aspx" />
     <Content Include="Coordinator\ViewVolunteers.aspx" />
+    <Content Include="css\login.css" />
+    <Content Include="css\StyleSheet.css" />
     <Content Include="Global.asax" />
     <Content Include="HomeMainPage3.html" />
     <Content Include="Home\AboutUs.aspx" />

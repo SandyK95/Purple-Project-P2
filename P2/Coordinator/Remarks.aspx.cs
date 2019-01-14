@@ -15,16 +15,16 @@ namespace P2.Coordinator
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Test
-            DataSet result = new DataSet();
-            Elderlies objElder = new Elderlies();
+            ////Test
+            //DataSet result = new DataSet();
+            //Elderlies objElder = new Elderlies();
 
-            int errorCode = objElder.displayRemarks(ref result);
-            if (errorCode == 0)
-            {
-                GV_ShowDetails.DataSource = result.Tables["Remarks"];
-                GV_ShowDetails.DataBind();
-            }
+            //int errorCode = objElder.displayRemarks(ref result);
+            //if (errorCode == 0)
+            //{
+            //    gv.DataSource = result.Tables["Remarks"];
+            //    GV_ShowDetails.DataBind();
+            //}
 
         }
         protected void Submit_ID_Click(object sender, EventArgs e)
@@ -32,10 +32,10 @@ namespace P2.Coordinator
             if (Page.IsValid)
             {
                 
-                Elderlies objElder = new Elderlies();
-                objElder.FullName = txt_Remark.Text;
-                //int id = objStaff.add();
-                //Response.Redirect("ConfirmAddStaff.aspx?name=" + txtName.Text + "&id=" + id.ToString());
+                //Elderlies objElder = new Elderlies();
+                //objElder.FullName = txt_Remark.Text;
+                ////int id = objStaff.add();
+                ////Response.Redirect("ConfirmAddStaff.aspx?name=" + txtName.Text + "&id=" + id.ToString());
             }
         }
 

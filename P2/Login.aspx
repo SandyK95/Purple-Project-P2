@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Login</title>
-    <style type="text/css">
+   <%-- --<style type="text/css">
         
         .auto-style1 {
             height: 45px;
@@ -36,10 +36,11 @@
             font-size: x-large;
             background-color: #CCCCFF;
         }
-    </style>
+    </style>----%>
+     <link href="css/login.css" rel="stylesheet" />
 </head>
 <body>
-    <form id="form1" runat="server" style="font-family: Arial, Helvetica, sans-serif">
+   <%-- <form id="form1" runat="server" style="font-family: Arial, Helvetica, sans-serif">
     <div>
         <table style="border: 0px solid #000000; margin: auto; width: auto">
             <tr>
@@ -68,6 +69,18 @@
             </tr>
         </table>
     </div>
+    </form>--%>
+
+    <form class="box" action="#" method="post" runat="server" >
+        <h1> Admin Login </h1>
+
+        <asp:TextBox ID="txtLoginID" runat="server"   CssClass="auto-style7" placeholder="Username"></asp:TextBox>
+         <asp:TextBox ID="txtPassword"   runat="server" TextMode="Password"  CssClass="auto-style4" placeholder="Password"></asp:TextBox>
+    
+         <asp:Button ID="btnLogin" runat="server" Text="Login" BackColor="#66CCFF" Font-Bold="True" ForeColor="White" Height="46px" Width="109px" OnClick="BtnLogin_Click" BorderColor="White" BorderWidth="1px" CssClass="auto-style4" />
+&nbsp;
+        <asp:Label ID="lblMessage" runat="server" ForeColor="Red" CssClass="auto-style4"></asp:Label>
+
     </form>
 </body>
 </html>
