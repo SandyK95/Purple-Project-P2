@@ -77,9 +77,9 @@
         <asp:TextBox ID="txtLoginID" runat="server"   CssClass="auto-style7" placeholder="Username"></asp:TextBox>
          <asp:TextBox ID="txtPassword"   runat="server" TextMode="Password"  CssClass="auto-style4" placeholder="Password"></asp:TextBox>
     
-         <asp:Button ID="btnLogin" runat="server" Text="Login" BackColor="#66CCFF" Font-Bold="True" ForeColor="White" Height="46px" Width="109px" OnClick="BtnLogin_Click" BorderColor="White" BorderWidth="1px" CssClass="auto-style4" />
+         <asp:Button ID="btnLogin" runat="server" Text="Login"   OnClick="BtnLogin_Click"  CssClass="auto-style4" />
 &nbsp;
-        <asp:Label ID="lblMessage" runat="server" ForeColor="Red" CssClass="auto-style4"></asp:Label>
+        <asp:Label ID="lblMessage" runat="server"  CssClass="auto-style5" type="submit"></asp:Label>
 
     </form>
 </body>

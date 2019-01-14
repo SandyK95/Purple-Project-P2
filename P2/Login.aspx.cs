@@ -20,52 +20,63 @@ namespace P2
             string loginID = txtLoginID.Text.ToLower(); //Textbox: txtLoginID
             string password = txtPassword.Text; //Textbox: txtPassword
 
-            Coordinators objCoordinator = new Coordinators();
-            objCoordinator.EmailAdd = loginID;
-            objCoordinator.Password = password;
-            string CerrorCode = objCoordinator.getLogin();
-
-            Volunteers objVolunteer = new Volunteers();
-            objVolunteer.EmailAddr = loginID;
-            objVolunteer.Password = password;
-            string VerrorCode = objVolunteer.getLogin();
-
-            Vendor1 objVendor = new Vendor1();
-            objVendor.EmailAdd = loginID;
-            objVendor.Password = password;
-            string ZerrorCode = objVendor.getLogin();
-
-            if (CerrorCode == "Coordinator")
-            {
-                Session["LoginID"] = loginID;
-                Session["LoggedInTime"] = DateTime.Now.ToString();
-                Response.Redirect("Coordinator/CoordinatorMain.aspx");
-            }
-
-            else if (VerrorCode == "Volunteer")
-            {
-                Session["LoginID"] = loginID;
-                Session["LoggedInTime"] = DateTime.Now.ToString();
-                Response.Redirect("Volunteer/VolunteerMain.aspx");
-            }
-
-            else if (ZerrorCode == "Vendor")
-            {
-                Session["LoginID"] = loginID;
-                Session["LoggedInTime"] = DateTime.Now.ToString();
-                Response.Redirect("Vendor/VendorMain.aspx");
-            }
-            else if (loginID == "bethesdacare_admin@org.com"&& password == "bethesdacare1234")
+            if(loginID == "bethesdacare_admin@org.com" && password == "bethesdacare1234")
             {
                 Response.Redirect("Admin/AdminMain.aspx");
             }
 
-
             else
             {
-                //Display error message
                 lblMessage.Text = "Invalid Login Credentials";
             }
+
+
+            //Coordinators objCoordinator = new Coordinators();
+            //objCoordinator.EmailAdd = loginID;
+            //objCoordinator.Password = password;
+            //string CerrorCode = objCoordinator.getLogin();
+
+            //Volunteers objVolunteer = new Volunteers();
+            //objVolunteer.EmailAddr = loginID;
+            //objVolunteer.Password = password;
+            //string VerrorCode = objVolunteer.getLogin();
+
+            //Vendor1 objVendor = new Vendor1();
+            //objVendor.EmailAdd = loginID;
+            //objVendor.Password = password;
+            //string ZerrorCode = objVendor.getLogin();
+
+            //if (CerrorCode == "Coordinator")
+            //{
+            //    Session["LoginID"] = loginID;
+            //    Session["LoggedInTime"] = DateTime.Now.ToString();
+            //    Response.Redirect("Coordinator/CoordinatorMain.aspx");
+            //}
+
+            //else if (VerrorCode == "Volunteer")
+            //{
+            //    Session["LoginID"] = loginID;
+            //    Session["LoggedInTime"] = DateTime.Now.ToString();
+            //    Response.Redirect("Volunteer/VolunteerMain.aspx");
+            //}
+
+            //else if (ZerrorCode == "Vendor")
+            //{
+            //    Session["LoginID"] = loginID;
+            //    Session["LoggedInTime"] = DateTime.Now.ToString();
+            //    Response.Redirect("Vendor/VendorMain.aspx");
+            //}
+            //else if (loginID == "bethesdacare_admin@org.com"&& password == "bethesdacare1234")
+            //{
+            //    Response.Redirect("Admin/AdminMain.aspx");
+            //}
+
+
+            //else
+            //{
+            //    //Display error message
+            //    lblMessage.Text = "Invalid Login Credentials";
+            //}
 
 
         }
