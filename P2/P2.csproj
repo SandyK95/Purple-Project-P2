@@ -105,6 +105,9 @@
     <Content Include="Images\Purple Project 1.PNG" />
     <Content Include="Images\Purple Project 4.png" />
     <Content Include="Login.aspx" />
+    <Content Include="LoginCoordinator.aspx" />
+    <Content Include="loginVendor.aspx" />
+    <Content Include="loginVolunteer.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -322,6 +325,27 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginCoordinator.aspx.cs">
+      <DependentUpon>LoginCoordinator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginCoordinator.aspx.designer.cs">
+      <DependentUpon>LoginCoordinator.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="loginVendor.aspx.cs">
+      <DependentUpon>loginVendor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="loginVendor.aspx.designer.cs">
+      <DependentUpon>loginVendor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="loginVolunteer.aspx.cs">
+      <DependentUpon>loginVolunteer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="loginVolunteer.aspx.designer.cs">
+      <DependentUpon>loginVolunteer.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="App_Code\Volunteers.cs" />
