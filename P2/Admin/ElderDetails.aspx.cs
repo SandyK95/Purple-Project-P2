@@ -82,7 +82,11 @@ namespace P2.Admin
             {
                 objElder.ElderID = lblId.Text;
                 int errorCode = objElder.delete();
-                Response.Redirect("ViewElderDetails.aspx");
+                if (errorCode == 0)
+                {
+                    ClientScript.RegisterStartupScript(this.GetType(),
+    "Success", "<script type='text/javascript'>alert('Success');window.location='ViewElderDetails.aspx';</script>'");
+                }
             }
         }
     }

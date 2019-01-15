@@ -354,15 +354,19 @@ namespace P2
 
             SqlConnection conn = new SqlConnection(strConn);
 
-            SqlCommand cmd1 = new SqlCommand("DELETE FROM Remark WHERE ElderID = @selectedElderID",conn);//delete
+            SqlCommand cmd1 = new SqlCommand("DELETE FROM Remark WHERE ElderID = @selectedElderID1",conn);//delete
+            cmd1.Parameters.AddWithValue("@selectedElderID1", ElderID);
 
-            SqlCommand cmd2 = new SqlCommand("DELETE FROM Location WHERE ElderID = @selectedElderID",conn);//Location delete
+            SqlCommand cmd2 = new SqlCommand("DELETE FROM Location WHERE ElderID = @selectedElderID2",conn);//Location delete
+            cmd2.Parameters.AddWithValue("@selectedElderID2", ElderID);
 
             SqlCommand cmd3 = new SqlCommand(
-                "DELETE FROM Feedback WHERE ElderID = @selectedElderID",conn);//FEEDBACK delete
+                "DELETE FROM Feedback WHERE ElderID = @selectedElderID3",conn);//FEEDBACK delete
+            cmd3.Parameters.AddWithValue("@selectedElderID3", ElderID);
 
             SqlCommand cmd4 = new SqlCommand(
-                "DELETE FROM Elder WHERE ElderID = @selectedElderID", conn);
+                "DELETE FROM Elder WHERE ElderID = @selectedElderID4", conn);
+            cmd4.Parameters.AddWithValue("@selectedElderID4", ElderID);
 
             conn.Open();
             cmd1.ExecuteNonQuery();
