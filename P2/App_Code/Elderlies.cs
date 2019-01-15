@@ -321,5 +321,59 @@ namespace P2
                 return -2;
         }
 
+        public int updateElderDetails()
+        {
+            string strConn = ConfigurationManager.ConnectionStrings
+["P2ConnectionString"].ToString();
+
+            SqlConnection conn = new SqlConnection(strConn);
+
+            SqlCommand cmd = new SqlCommand("UPDATE Elder SET Name=@name, ElderAddress=@address, " +
+                "ContactNo=@contactno, Dietary=@dietary, HealthCondition=@healthcondition WHERE ElderID = @selectedElderID", conn);
+
+            cmd.Parameters.AddWithValue("@name", FullName);
+            cmd.Parameters.AddWithValue("@address", Address);
+            cmd.Parameters.AddWithValue("@contactno", Contact);
+            cmd.Parameters.AddWithValue("@dietary", Dietary);
+            cmd.Parameters.AddWithValue("@healthcondition", HealthCondition);
+            cmd.Parameters.AddWithValue("selectedElderID", ElderID);
+
+            conn.Open();
+            int count = cmd.ExecuteNonQuery();
+            conn.Close();
+            if (count > 0)
+                return 0;
+            else
+                return -2;
+        }
+
+        public int delete()
+        {
+            string strConn = ConfigurationManager.ConnectionStrings
+["P2ConnectionString"].ToString();
+
+            SqlConnection conn = new SqlConnection(strConn);
+
+            SqlCommand cmd1 = new SqlCommand("DELETE FROM Remark WHERE ElderID = @selectedElderID",conn);//delete
+
+            SqlCommand cmd2 = new SqlCommand("DELETE FROM Location WHERE ElderID = @selectedElderID",conn);//Location delete
+
+            SqlCommand cmd3 = new SqlCommand(
+                "DELETE FROM Feedback WHERE ElderID = @selectedElderID",conn);//FEEDBACK delete
+
+            SqlCommand cmd4 = new SqlCommand(
+                "DELETE FROM Elder WHERE ElderID = @selectedElderID", conn);
+
+            conn.Open();
+            cmd1.ExecuteNonQuery();
+            cmd2.ExecuteNonQuery();
+            cmd3.ExecuteNonQuery();
+            cmd4.ExecuteNonQuery();
+
+            conn.Close();
+
+            return 0;
+        }
+
     }
 }

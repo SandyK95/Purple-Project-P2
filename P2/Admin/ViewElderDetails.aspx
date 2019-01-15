@@ -1,5 +1,18 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AdminTemplate.Master" AutoEventWireup="true" CodeBehind="ViewElderDetails.aspx.cs" Inherits="P2.Admin.ViewElderDetails" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style type="text/css">
+        .auto-style3 {
+            position: relative;
+            width: 100%;
+            min-height: 1px;
+            -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+            max-width: 100%;
+            text-align: left;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="row">
@@ -8,7 +21,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-12">
+        <div class="auto-style3">
 
             <asp:GridView ID="gv_Elder" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Width="541px">
                 <AlternatingRowStyle BackColor="White" />
