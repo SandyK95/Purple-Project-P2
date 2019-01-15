@@ -1,0 +1,152 @@
+﻿*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Century Gothic';
+}
+header
+{
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../Images/bgimg.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+/*Nav*/
+ul
+{
+    float: right;
+    list-style-type: none;
+    margin-top: 25px;
+}
+ul li
+{
+    display: inline-block;
+}
+ul li a 
+{
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    transition: 0.6s ease;
+}
+ul li a:hover
+{
+    background-color: #fff;
+    color: #000;
+}
+ul li.btn a 
+{
+    background-color: #fff;
+    color: #000;
+}
+.logo img
+{
+    float: left;
+    width: 150px;
+    height: auto;
+}
+.main
+{
+    max-width: 1200px;
+    margin: auto;
+} 
+/*About Us*/
+.team-section {
+    position: absolute;
+    overflow: hidden;
+    text-align: center;
+    padding: 6%;
+    margin: 0%;
+    transform: translate(15%, -90%);
+}
+.team-section h1
+{
+    text-transform: uppercase;
+    margin-bottom: 10px; /*Space between the border and h1*/
+    color: #fff;
+    font-size: 30px;
+}
+.border 
+{
+    display: block;
+    margin: auto;
+    width: 160px;
+    height: 3px;
+    background: #4cff00;
+    margin-bottom: 30px;
+}
+.pics
+{
+    margin-bottom: 40px;
+}
+.pics a
+{
+    display: inline-block;
+    margin: 0 30px;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.pics a img
+{
+    width: 100%;
+    -webkit-filter: grayscale(100%);
+    transition: 0.4s all;
+}
+.pics a:hover > img
+{
+    -webkit-filter: none; /*Changes it back to color*/
+}
+.section {
+    position: relative;
+    width: 800px;
+    margin: auto;
+    font-size: 15px;
+    color: #fff;
+    text-align: justify;
+    height: 0;
+    overflow: hidden;
+}
+.section:target
+{
+    height: auto;
+}
+.name p
+{
+    margin: auto;
+}
+.name
+{
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+/*Footer
+.footer
+{
+    position: fixed;
+    left: 5%;
+    bottom: 0%;
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,0.5));
+    color: white;
+    text-align: center;
+    margin-right: 15px;
+    padding-right: 20px;
+}
+.footer p
+{
+    color: white;
+    font-size: 8px;
+    text-align: center;
+    position: relative;
+    transform: translate(-5%, 150%);
+}*/
+body
+{
+
+}
