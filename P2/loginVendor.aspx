@@ -29,10 +29,10 @@
       <%--  <div>
         </div>--%>
       <h1>Vendor Login</h1>
-        <asp:TextBox ID="TextBox1" runat="server" CssClass="auto-style7" placeholder="Username"></asp:TextBox>
-          <asp:TextBox ID="TextBox2" runat="server" CssClass="auto-style4" placeholder="Password"></asp:TextBox>
-        <asp:Button ID="Button1" runat="server" Text="Login" OnClick="BtnLogin_Click" CssClass="auto-style4" />
-        <asp:Label ID="Label1" runat="server" Text="" CssClass="auto-style5"></asp:Label>
+        <asp:TextBox ID="txtloginID" runat="server" CssClass="auto-style7" placeholder="Username"></asp:TextBox>
+          <asp:TextBox ID="txtPassword" runat="server" CssClass="auto-style4" placeholder="Password" TextMode="Password"></asp:TextBox>
+        <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="BtnLogin_Click" CssClass="auto-style4" />
+        <asp:Label ID="lblMessage" runat="server" Text="" CssClass="auto-style5"></asp:Label>
     </form>
 
         </header>
