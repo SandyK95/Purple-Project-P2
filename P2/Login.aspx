@@ -38,6 +38,8 @@
         }
     </style>----%>
      <link href="css/login.css" rel="stylesheet" />
+    <link href="css/StyleSheet2.css" rel="stylesheet" />
+
 </head>
 <body>
    <%-- <form id="form1" runat="server" style="font-family: Arial, Helvetica, sans-serif">
@@ -71,6 +73,20 @@
     </div>
     </form>--%>
 
+    <header>
+        <div class="main">
+            <div class="logo">
+                <img src="../Images/Purple Project 4.png" />
+            
+            </div>
+            <ul>
+                <li class="active"><a href="HomeMainPage3.html"> HOME </a></li>
+                <li><a href=""> ABOUT </a></li>
+                <li><a href=""> CONTACT US </a></li>
+
+            </ul>
+        </div>
+
     <form class="box" action="#" method="post" runat="server" >
         <h1> Admin Login </h1>
 
@@ -82,5 +98,7 @@
         <asp:Label ID="lblMessage" runat="server"  CssClass="auto-style5" type="submit"></asp:Label>
 
     </form>
+
+        </header>
 </body>
 </html>

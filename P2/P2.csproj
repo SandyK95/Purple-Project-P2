@@ -92,6 +92,7 @@
     <Content Include="Coordinator\ViewVolunteers.aspx" />
     <Content Include="css\login.css" />
     <Content Include="css\StyleSheet.css" />
+    <Content Include="css\StyleSheet2.css" />
     <Content Include="Global.asax" />
     <Content Include="HomeMainPage3.html" />
     <Content Include="Home\AboutUs.aspx" />
@@ -133,6 +134,7 @@
     <Content Include="HomePageTemplate.Master" />
     <Content Include="CoordinatorTemplate.Master" />
     <Content Include="AdminTemplate.Master" />
+    <None Include="Properties\PublishProfiles\purpleproject - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />

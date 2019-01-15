@@ -13,5 +13,10 @@ namespace P2
         {
 
         }
+
+        protected void BtnLogin_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
