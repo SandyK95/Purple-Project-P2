@@ -73,6 +73,8 @@
     <Content Include="Admin\AdminMain.aspx" />
     <Content Include="Admin\DeleteCoordinator.aspx" />
     <Content Include="Admin\DeleteVendor.aspx" />
+    <Content Include="Admin\ElderDetails.aspx" />
+    <Content Include="Admin\ViewElderDetails.aspx" />
     <Content Include="Admin\VolunteerDetails.aspx" />
     <Content Include="Admin\ViewCoordinatorVendors.aspx" />
     <Content Include="Admin\VolunteerUpdate.aspx" />
@@ -173,6 +175,20 @@
     </Compile>
     <Compile Include="Admin\DeleteVendor.aspx.designer.cs">
       <DependentUpon>DeleteVendor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ElderDetails.aspx.cs">
+      <DependentUpon>ElderDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ElderDetails.aspx.designer.cs">
+      <DependentUpon>ElderDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ViewElderDetails.aspx.cs">
+      <DependentUpon>ViewElderDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ViewElderDetails.aspx.designer.cs">
+      <DependentUpon>ViewElderDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\VolunteerDetails.aspx.cs">
       <DependentUpon>VolunteerDetails.aspx</DependentUpon>
