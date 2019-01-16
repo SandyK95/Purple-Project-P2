@@ -13,6 +13,8 @@ namespace P2
         protected void Page_Load(object sender, EventArgs e)
         {
 
+
+
         }
 
         protected void CoordLogout_Click(object sender, EventArgs e)
