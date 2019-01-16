@@ -30,11 +30,11 @@ namespace P2
             string CerrorCode = objCoordinator.getLogin();
 
 
-            if (CerrorCode == "Coordinator")
+            if (CerrorCode == "Vendor")
             {
                 Session["LoginID"] = loginID;
                 Session["LoggedInTime"] = DateTime.Now.ToString();
-                Response.Redirect("Coordinator/CoordinatorMain.aspx");
+                Response.Redirect("Vendor/VendorMain.aspx");
             }
 
             else
