@@ -16,7 +16,7 @@ ul
 {
     float: right;
     list-style-type: none;
-    margin-top: 25px;
+    margin-top: 80px;
 }
 ul li
 {
@@ -53,12 +53,12 @@ ul li.btn a
 } 
 /*About Us*/
 .team-section {
-    position: absolute;
+    /*position: absolute;
     overflow: hidden;
     text-align: center;
     padding: 6%;
-    margin: 0%;
-    transform: translate(15%, -90%);
+    /*margin: 0%;*/
+    transform: translate(15%, -90%);*/
 }
 .team-section h1
 {
