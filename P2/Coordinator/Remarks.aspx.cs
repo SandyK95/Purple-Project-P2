@@ -21,42 +21,18 @@ namespace P2.Coordinator
 
                 Coordinators objCoordinator = new Coordinators();
                 Elderlies objElder = new Elderlies();
+                Volunteers objVolunteers = new Volunteers();
                 Remarks objRemarks = new Remarks();
 
-                objCoordinator.EmailAdd = Session["LoginID"].ToString();
-
+                lblCoordinatorEmail.Text = Session["LoginID"].ToString();
+                objCoordinator.EmailAdd = lblCoordinatorEmail.Text;
                 objCoordinator.Password = objCoordinator.getPass();
-                objCoordinator.getId();
+                objCoordinator.getDetails();
 
-                lblCoordinatorEmail.Text = objCoordinator.EmailAdd;
                 lblCoordinatorName.Text = objCoordinator.Name;
-
-                ddlElders.SelectedValue = objElder.ElderID.ToString();
             }
 
 
-            ////Test
-            //DataSet result = new DataSet();
-            //Elderlies objElder = new Elderlies();
-
-            //int errorCode = objElder.displayRemarks(ref result);
-            //if (errorCode == 0)
-            //{
-            //    gv.DataSource = result.Tables["Remarks"];
-            //    GV_ShowDetails.DataBind();
-            //}
-
-        }
-        protected void Submit_ID_Click(object sender, EventArgs e)
-        {
-            if (Page.IsValid)
-            {
-                
-                //Elderlies objElder = new Elderlies();
-                //objElder.FullName = txt_Remark.Text;
-                ////int id = objStaff.add();
-                ////Response.Redirect("ConfirmAddStaff.aspx?name=" + txtName.Text + "&id=" + id.ToString());
-            }
         }
 
         private void displayElderDropDownList()
@@ -85,5 +61,20 @@ namespace P2.Coordinator
             ddlElders.Items.Insert(0, "--Select--");
         }
 
+        protected void btnSend_Click(object sender, EventArgs e)
+        {
+            if (Page.IsValid)
+            {
+                if (txtBox.Text.Length > 1)
+                {
+
+                }
+
+                else
+                {
+                    lblError.Text = "Message too short";
+                }
+            }
+        }
     }
 }

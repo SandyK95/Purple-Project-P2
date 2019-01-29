@@ -21,12 +21,6 @@
             </td>
         </tr>
         <tr>
-            <td>To:</td>
-            <td>
-                <asp:Label ID="lblVolunteer" runat="server"></asp:Label>
-            </td>
-        </tr>
-        <tr>
             <td>Elder:</td>
             <td>
                 <asp:DropDownList ID="ddlElders" runat="server">
@@ -36,7 +30,8 @@
         <tr>
             <td>Remarks:</td>
             <td>
-                <asp:TextBox ID="TextBox1" runat="server" Height="127px" Width="633px"></asp:TextBox>
+                <asp:TextBox ID="txtBox" runat="server" Height="127px" Width="633px"></asp:TextBox>
+            &nbsp;<asp:RequiredFieldValidator ID="rfvRemark" runat="server" ErrorMessage="Please required remarks" ForeColor="Red">*</asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
@@ -46,7 +41,7 @@
         <tr>
             <td>&nbsp;</td>
             <td class="auto-style3">
-                <asp:Button ID="btnSend" runat="server" Text="Confirm" />
+                <asp:Button ID="btnSend" runat="server" Text="Confirm" OnClick="btnSend_Click" />
             </td>
         </tr>
         <tr>

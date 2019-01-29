@@ -141,5 +141,41 @@ namespace P2
 
             return 0;
         }
+
+        public int getDetails()
+        {
+            string strConn = ConfigurationManager.ConnectionStrings
+["P2ConnectionString"].ToString();
+
+            SqlConnection conn = new SqlConnection(strConn);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Coordinator WHERE CoordinatorID = @selectedCoordinatorID", conn);
+
+            cmd.Parameters.AddWithValue("@selectedCoordinatorID", CoordinatorID);
+
+            SqlDataAdapter daCoordinator = new SqlDataAdapter(cmd);
+
+            DataSet result = new DataSet();
+
+            conn.Open();
+            daCoordinator.Fill(result, "CoordinatorDetails");
+            conn.Close();
+
+            if (result.Tables["CoordinatorDetails"].Rows.Count > 0)
+            {
+                DataTable table = result.Tables["CoordinatorDetails"];
+                if (!DBNull.Value.Equals(table.Rows[0]["EmailAddr"]))
+                    EmailAdd = (table.Rows[0]["EmailAddr"].ToString());
+                if (!DBNull.Value.Equals(table.Rows[0]["Name"]))
+                    Name = (table.Rows[0]["Name"].ToString());
+                if (!DBNull.Value.Equals(table.Rows[0]["Password"]))
+                    Password = (table.Rows[0]["Password"].ToString());
+
+                return 0;
+            }
+            else
+            {
+                return -2;
+            }
+        }
     }
 }

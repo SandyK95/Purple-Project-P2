@@ -31,15 +31,6 @@ namespace P2.Coordinator {
         protected global::System.Web.UI.WebControls.Label lblCoordinatorName;
         
         /// <summary>
-        /// lblVolunteer control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblVolunteer;
-        
-        /// <summary>
         /// ddlElders control.
         /// </summary>
         /// <remarks>
@@ -49,13 +40,22 @@ namespace P2.Coordinator {
         protected global::System.Web.UI.WebControls.DropDownList ddlElders;
         
         /// <summary>
-        /// TextBox1 control.
+        /// txtBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox txtBox;
+        
+        /// <summary>
+        /// rfvRemark control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvRemark;
         
         /// <summary>
         /// btnSend control.
