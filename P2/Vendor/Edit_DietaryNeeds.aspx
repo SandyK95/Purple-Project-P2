@@ -2,30 +2,30 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
         .auto-style3 {
-            width: 219px;
+            width: 217px;
         }
         .auto-style4 {
-            width: 219px;
+            width: 217px;
             height: 13px;
         }
         .auto-style5 {
             height: 13px;
         }
         .auto-style6 {
-            width: 219px;
+            width: 217px;
             height: 47px;
         }
         .auto-style7 {
             height: 47px;
         }
         .auto-style8 {
-            width: 219px;
+            width: 217px;
             height: 54px;
         }
         .auto-style9 {
             height: 54px;
         }
-    </style>
+        </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <table class="w-100">
@@ -48,19 +48,30 @@
         <tr>
             <td class="auto-style8">Preparation Status:</td>
             <td class="auto-style9">
-                <asp:DropDownList ID="dd_Prepare" runat="server">
+                <asp:DropDownList ID="dd_Prepare" runat="server" OnSelectedIndexChanged="dd_Prepare_SelectedIndexChanged">
                     <asp:ListItem>Completed</asp:ListItem>
                     <asp:ListItem>Still Progressing</asp:ListItem>
                 </asp:DropDownList>
             </td>
         </tr>
         <tr>
+            <td class="auto-style8">Timing:</td>
+            <td class="auto-style9">
+&nbsp;
+                &nbsp;<asp:DropDownList ID="DropDownList1" runat="server">
+                    <asp:ListItem Selected="True" Value="0">12:00Hrs - 13:00Hrs </asp:ListItem>
+                    <asp:ListItem>17:00Hrs - 18:00Hrs</asp:ListItem>
+                </asp:DropDownList>
+                <br />
+            </td>
+        </tr>
+        <tr>
             <td class="auto-style4">&nbsp;</td>
             <td class="auto-style5">
-                <asp:Button ID="btn_Submit" runat="server" OnClick="btn_Submit_Click" Text="Update" />
-&nbsp;
+                <asp:Button ID="btn_Submit" runat="server" OnClick="btn_Submit_Click" Text="Update" /> 
                 <asp:Button ID="btn_Back" runat="server" OnClick="btn_Back_Click" Text="Back" />
-&nbsp;<br />
+                <br />
+                <br />
                 <asp:Label ID="lblMessage" runat="server"></asp:Label>
             </td>
         </tr>

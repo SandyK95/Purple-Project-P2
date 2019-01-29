@@ -79,6 +79,10 @@ namespace P2.Vendor
         {
             Response.Redirect("View_DietaryNeeds.aspx");
         }
-        
+
+        protected void dd_Prepare_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
