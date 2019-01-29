@@ -11,7 +11,7 @@ namespace P2.App_Code
 {
     public class Remarks
     {
-        public int REMarkID { get; set; }
+        public int RemarkID { get; set; }
         public string remarkFood { get; set; }
 
         public int VendorID { get; set; }
@@ -21,11 +21,13 @@ namespace P2.App_Code
         {
             string strConn = ConfigurationManager.ConnectionStrings["P2ConnectionString"].ToString();
             SqlConnection conn = new SqlConnection(strConn);
-            SqlCommand cmd = new SqlCommand("Insert INTO Remark (FoodRemark) " +
+            SqlCommand cmd = new SqlCommand("Insert INTO Remark (FoodRemark, VendorID, ElderID) " +
                                             "OUTPUT INSERTED.RemarkID " +
-                                            "VALUES(@Foodremark)", conn);
+                                            "VALUES(@Foodremark, @VendorID, @ElderID)", conn);
 
             cmd.Parameters.AddWithValue("@Foodremark", remarkFood);
+            cmd.Parameters.AddWithValue("@VendorID", VendorID);
+            cmd.Parameters.AddWithValue("@ElderID", ElderID);
 
             conn.Open();
             int id = (int)cmd.ExecuteScalar();

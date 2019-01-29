@@ -28,7 +28,7 @@ namespace P2.Volunteer
                 ["P2ConnectionString"].ToString();
 
             SqlConnection conn = new SqlConnection(strConn);
-            SqlCommand cmd = new SqlCommand("SELECT * FROM Remark  ORDERBY RemarkID ", conn);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Remark  ORDER BY RemarkID ", conn);
             SqlDataAdapter daRemark = new SqlDataAdapter(cmd);
             DataSet result = new DataSet();
             conn.Open();

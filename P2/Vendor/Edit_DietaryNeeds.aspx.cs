@@ -74,7 +74,6 @@ namespace P2.Vendor
 
             }
 
-
         }
         protected void btn_Back_Click(object sender, EventArgs e)
         {

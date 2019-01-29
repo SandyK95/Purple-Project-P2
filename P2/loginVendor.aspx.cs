@@ -24,10 +24,10 @@ namespace P2
             string password = txtPassword.Text; //Textbox: txtPassword
 
 
-            Coordinators objCoordinator = new Coordinators();
-            objCoordinator.EmailAdd = loginID;
-            objCoordinator.Password = password;
-            string CerrorCode = objCoordinator.getLogin();
+            Vendor1 objVendor = new Vendor1();
+            objVendor.EmailAdd = loginID;
+            objVendor.Password = password;
+            string CerrorCode = objVendor.getLogin();
 
 
             if (CerrorCode == "Vendor")
