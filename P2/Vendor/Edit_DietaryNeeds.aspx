@@ -17,6 +17,7 @@
         }
         .auto-style7 {
             height: 47px;
+            font-size: xx-large;
         }
         .auto-style8 {
             width: 217px;
@@ -26,7 +27,7 @@
             height: 54px;
         }
         .auto-style10 {
-            width: 533px;
+            width: 825px;
         }
         </style>
 </asp:Content>
@@ -34,7 +35,7 @@
     <table class="auto-style10">
         <tr>
             <td class="auto-style6"></td>
-            <td class="auto-style7">Edit Dierary Needs</td>
+            <td class="auto-style7"><strong>Edit/Receipt Dierary Needs</strong></td>
         </tr>
         <tr>
             <td class="auto-style8">Name:</td>
@@ -69,7 +70,7 @@
         <tr>
             <td class="auto-style8">Timing:</td>
             <td class="auto-style9">
-                <asp:DropDownList ID="ddlTiming" runat="server">
+                <asp:DropDownList ID="ddlTiming" runat="server" Width="250px">
                     <asp:ListItem Selected="True" Value="12:00 - 13:00">12:00PM - 13:00PM</asp:ListItem>
                     <asp:ListItem Value="18:00 - 19:00">18:00PM - 19:00PM</asp:ListItem>
                 </asp:DropDownList>
