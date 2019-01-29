@@ -3,60 +3,82 @@
 <head>
     <meta charset="utf-8" />
     <title> About Purple Project</title>
-    <link rel="stylesheet" type=" text/css" href="../css/AbtStyleSheet.css" />
+    <link rel="stylesheet" type=" text/css" href="../css/StyleSheet3.css" />
 </head>
 <body>
     <header>
-        <!--Navigation all that-->
         <div class="main">
             <div class="logo">
+
                 <img src="../Images/Purple Project 4.png" />
             </div>
             <ul>
-                <li class="btn"><a href="../HomeMainPage3.html"> HOME </a></li>
+                <li><a href="../HomeMainPage3.html"> HOME </a></li>
                 <li><a href="../Home/About.html"> ABOUT </a></li>
 
-                <li><a href="Contact.html"> CONTACT US </a></li>
+                <li><a href="../Home/ContactUs.html"> CONTACT US </a></li>
             </ul>
         </div>
-        <!--About Me Pending-->
+
+        <div class="title">
+            <h1 class="team-section" style="text-transform:uppercase; text-align:center;">About Us</h1>
+            <span class="fakeHorizontalLine"></span>
+            <br />
+
+            <div class="pics">
+                <!--Bethesda and NP Logo-->
+                <a href="#BC"><img src="../Images/BC.png" onclick="visbilityBC()" /></a>
+                <a href="#NP"><img src="../Images/NP.png" /></a>
+                <a href="#PP"><img src="../Images/Purple Project 4 white.png" /></a>
+                <!-- Add Logo Here  -->
+
+                <br />
+            </div>
+
+            <br />
+
+            <div class="section" id="BC">
+                <!--Abou clat Bethesda-->
+                <span class="name">Bethesda Care</span>
+                <span class="fakeHorizontalLine"></span>
+
+                <p style="text-align:justify;" >
+                    In 1996, Bethesda Care Services (BCS) was started with a vision of reaching out and meeting the needs of the community in Bedok area. Since then, BCS has been serving the children, youths, families and the elderly in need within our community.
+                    Our range of services include providing affordable before-and-after school care services through the Integrated Special Student Care Centre (ISSCC); caring for the ageing needs of seniors through the Elderly Services; guiding families and youths in life’s challenges through excITE and Family Services, as well as assisting families through the Welfare Services.
+                </p>
+                <br />
+            </div>
+
+            <div class="section" id="NP">
+                <!--About the project/Team-->
+                <span class="name">Ngee Ann Polytechnic</span>
+                <span class="fakeHorizontalLine"></span>
+
+                <p style="text-align:justify">
+                    We are a group of students from Ngee Ann polytechnic with a desire to help elderly and the result is Purple Project. Through this site, we wanted to ensure elderly got their meals on time and as well help Voluntary Welfare Organisations (VWOs) simplify their volunteer workload as most for their work are done manually.
+                    Through this site, they would be able to work much more efficiently in turn increasing productivity. Unlike other developers, we believe in understanding the organizations’ specific needs which helps us to craft a system based on their needs.
+                </p>
+
+                <br />
+            </div>
+
+            <div class="section" id="PP">
+                <!--Purple Project-->
+                <span class="name">Purple Project</span>
+                <span class="fakeHorizontalLine"></span>
+
+                <p class="" style="text-align:justify">
+                    In this project, we have used a variety of things to make this a possibility. Some of which are brand new for us and we had fun exploring them. Such things include Microsoft Azure which we used as our cloud computing platoform, Languages such as JavaScript, C# just to name a few.
+                    We used a database to store the information needed for the project as such the right users see content which is related to them. This is an important to the project as we do not want every type of user to have access to all informations as it pertains to Data Security & Privacy.
+                </p>
+                <br />
+            </div>
+
+        </div>
+
 
     </header>
 
-    <div class="team-section">
-        <h1>About Us</h1>
-        <span class="border"></span> <!--The line in betwwen-->
-
-        <div class="pics">
-            <!--Bethesda and NP Logo-->
-            <a href="#BC"><img src="../Images/BC.png" alt="" /></a>
-            <a href="#NP"><img src="../Images/NP.png" alt="" /></a>
-        </div>
-
-        <div class="section" id="BC">
-            <!--About Bethesda-->
-            <span class="name">Bethesda Care</span>
-            <span class="border"></span>
-            <p>
-                In 1996, Bethesda Care Services (BCS) was started with a vision of reaching out and meeting the needs of the community in Bedok area. Since then, BCS has been serving the children, youths, families and the elderly in need within our community.
-                Our range of services include providing affordable before-and-after school care services through the Integrated Special Student Care Centre (ISSCC); caring for the ageing needs of seniors through the Elderly Services; guiding families and youths in life’s challenges through excITE and Family Services, as well as assisting families through the Welfare Services.
-            </p>
-        </div>
-
-        <div class="section" id="NP">
-            <!--About the project/Team-->
-            <span class="name">Team Purple Project</span>
-            <span class="border"></span>
-            <p>
-                We are a group of students from Ngee Ann polytechnic with a desire to help elderly and the result is Purple Project. Through this site, we wanted to ensure elderly got their meals on time and as well help Voluntary Welfare Organisations (VWOs) simplify their volunteer workload as most for their work are done manually.
-                Through this site, they would be able to work much more efficiently in turn increasing productivity. Unlike other developers, we believe in understanding the organizations’ specific needs which helps us to craft a system based on their needs.
-            </p>
-        </div>
-
-    </div>
-    <!--
-    <div class="footer">
-        <p>Bethesda Care Services 2019</p> <i class="far fa-copyright fa-xs"></i>
-    </div>-->
+    <footer></footer>
 </body>
 </html>
