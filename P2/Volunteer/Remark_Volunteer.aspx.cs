@@ -28,7 +28,7 @@ namespace P2.Volunteer
                 ["P2ConnectionString"].ToString();
 
             SqlConnection conn = new SqlConnection(strConn);
-            SqlCommand cmd = new SqlCommand("SELECT * FROM Remark  ORDER BY RemarkID ", conn);
+            SqlCommand cmd = new SqlCommand("SELECT c.Name, E.Name, r.FoodRemark from Remark r inner join Coordinator c on r.COORDINATORID = c.COORDINATORID INNER JOIN Elder E ON R.ElderID = E.ElderID", conn);
             SqlDataAdapter daRemark = new SqlDataAdapter(cmd);
             DataSet result = new DataSet();
             conn.Open();

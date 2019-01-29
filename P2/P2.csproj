@@ -237,7 +237,6 @@
     <Compile Include="Admin\AdminMain.aspx.designer.cs">
       <DependentUpon>AdminMain.aspx</DependentUpon>
     </Compile>
-    <Content Include="App_Code\Remarks.cs" />
     <Compile Include="CoordinatorMenu.ascx.cs">
       <DependentUpon>CoordinatorMenu.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -372,6 +371,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="App_Code\Volunteers.cs" />
     <Compile Include="App_Code\Vendor1.cs" />
+    <Compile Include="App_Code\Remark1.cs" />
     <Compile Include="VendorMenu.ascx.cs">
       <DependentUpon>VendorMenu.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

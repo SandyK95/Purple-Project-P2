@@ -4,13 +4,16 @@
         .auto-style3 {
             margin-left: 40px;
         }
+        .auto-style4 {
+            font-size: xx-large;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <table class="w-100">
         <tr>
             <td>&nbsp;</td>
-            <td>Create Remarks</td>
+            <td class="auto-style4"><strong>Create Remarks</strong></td>
         </tr>
         <tr>
             <td>From:&nbsp;</td>
@@ -18,6 +21,7 @@
                 <asp:Label ID="lblCoordinatorEmail" runat="server"></asp:Label>
                 ,
                 <asp:Label ID="lblCoordinatorName" runat="server"></asp:Label>
+            &nbsp;<asp:Label ID="lblCoordinatorID" runat="server" Visible="False"></asp:Label>
             </td>
         </tr>
         <tr>
@@ -31,8 +35,7 @@
             <td>Remarks:</td>
             <td>
                 <asp:TextBox ID="txtBox" runat="server" Height="127px" Width="633px"></asp:TextBox>
-            &nbsp;<asp:RequiredFieldValidator ID="rfvRemark" runat="server" ErrorMessage="Please required remarks" ForeColor="Red">*</asp:RequiredFieldValidator>
-            </td>
+            &nbsp;</td>
         </tr>
         <tr>
             <td>&nbsp;</td>

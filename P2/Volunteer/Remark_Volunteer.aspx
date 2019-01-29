@@ -5,10 +5,9 @@
     <asp:GridView ID="gv_remark" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None">
         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
         <Columns>
-            <asp:BoundField DataField="RemarkID" HeaderText="ID" />
-            <asp:BoundField DataField="FoodRemark" HeaderText="Remark" />
-            <asp:BoundField DataField="VendorID" HeaderText="VendorID" />
-            <asp:BoundField DataField="ElderID" HeaderText="ElderID" />
+            <asp:BoundField DataField="Name" HeaderText="Coordinator Name" />
+            <asp:BoundField DataField="Name1" HeaderText="Elder Name" />
+            <asp:BoundField DataField="FoodRemark" HeaderText="Remarks" />
         </Columns>
         <EditRowStyle BackColor="#999999" />
         <FooterStyle BackColor="#5D7B9D" ForeColor="White" Font-Bold="True" />

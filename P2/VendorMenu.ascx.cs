@@ -21,7 +21,7 @@ namespace P2
         protected void btnLogout_Click(object sender, EventArgs e)
         {
             Session.Abandon(); //deletes all user data stored in the session
-            Response.Redirect("../Home/HomePageMain.aspx"); //redirect to start page
+            Response.Redirect("../HomeMainPage3.html"); //redirect to start page
         }
     }
 }
