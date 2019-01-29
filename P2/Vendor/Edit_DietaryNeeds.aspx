@@ -25,10 +25,13 @@
         .auto-style9 {
             height: 54px;
         }
+        .auto-style10 {
+            width: 533px;
+        }
         </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <table class="w-100">
+    <table class="auto-style10">
         <tr>
             <td class="auto-style6"></td>
             <td class="auto-style7">Edit Dierary Needs</td>
@@ -55,12 +58,20 @@
             </td>
         </tr>
         <tr>
+            <td class="auto-style8">Meal Status</td>
+            <td class="auto-style9">
+                <asp:RadioButtonList ID="rblMeal" runat="server">
+                    <asp:ListItem>Lunch</asp:ListItem>
+                    <asp:ListItem>Dinner</asp:ListItem>
+                </asp:RadioButtonList>
+            </td>
+        </tr>
+        <tr>
             <td class="auto-style8">Timing:</td>
             <td class="auto-style9">
-&nbsp;
-                &nbsp;<asp:DropDownList ID="DropDownList1" runat="server">
-                    <asp:ListItem Selected="True" Value="0">12:00Hrs - 13:00Hrs </asp:ListItem>
-                    <asp:ListItem>17:00Hrs - 18:00Hrs</asp:ListItem>
+                <asp:DropDownList ID="ddlTiming" runat="server">
+                    <asp:ListItem Selected="True" Value="12:00 - 13:00">12:00PM - 13:00PM</asp:ListItem>
+                    <asp:ListItem Value="18:00 - 19:00">18:00PM - 19:00PM</asp:ListItem>
                 </asp:DropDownList>
                 <br />
             </td>
@@ -69,10 +80,12 @@
             <td class="auto-style4">&nbsp;</td>
             <td class="auto-style5">
                 <asp:Button ID="btn_Submit" runat="server" OnClick="btn_Submit_Click" Text="Update" /> 
-                <asp:Button ID="btn_Back" runat="server" OnClick="btn_Back_Click" Text="Back" />
+                &nbsp;<asp:Button ID="btn_Back" runat="server" OnClick="btn_Back_Click" Text="Back" />
                 <br />
                 <br />
                 <asp:Label ID="lblMessage" runat="server"></asp:Label>
+                <br />
+                <asp:Label ID="lblMealTiming" runat="server"></asp:Label>
             </td>
         </tr>
         <tr>

@@ -22,6 +22,7 @@ namespace P2
         public string Prepare { get; set; }
         public string status { get; set; }
         public string volunteer { get; set; }
+        public string Timing { get; set; }
 
         public int displayElderListStatusYes(ref DataSet result)
         {
@@ -49,7 +50,7 @@ namespace P2
 
             SqlConnection conn = new SqlConnection(strConn);
             SqlCommand cmd = new SqlCommand("SELECT SerialNo, Name, ElderAddress, ContactNo, Dietary, " +
-                "HealthCondition FROM Elder WHERE Status = 'P' ORDER BY ElderID", conn);
+                "HealthCondition, Timing FROM Elder WHERE Status = 'P' ORDER BY ElderID", conn);
 
             SqlDataAdapter daElders = new SqlDataAdapter(cmd);
 
@@ -157,8 +158,10 @@ namespace P2
                     Prepare = table.Rows[0]["Prepare"].ToString();
                 if (!DBNull.Value.Equals(table.Rows[0]["VolunteerID"]))
                     volunteer = table.Rows[0]["VolunteerID"].ToString();
-                if (DBNull.Value.Equals(table.Rows[0]["VolunteerID"]))
+                if (!DBNull.Value.Equals(table.Rows[0]["VolunteerID"]))
                     volunteer = table.Rows[0]["VolunteerID"].ToString();
+                if (!DBNull.Value.Equals(table.Rows[0]["TIMING"]))
+                    Timing = table.Rows[0]["TIMING"].ToString();
 
                 return 0;
             }
@@ -168,33 +171,20 @@ namespace P2
 
         public int update()
         {
-            //Read connection string "NPBookConnectionString" from web.config file
             string strConn = ConfigurationManager.ConnectionStrings["P2ConnectionString"].ToString();
 
-            //Instantiate a SqlCommand object with the Connection String read
             SqlConnection conn = new SqlConnection(strConn);
 
-            //Instantiate a SqlCommand object,supply it with SQL statement UPDATE
-            // and the connection object for connecting to the database
             SqlCommand cmd = new SqlCommand("UPDATE Elder SET Prepare=@prepare WHERE ElderID=@selectedElderID", conn);
 
-            //Define the parameters used in SQL statement ,value for each parameters
-            //is retrieved from respective class's property
             cmd.Parameters.AddWithValue("@prepare", Prepare);
-
-           // if (Prepare != "Completed" || Prepare != "Still Progressing") // A branch is assigned
-           //     cmd.Parameters.AddWithValue("@prepare", Prepare);
-           //else // No branch is assigned
-           //    cmd.Parameters.AddWithValue("@prepare", DBNull.Value);
-
 
             cmd.Parameters.AddWithValue("@selectedElderID", ElderID);
 
-            //A connection to database must be opened before any operations made
             conn.Open();
-            //ExecuteNonQuery is used for UPDATE and DELETE
+
             int count = cmd.ExecuteNonQuery();
-            //A connection should be close after operations
+
             conn.Close();
 
             if (count > 0) // at least 1 row updated
@@ -377,6 +367,75 @@ namespace P2
             conn.Close();
 
             return 0;
+        }
+
+        public string getMeal()
+        {
+            string strConn = ConfigurationManager.ConnectionStrings
+["P2ConnectionString"].ToString();
+
+            SqlConnection conn = new SqlConnection(strConn);
+
+            SqlCommand cmd = new SqlCommand("SELECT Meal FROM Elder WHERE ElderID =@selectedElderID",conn);
+
+            cmd.Parameters.AddWithValue("@selectedElderID", ElderID);
+
+            SqlDataAdapter daElder = new SqlDataAdapter(cmd);
+
+            DataSet result = new DataSet();
+
+            conn.Open();
+
+            daElder.Fill(result, "ElderDetails");
+            DataTable table = result.Tables["ElderDetails"];
+            if (!DBNull.Value.Equals(table.Rows[0]["Meal"]))
+                Meal = (table.Rows[0]["Meal"].ToString());
+            conn.Close();
+
+            return Meal;
+        }
+
+        public string setDinner()
+        {
+            string strConn = ConfigurationManager.ConnectionStrings
+["P2ConnectionString"].ToString();
+
+            SqlConnection conn = new SqlConnection(strConn);
+
+            SqlCommand cmd = new SqlCommand("Update Elder Set Meal = 'Dinner', Timing = '18:00 - 19:00' Where ElderID = @elderID", conn);
+
+            cmd.Parameters.AddWithValue("@elderID", ElderID);
+
+            conn.Open();
+
+            int count = cmd.ExecuteNonQuery();
+            conn.Close();
+            if (count > 0)
+                return "Successful Update Meal Status with correct Timing!";
+            else
+                return"Unsuccessful";
+        }
+
+        public string setLunch()
+        {
+            string strConn = ConfigurationManager.ConnectionStrings
+["P2ConnectionString"].ToString();
+
+            SqlConnection conn = new SqlConnection(strConn);
+
+            SqlCommand cmd = new SqlCommand("Update Elder Set Meal = 'Lunch', Timing = '12:00 - 13:00' Where ElderID = @elderID", conn);
+
+            cmd.Parameters.AddWithValue("@elderID", ElderID);
+
+            conn.Open();
+
+            int count = cmd.ExecuteNonQuery();
+            conn.Close();
+
+            if (count > 0)
+                return "Successful Update Meal Status with correct Timing!";
+            else
+                return "Unsuccessful";
         }
 
     }

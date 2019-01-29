@@ -60,7 +60,7 @@
         </tr>
         <tr>
             <td>
-                <asp:GridView ID="gvElderP" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Width="600px">
+                <asp:GridView ID="gvElderP" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Width="909px">
                     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                     <EditRowStyle BackColor="#999999" />
                     <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />

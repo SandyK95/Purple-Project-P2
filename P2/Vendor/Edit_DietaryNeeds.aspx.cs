@@ -15,12 +15,13 @@ namespace P2.Vendor
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            Elderlies objElder = new Elderlies();
+
             if (!Page.IsPostBack)
             {
 
                 if (Request.QueryString["elderid"] != null)
                 {
-                    Elderlies objElder = new Elderlies();
 
                     objElder.ElderID = (Request.QueryString["elderid"]);
 
@@ -30,6 +31,7 @@ namespace P2.Vendor
                         lblName.Text = objElder.FullName;
                         lblSerialNo.Text = objElder.SerialNo;
                         dd_Prepare.SelectedValue = objElder.Prepare.ToString();
+                        ddlTiming.SelectedValue = objElder.Timing.ToString();
                     }
                     else if (errorCode == -2)
                     {
@@ -37,6 +39,15 @@ namespace P2.Vendor
                         lblMessage.ForeColor = System.Drawing.Color.Red;
                     }
 
+                }
+
+                if (objElder.getMeal() == "Lunch")
+                {
+                    rblMeal.SelectedIndex = 0;
+                }
+                else
+                {
+                    rblMeal.SelectedIndex = 1;
                 }
             }
         }
@@ -59,8 +70,17 @@ namespace P2.Vendor
                     objelder.Prepare = "Still Progressing";
                 }
 
-
                 int errorCode = objelder.update();
+
+                if (rblMeal.SelectedIndex == 0 && ddlTiming.SelectedIndex == 0)
+                {
+                    lblMealTiming.Text = objelder.setLunch();
+                }
+
+                if (rblMeal.SelectedIndex == 1 && ddlTiming.SelectedIndex == 1)
+                {
+                    lblMealTiming.Text = objelder.setDinner();
+                }
 
                 if (errorCode == 0)
                 {

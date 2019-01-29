@@ -40,13 +40,22 @@ namespace P2.Vendor {
         protected global::System.Web.UI.WebControls.DropDownList dd_Prepare;
         
         /// <summary>
-        /// DropDownList1 control.
+        /// rblMeal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.RadioButtonList rblMeal;
+        
+        /// <summary>
+        /// ddlTiming control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlTiming;
         
         /// <summary>
         /// btn_Submit control.
@@ -74,5 +83,14 @@ namespace P2.Vendor {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblMessage;
+        
+        /// <summary>
+        /// lblMealTiming control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMealTiming;
     }
 }
