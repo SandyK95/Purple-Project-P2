@@ -38,6 +38,9 @@
             padding-left: 15px;
             padding-right: 15px;
         }
+            .auto-style3 {
+                font-size: large;
+            }
     </style>
 </head>
 <body>
@@ -52,8 +55,10 @@
         <!-- 2nd row-->
         <div class="row">
             <div class="col-sm-12">
-                Welcome back,
-              <asp:Label ID="lblLoginID" runat="server" Text=""></asp:Label>
+                <strong><em><span class="auto-style3">Welcome back,
+              </span>
+              <asp:Label ID="lblLoginID" runat="server" Text="" CssClass="auto-style3"></asp:Label>
+                </em></strong>
             </div>
         </div>
         <!--3rd row-->

@@ -112,6 +112,7 @@
     <Content Include="Home\ContactUs.html" />
     <Content Include="Home\HomePageMain.aspx" />
     <Content Include="HomePageMenu.ascx" />
+    <Content Include="Images\Background.jpeg" />
     <Content Include="Images\BC.png" />
     <Content Include="Images\bgimg.jpg" />
     <Content Include="Images\bgimg1.jpg" />
