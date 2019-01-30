@@ -27,23 +27,32 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
             <style type="text/css">
-                .auto-style2 {
-            position: relative;
-            width: 100%;
-            min-height: 1px;
-            -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
-            max-width: 100%;
-            text-align: center;
-            padding-left: 15px;
-            padding-right: 15px;
-        }
                 .auto-style3 {
                     font-size: large;
                 }
                 .auto-style4 {
                     font-size: large;
                     color: #FFFFFF;
+                }
+
+                 body {
+                background-image:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url("../Images/bgimg1.jpg");
+                background-size:cover;
+               
+            }
+                .auto-style5 {
+                    position: relative;
+                    width: 100%;
+                    min-height: 1px;
+                    -ms-flex: 0 0 100%;
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                    text-align: center;
+                    left: 0px;
+                    top: 0px;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                    background-color: #D8DFD8;
                 }
     </style>
 </head>
@@ -75,7 +84,7 @@
         </div>
 
         <!--4th row-->
-        <div class="auto-style2">
+        <div class="auto-style5">
 
         </div>
         </div>       

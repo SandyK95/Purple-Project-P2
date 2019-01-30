@@ -4,12 +4,21 @@
         .auto-style3 {
             font-size: xx-large;
         }
+        .auto-style5 {
+            font-size: x-large;
+            color: #FFFFFF;
+        }
+        .auto-style6 {
+            font-size: x-large;
+            color: #FFFFFF;
+            text-align: center;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="row">
         <div class="col-sm-12">
-                <p class="auto-style3"><strong>View Elder Dietary Needs</strong></p>
+                <p class="auto-style6" ><strong><em>View Elder Dietary Needs</em></strong></p>
         </div>
     </div>
 
@@ -24,7 +33,7 @@
             <asp:GridView ID="gv_Elders" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Width="100%" Height="100%">
                 <AlternatingRowStyle BackColor="White" />
                     <Columns>
-                        <asp:HyperLinkField DataTextField="ElderID" HeaderText="ID" DataNavigateUrlFields="ElderID" DataNavigateUrlFormatString="Edit_DietaryNeeds.aspx?ElderID={0} " />
+                        <asp:HyperLinkField DataTextField="ElderID" HeaderText="ID" DataNavigateUrlFields="ElderID" DataNavigateUrlFormatString="Edit_DietaryNeeds.aspx?ElderID={0} "  ControlStyle-ForeColor="#CD5C5C"/>
                         <asp:BoundField DataField="SerialNo" HeaderText="Serial No" />
                         <asp:BoundField DataField="Dietary" HeaderText="Dietary Needs" />
                         <asp:BoundField DataField="HealthCondition" HeaderText="Health Condition" />
@@ -33,9 +42,9 @@
                     </Columns>
                     <EditRowStyle BackColor="#2461BF" />
                     <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                    <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                    <HeaderStyle BackColor="#D8BFD8" Font-Bold="True" ForeColor="black" />
                     <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
-                    <RowStyle BackColor="#EFF3FB" />
+                    <RowStyle BackColor="#F5F5F5" />
                     <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
                     <SortedAscendingCellStyle BackColor="#F5F7FB" />
                     <SortedAscendingHeaderStyle BackColor="#6D95E1" />
@@ -54,9 +63,9 @@
                 </Columns>
                 <EditRowStyle BackColor="#2461BF" />
                 <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                <HeaderStyle BackColor="#D8BFD8" Font-Bold="True" ForeColor="black" />
                 <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
-                <RowStyle BackColor="#EFF3FB" />
+                <RowStyle BackColor="#F5F5F5" />
                 <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
                 <SortedAscendingCellStyle BackColor="#F5F7FB" />
                 <SortedAscendingHeaderStyle BackColor="#6D95E1" />
@@ -64,7 +73,7 @@
                 <SortedDescendingHeaderStyle BackColor="#4870BE" />
             </asp:GridView>
             <br />
-            <asp:Label runat="server" ID="lblTest" CssClass="label label-info" Visible="False"></asp:Label>
+            <asp:Label runat="server" ID="lblTest" CssClass="label label-info" Visible="False" style="color: #FFFFFF"></asp:Label>
         </div>
     </div>
     <br />

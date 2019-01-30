@@ -4,12 +4,16 @@
         .auto-style3 {
             font-size: xx-large;
         }
+        .auto-style5 {
+            font-size: x-large;
+            color: #FFFFFF;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <table class="w-100">
         <tr>
-            <td class="auto-style3"><strong>Remarks from Coordinator(s)</strong></td>
+            <td class="auto-style5"><strong><em>Remarks from Coordinator(s)</em></strong></td>
         </tr>
         <tr>
             <td>&nbsp;</td>
@@ -25,7 +29,7 @@
         </Columns>
         <EditRowStyle BackColor="#2461BF" />
         <FooterStyle BackColor="#507CD1" ForeColor="White" Font-Bold="True" />
-        <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+         <HeaderStyle BackColor="#D8BFD8" Font-Bold="True" ForeColor="black" />
         <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
         <RowStyle BackColor="#EFF3FB" />
         <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />

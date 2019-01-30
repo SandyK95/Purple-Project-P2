@@ -30,6 +30,11 @@
         .auto-style10 {
             width: 949px;
         }
+        .auto-style11 {
+        width: 217px;
+        height: 54px;
+        color: #FFFFFF;
+    }
         </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -41,7 +46,7 @@
         <tr>
             <td class="auto-style8"><span class="text-white">Name:</td>
             <td class="auto-style9">
-                <asp:Label ID="lblName" runat="server"></asp:Label>
+                <asp:Label ID="lblName" runat="server" CssClass="text-white"></asp:Label>
             </td>
         </tr>
         <tr>
@@ -50,9 +55,9 @@
                 &nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style8">SerialNo:</td>
+            <td class="auto-style11">SerialNo:</td>
             <td class="auto-style9">
-                <asp:Label ID="lblSerialNo" runat="server"></asp:Label>
+                <asp:Label ID="lblSerialNo" runat="server" CssClass="text-white"></asp:Label>
             </td>
         </tr>
         <tr>
@@ -61,7 +66,7 @@
                 &nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style8">Preparation Status:</span></td>
+            <td class="auto-style11">Preparation Status:</span></td>
             <td class="auto-style9">
                 <asp:DropDownList ID="dd_Prepare" runat="server" OnSelectedIndexChanged="dd_Prepare_SelectedIndexChanged">
                     <asp:ListItem>Completed</asp:ListItem>
@@ -75,7 +80,7 @@
                 &nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style8">Meal Status</td>
+            <td class="auto-style11">Meal Status</td>
             <td class="auto-style9">
                 <asp:RadioButtonList ID="rblMeal" runat="server">
                     <asp:ListItem>Lunch</asp:ListItem>
@@ -89,7 +94,7 @@
                 &nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style8">Timing:</span></td>
+            <td class="auto-style11">Timing:</span></td>
             <td class="auto-style9">
                 <asp:DropDownList ID="ddlTiming" runat="server" Width="250px">
                     <asp:ListItem Selected="True" Value="12:00 - 13:00">12:00PM - 13:00PM</asp:ListItem>

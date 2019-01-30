@@ -1,9 +1,14 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VolunteerMenu.ascx.cs" Inherits="P2.VolunteerMenu" %>
 <!-- A grey navbar that expands horizontally at medium device -->
-    <nav class="navbar navbar-expand-md navbar-light style="background-color:lavender">
+    <style type="text/css">
+        .auto-style1 {
+            color: black;
+        }
+    </style>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#D8bfd8">
             <!-- The brand (or icon) of the navbar -->
-            <a class="navbar-brand" href="VolunteerMain.aspx" style="font-size: 32px; font-weight:bold; color:blueviolet;">
-                    Volunteer Menu
+            <a class="auto-style1" href="VolunteerMain.aspx" style="font-size: 32px; font-weight:bold; ">
+                    Volunteer 
                 </a>
             <!-- Toggle/collapsible Button, also known as hamburger button -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#VolunteerMenu">

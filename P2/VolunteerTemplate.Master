@@ -45,6 +45,13 @@
                 font-size: large;
                 color: #FFFFFF;
             }
+
+            body {
+                background-image:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url("../Images/bgimg1.jpg");
+                background-size:cover;
+               
+            }
+
     </style>
 </head>
 <body>
@@ -77,7 +84,7 @@
         <div class="row">
             <div class="auto-style2">
 
-                <asp:Label ID="lblCurrentUsers" runat="server"></asp:Label>
+                <asp:Label ID="lblCurrentUsers" runat="server" CssClass="text-white"></asp:Label>
 
             </div>
         </div>
