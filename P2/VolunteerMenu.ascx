@@ -1,8 +1,8 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VolunteerMenu.ascx.cs" Inherits="P2.VolunteerMenu" %>
 <!-- A grey navbar that expands horizontally at medium device -->
-    <nav class="navbar navbar-expand-md bg-light navbar-light">
+    <nav class="navbar navbar-expand-md navbar-light style="background-color:lavender">
             <!-- The brand (or icon) of the navbar -->
-            <a class="navbar-brand" href="VolunteerMain.aspx" style="font-size: 32px; font-weight:bold; color:#3399FF;">
+            <a class="navbar-brand" href="VolunteerMain.aspx" style="font-size: 32px; font-weight:bold; color:blueviolet;">
                     Volunteer Menu
                 </a>
             <!-- Toggle/collapsible Button, also known as hamburger button -->
@@ -15,19 +15,10 @@
                 <!-- Links that are aligned to the left, mr-autoL right margin auto-adjuusted -->
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="ViewElder.aspx">View Elder contact details</a>
+                        <a class="nav-link" href="ViewElder.aspx">View Elder Contact Details</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Remark_Volunteer.aspx">Remark_Volunteer</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="CreateSkill.aspx">B</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="StudentImage.aspx">C</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="ViewRequest.aspx">D</a>
+                        <a class="nav-link" href="Remark_Volunteer.aspx">Remarks to Volunteer</a>
                     </li>
                 </ul>
                 <!-- Links that are alighed to the right, ml-auto: left margin auto-adjusted -->

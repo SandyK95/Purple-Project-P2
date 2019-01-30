@@ -7,14 +7,22 @@
         .auto-style4 {
             height: 40px;
         }
+        .auto-style5 {
+            font-size: xx-large;
+        }
+        .auto-style6 {
+            font-size: small;
+        }
+        .auto-style7 {
+            font-size: medium;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <table class="w-100">
         <tr>
             <td class="auto-style3">&nbsp;</td>
-            <td class="auto-style9"><strong>Change Elder&#39;s Distribution Status<br />
-                </strong></td>
+            <td class="auto-style5"><strong>Change Elder&#39;s Distribution Status</strong></td>
         </tr>
         <tr>
             <td class="auto-style3">&nbsp;</td>
@@ -67,17 +75,16 @@
         <tr>
             <td class="auto-style4">&nbsp;</td>
             <td class="auto-style5">
-                <asp:Button ID="btnSave" runat="server" OnClick="btnSave_Click" Text="Save" />
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Button ID="btnBack" runat="server" OnClick="btnBack_Click" Text="Back" />
+                <asp:Button ID="btnSave" CssClass="btn btn-primary" runat="server" OnClick="btnSave_Click" Text="Save"/>
+                &nbsp;<asp:Button ID="btnBack" CssClass="btn btn-light" runat="server" OnClick="btnBack_Click" Text="Back"/>
             </td>
         </tr>
         <tr>
             <td class="auto-style4">&nbsp;</td>
-            <td class="auto-style5">
-                <asp:Label ID="lblChanges" runat="server" CssClass="auto-style8"></asp:Label>
+            <td>
+                <asp:Label ID="lblChanges" runat="server" CssClass="label label-info"></asp:Label>
                 <br />
-                <asp:Label ID="lblFeedback" runat="server" CssClass="auto-style8"></asp:Label>
+                <asp:Label ID="lblFeedback" runat="server" CssClass="label label-info"></asp:Label>
             </td>
         </tr>
     </table>

@@ -97,13 +97,11 @@ namespace P2.Volunteer
 
                     conn.Close();
                     lblFeedback.Text = "Success Sent!";
-                    lblFeedback.ForeColor = System.Drawing.Color.Green;
                 }
 
                 else
                 {
                     lblFeedback.Text = "Error!";
-                    lblFeedback.ForeColor = System.Drawing.Color.Red;
                 }
             }
         }

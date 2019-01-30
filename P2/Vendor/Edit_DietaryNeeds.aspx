@@ -27,7 +27,7 @@
             height: 54px;
         }
         .auto-style10 {
-            width: 825px;
+            width: 949px;
         }
         </style>
 </asp:Content>
@@ -44,10 +44,20 @@
             </td>
         </tr>
         <tr>
+            <td class="auto-style8">&nbsp;</td>
+            <td class="auto-style9">
+                &nbsp;</td>
+        </tr>
+        <tr>
             <td class="auto-style8">SerialNo:</td>
             <td class="auto-style9">
                 <asp:Label ID="lblSerialNo" runat="server"></asp:Label>
             </td>
+        </tr>
+        <tr>
+            <td class="auto-style8">&nbsp;</td>
+            <td class="auto-style9">
+                &nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style8">Preparation Status:</td>
@@ -59,6 +69,11 @@
             </td>
         </tr>
         <tr>
+            <td class="auto-style8">&nbsp;</td>
+            <td class="auto-style9">
+                &nbsp;</td>
+        </tr>
+        <tr>
             <td class="auto-style8">Meal Status</td>
             <td class="auto-style9">
                 <asp:RadioButtonList ID="rblMeal" runat="server">
@@ -66,6 +81,11 @@
                     <asp:ListItem>Dinner</asp:ListItem>
                 </asp:RadioButtonList>
             </td>
+        </tr>
+        <tr>
+            <td class="auto-style8">&nbsp;</td>
+            <td class="auto-style9">
+                &nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style8">Timing:</td>
@@ -78,15 +98,20 @@
             </td>
         </tr>
         <tr>
+            <td class="auto-style8">&nbsp;</td>
+            <td class="auto-style9">
+                &nbsp;</td>
+        </tr>
+        <tr>
             <td class="auto-style4">&nbsp;</td>
             <td class="auto-style5">
-                <asp:Button ID="btn_Submit" runat="server" OnClick="btn_Submit_Click" Text="Update" /> 
-                &nbsp;<asp:Button ID="btn_Back" runat="server" OnClick="btn_Back_Click" Text="Back" />
+                <asp:Button ID="btn_Submit" CssClass="btn btn-success" runat="server" OnClick="btn_Submit_Click" Text="Update" /> 
+                &nbsp;<asp:Button ID="btn_Back" CssClass="btn btn-secondary" runat="server" OnClick="btn_Back_Click" Text="Back" />
                 <br />
                 <br />
-                <asp:Label ID="lblMessage" runat="server"></asp:Label>
+                <asp:Label ID="lblMessage" CssClass="label label-info" runat="server"></asp:Label>
                 <br />
-                <asp:Label ID="lblMealTiming" runat="server"></asp:Label>
+                <asp:Label ID="lblMealTiming" CssClass="label label-success" runat="server"></asp:Label>
             </td>
         </tr>
         <tr>

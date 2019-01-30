@@ -12,18 +12,22 @@
             padding-left: 15px;
             padding-right: 15px;
         }
+        .auto-style4 {
+            font-size: xx-large;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="row">
         <div class="col-sm-12">
-            <p>View Elder Details</p>
+            <p class="auto-style4"><strong>View Elder Details</strong></p>
+            <p>&nbsp;</p>
         </div>
     </div>
     <div class="row">
         <div class="auto-style3">
 
-            <asp:GridView ID="gv_Elder" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Width="541px">
+            <asp:GridView ID="gv_Elder" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Width="800px">
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
                     <asp:HyperLinkField DataNavigateUrlFields="ElderID" DataNavigateUrlFormatString="ElderDetails.aspx?elderid={0}" HeaderText="ID" Text="Edit" />
@@ -39,6 +43,8 @@
                 <SortedDescendingCellStyle BackColor="#E9EBEF" />
                 <SortedDescendingHeaderStyle BackColor="#4870BE" />
             </asp:GridView>
+
+            <br />
 
         </div>
     </div>

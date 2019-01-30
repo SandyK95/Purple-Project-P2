@@ -1,20 +1,46 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AdminTemplate.Master" AutoEventWireup="true" CodeBehind="ViewCoordinatorVendors.aspx.cs" Inherits="P2.Admin.Requests" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style type="text/css">
+        .auto-style3 {
+            position: relative;
+            width: 100%;
+            min-height: 1px;
+            -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+            max-width: 100%;
+            font-size: xx-large;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        .auto-style4 {
+            position: relative;
+            width: 100%;
+            min-height: 1px;
+            -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+            max-width: 100%;
+            left: 0px;
+            top: 0px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
         <div class ="row">
-        <div class ="col-sm-12">
-            View Coordinator Details
+        <div class ="auto-style3">
+            <strong>View Coordinator Details
+        </strong>
         </div>
     </div>
         <div class="row">
-        <div class="col-sm-12">
+        <div class="auto-style4">
 
         </div>
     </div>
     <div class="row">
         <div class="col-sm-12">
-            <asp:GridView ID="gv_Coordinators" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Width="761px">
+            <asp:GridView ID="gv_Coordinators" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Width="800px">
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
                     <asp:BoundField DataField="CoordinatorID" HeaderText="ID" />
@@ -39,16 +65,18 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-12">
+        <div class="auto-style3">
 
-            View Vendor Details
+            <strong>View Vendor Details
+        
+        </strong>
         
         </div>
     </div>
     <div class="row">
         <div class="col-sm-12">
 
-            <asp:GridView ID="gv_Vendors" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Width="766px" AutoGenerateColumns="False">
+            <asp:GridView ID="gv_Vendors" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Width="800px" AutoGenerateColumns="False">
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
                     <asp:BoundField DataField="VendorID" HeaderText="ID" />

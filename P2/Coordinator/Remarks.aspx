@@ -16,7 +16,7 @@
             <td class="auto-style4"><strong>Create Remarks</strong></td>
         </tr>
         <tr>
-            <td>From:&nbsp;</td>
+            <td><strong>From:&nbsp;</strong></td>
             <td>
                 <asp:Label ID="lblCoordinatorEmail" runat="server"></asp:Label>
                 ,
@@ -25,14 +25,24 @@
             </td>
         </tr>
         <tr>
-            <td>Elder:</td>
+            <td><strong></strong></td>
+            <td>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td><strong>Elder:</strong></td>
             <td>
                 <asp:DropDownList ID="ddlElders" runat="server">
                 </asp:DropDownList>
             </td>
         </tr>
         <tr>
-            <td>Remarks:</td>
+            <td><strong></strong></td>
+            <td>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td><strong>Remarks:</strong></td>
             <td>
                 <asp:TextBox ID="txtBox" runat="server" Height="127px" Width="633px"></asp:TextBox>
             &nbsp;</td>
@@ -44,13 +54,19 @@
         <tr>
             <td>&nbsp;</td>
             <td class="auto-style3">
-                <asp:Button ID="btnSend" runat="server" Text="Confirm" OnClick="btnSend_Click" />
+                <asp:Button ID="btnSend" CssClass="btn btn-success" runat="server" Text="Confirm" OnClick="btnSend_Click" />
+                <br />
             </td>
         </tr>
         <tr>
             <td>&nbsp;</td>
             <td class="auto-style3">
-                <asp:Label ID="lblError" runat="server"></asp:Label>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td class="auto-style3">
+                <asp:Label ID="lblError" CssClass="label label-info" runat="server"></asp:Label>
             </td>
         </tr>
     </table>

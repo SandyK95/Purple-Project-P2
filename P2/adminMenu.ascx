@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="adminMenu.ascx.cs" Inherits="P2.admin" %>
-<nav class="navbar navbar-expand-md bg-light navbar-light">
+<nav class="navbar navbar-expand-md navbar-light style="background-color:lavender">
             <!-- The brand (or icon) of the navbar -->
-            <a class="navbar-brand" href="VolunteerMain.aspx" style="font-size: 32px; font-weight:bold; color:#3399FF;">
+            <a class="navbar-brand" href="VolunteerMain.aspx" style="font-size: 32px; font-weight:bold; color:blueviolet;">
                     Admin Menu
                 </a>
             <!-- Toggle/collapsible Button, also known as hamburger button -->
@@ -21,12 +21,6 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="ViewElderDetails.aspx">View the Elders Details</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="//">D</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="//">E</a>
                     </li>
                 </ul>
                 <!-- Links that are alighed to the right, ml-auto: left margin auto-adjusted -->

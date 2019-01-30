@@ -1,8 +1,8 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VendorMenu.ascx.cs" Inherits="P2.VendorMenu" %>
 <!-- A grey navbar that expands horizontally at medium device -->
-    <nav class="navbar navbar-expand-md bg-light navbar-light">
+    <nav class="navbar navbar-expand-md navbar-light style="background-color:lavender">
             <!-- The brand (or icon) of the navbar -->
-            <a class="navbar-brand" href="VolunteerMain.aspx" style="font-size: 32px; font-weight:bold; color:#3399FF;">
+            <a class="navbar-brand" href="VolunteerMain.aspx" style="font-size: 32px; font-weight:bold; color:blueviolet;">
                     Vendor Menu
                 </a>
             <!-- Toggle/collapsible Button, also known as hamburger button -->
@@ -16,18 +16,6 @@
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="View_DietaryNeeds.aspx">View Elder Dietary </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="//">A</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="//">B</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="//">C</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="//">D</a>
                     </li>
                 </ul>
                 <!-- Links that are alighed to the right, ml-auto: left margin auto-adjusted -->

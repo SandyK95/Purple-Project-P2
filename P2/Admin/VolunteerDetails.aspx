@@ -1,17 +1,22 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AdminTemplate.Master" AutoEventWireup="true" CodeBehind="VolunteerDetails.aspx.cs" Inherits="P2.Admin.UpdateVolunteer" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style type="text/css">
+        .auto-style3 {
+            font-size: xx-large;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <table class="w-100">
         <tr>
+            <td class="auto-style3"><strong>View Volunteers</strong></td>
+        </tr>
+        <tr>
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td>View Volunteers</td>
-        </tr>
-        <tr>
             <td class="text-left">
-                <asp:GridView ID="gvVolunteerDetails" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" AutoGenerateColumns="False" Width="663px">
+                <asp:GridView ID="gvVolunteerDetails" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" AutoGenerateColumns="False" Width="100%" Height="100%">
                     <AlternatingRowStyle BackColor="White" />
                     <Columns>
                         <asp:BoundField DataField="VolunteerID" HeaderText="ID" />

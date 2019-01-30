@@ -93,6 +93,12 @@
     <Content Include="Coordinator\Remarks.aspx" />
     <Content Include="Coordinator\ViewVolunteers.aspx" />
     <Content Include="css\AbtStyleSheet.css" />
+    <Content Include="css\bootstrap-grid.css" />
+    <Content Include="css\bootstrap-grid.min.css" />
+    <Content Include="css\bootstrap-reboot.css" />
+    <Content Include="css\bootstrap-reboot.min.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
     <Content Include="css\ContactUsStylesheet.css" />
     <Content Include="css\login.css" />
     <Content Include="css\StyleSheet.css" />
@@ -145,6 +151,12 @@
     <Content Include="HomePageTemplate.Master" />
     <Content Include="CoordinatorTemplate.Master" />
     <Content Include="AdminTemplate.Master" />
+    <Content Include="css\bootstrap-grid.css.map" />
+    <Content Include="css\bootstrap-grid.min.css.map" />
+    <Content Include="css\bootstrap-reboot.css.map" />
+    <Content Include="css\bootstrap-reboot.min.css.map" />
+    <Content Include="css\bootstrap.css.map" />
+    <Content Include="css\bootstrap.min.css.map" />
     <None Include="Properties\PublishProfiles\purpleproject - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />

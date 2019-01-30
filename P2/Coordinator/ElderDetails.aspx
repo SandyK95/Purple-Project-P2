@@ -1,17 +1,22 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/CoordinatorTemplate.Master" AutoEventWireup="true" CodeBehind="ElderDetails.aspx.cs" Inherits="P2.Coordinator.ElderDetails" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style type="text/css">
+        .auto-style3 {
+            font-size: xx-large;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <table class="w-100">
         <tr>
+            <td class="auto-style3"><strong>View Elderlies</strong></td>
+        </tr>
+        <tr>
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td>View Elderlies</td>
-        </tr>
-        <tr>
             <td class="text-left">
-                <asp:GridView ID="gvElderDetails" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" AutoGenerateColumns="False" Width="663px">
+                <asp:GridView ID="gvElderDetails" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" AutoGenerateColumns="False" Width="100%" Height="100%">
                     <AlternatingRowStyle BackColor="White" />
                     <Columns>
                         <asp:BoundField DataField="ElderID" HeaderText="ID" />

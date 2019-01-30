@@ -6,12 +6,24 @@
             word-wrap:break-word;
             table-layout:fixed;
         }
+        .auto-style3 {
+            position: relative;
+            width: 100%;
+            min-height: 1px;
+            -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+            max-width: 100%;
+            font-size: xx-large;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class ="row">
-        <div class ="col-sm-12">
-            View Volunteer Details
+        <div class ="auto-style3">
+            <strong>View Volunteer Details
+        </strong>
         </div>
     </div>
     <div class="row">

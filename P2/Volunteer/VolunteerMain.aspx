@@ -10,7 +10,7 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="text-center">
-            <asp:GridView ID="gvElderPrepare" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Height="242px" Width="485px" AutoGenerateColumns="False">
+            <asp:GridView ID="gvElderPrepare" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Height="100%" Width="100%" AutoGenerateColumns="False">
             <AlternatingRowStyle BackColor="White" />
                 <Columns>
                     <asp:HyperLinkField DataNavigateUrlFields="ElderID" DataNavigateUrlFormatString="UpdateStatus.aspx?ElderID={0}" DataTextField="ElderID" HeaderText="Elder ID" />
