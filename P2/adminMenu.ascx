@@ -6,9 +6,10 @@
 </style>
 <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#D8bfd8">
             <!-- The brand (or icon) of the navbar -->
-            <a class="navbar-brand" href="VolunteerMain.aspx" style="font-size: 32px; font-weight:bold; color:blueviolet;">
-                    Admin Menu 
-                </a>
+            <span class="auto-style1">
+            <a class="navbar-brand" href="VolunteerMain.aspx" style="font-size: 32px; font-weight:bold; ">
+                    Admin Menu</a></span><a class="navbar-brand" href="VolunteerMain.aspx" style="font-size: 32px; font-weight:bold; color:blueviolet;">
+                    </a>
             <!-- Toggle/collapsible Button, also known as hamburger button -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#VolunteerMenu">
                 <span class="navbar-toggler-icon"></span>
