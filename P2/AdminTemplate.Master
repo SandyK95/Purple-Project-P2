@@ -38,13 +38,15 @@
             padding-left: 15px;
             padding-right: 15px;
         }
-            .auto-style3 {
-                font-size: large;
-            }
             body {
                 background-image:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url("../Images/bgimg1.jpg");
                 background-size:cover;
                
+            }
+
+            .auto-style4 {
+                font-size: large;
+                color: #FFFFFF;
             }
 
     </style>
@@ -59,9 +61,9 @@
         </div>
         <div class="row">
             <div class="col-sm-12">
-                <strong><span class="auto-style3"><em>Welcome back,
+                <strong><span class="auto-style4"><em>Welcome back,
               </em></span><em>
-              <asp:Label ID="lblLoginID" runat="server" Text="" CssClass="auto-style3"></asp:Label>
+              <asp:Label ID="lblLoginID" runat="server" Text="" CssClass="auto-style4"></asp:Label>
                 </em></strong>
             </div>
         </div>
@@ -74,9 +76,7 @@
         </div>
         <div class="row">
             <div class="auto-style2">
-                <strong>
-                <asp:Label ID="lblCurrentUsers" runat="server" CssClass="auto-style3"></asp:Label>
-                </strong>
+                <asp:Label ID="lblCurrentUsers" runat="server" CssClass="text-white"></asp:Label>
             </div>
         </div>
         </div>
