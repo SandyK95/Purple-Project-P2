@@ -74,7 +74,9 @@
         </div>
         <div class="row">
             <div class="auto-style2">
-                <asp:Label ID="lblCurrentUsers" runat="server"></asp:Label>
+                <strong>
+                <asp:Label ID="lblCurrentUsers" runat="server" CssClass="auto-style3"></asp:Label>
+                </strong>
             </div>
         </div>
         </div>
