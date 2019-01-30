@@ -41,9 +41,23 @@
             .auto-style3 {
                 font-size: large;
             }
+
+        
+
+
+            .auto-style4 {
+                font-size: large;
+                color: #FFFFFF;
+            }
+
+        
+
+
     </style>
 </head>
 <body>
+   
+
     <form id="form1" runat="server">
         <div class="container" style="margin:auto;">
             <div class="row">
@@ -53,9 +67,9 @@
         </div>
         <div class="row">
             <div class="col-sm-12">
-                <strong><span class="auto-style3"><em>Welcome back,
+                <strong><span class="auto-style3"><em><span class="text-white">Welcome back,</span>
               </em></span><em>
-              <asp:Label ID="lblLoginID" runat="server" Text="" CssClass="auto-style3"></asp:Label>
+              <asp:Label ID="lblLoginID" runat="server" Text="" CssClass="auto-style4"></asp:Label>
                 </em></strong>
             </div>
         </div>

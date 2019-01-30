@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-md navbar-light style="background-color:lavender">
             <!-- The brand (or icon) of the navbar -->
             <a class="navbar-brand" href="VolunteerMain.aspx" style="font-size: 32px; font-weight:bold; color:blueviolet;">
-                    Admin Menu
+                    Admin Menu 
                 </a>
             <!-- Toggle/collapsible Button, also known as hamburger button -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#VolunteerMenu">
