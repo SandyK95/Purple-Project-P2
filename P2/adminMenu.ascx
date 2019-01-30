@@ -1,7 +1,12 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="adminMenu.ascx.cs" Inherits="P2.admin" %>
-<nav class="navbar navbar-expand-md navbar-light style="background-color:lavender">
+<style type="text/css">
+    .auto-style1 {
+        color: #666666;
+    }
+</style>
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color:#D8bfd8">
             <!-- The brand (or icon) of the navbar -->
-            <a class="navbar-brand" href="VolunteerMain.aspx" style="font-size: 32px; font-weight:bold; color:blueviolet;">
+            <a class="auto-style1" href="AdminMain.aspx" style="font-size: 32px; font-weight:bold; ">
                     Admin Menu
                 </a>
             <!-- Toggle/collapsible Button, also known as hamburger button -->
@@ -14,13 +19,13 @@
                 <!-- Links that are aligned to the left, mr-autoL right margin auto-adjuusted -->
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="ViewCoordinatorVendors.aspx">View Coordinators & Vendors</a>
+                        <a class="nav-link" style="color:white" href="ViewCoordinatorVendors.aspx"><strong>View Coordinators & Vendors</strong></a><strong> </strong>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="VolunteerDetails.aspx">Update the Volunteers</a>
+                        <a class="nav-link" style="color:white" href="VolunteerDetails.aspx"><strong>Update the Volunteers</strong></a><strong> </strong>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="ViewElderDetails.aspx">View the Elders Details</a>
+                        <a class="nav-link" style="color:white" href="ViewElderDetails.aspx"><strong>View the Elders Details</strong></a>
                     </li>
                 </ul>
                 <!-- Links that are alighed to the right, ml-auto: left margin auto-adjusted -->
