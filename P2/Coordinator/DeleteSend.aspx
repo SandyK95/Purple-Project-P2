@@ -7,7 +7,7 @@
                     <table align="center" class="w-100">
                         <tr>
                             <td>&nbsp;</td>
-                            <td>Are you sure want to delete records for <strong>
+                            <td class="text-white">Are you sure want to delete records for <strong>
     <asp:Label ID="lblVolunteerID" runat="server" Text="ID"></asp:Label>
 &nbsp;-
     <asp:Label ID="lblName" runat="server" Text="Name"></asp:Label>

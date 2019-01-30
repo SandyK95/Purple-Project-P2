@@ -11,9 +11,9 @@
             color: #FF0000;
         }
         .auto-style9 {
-            font-size: x-large;
-            color: #FFFFFF;
-        }
+        font-size: x-large;
+        color: #FFFFFF;
+    }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

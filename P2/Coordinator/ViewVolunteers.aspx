@@ -17,10 +17,10 @@
             padding-left: 15px;
             padding-right: 15px;
         }
-        .auto-style7 {
-            color: #fff;
-            font-size: x-large;
-        }
+    .auto-style7 {
+        color: #fff;
+        font-size: x-large;
+    }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
