@@ -18,8 +18,8 @@
             </div>
             <ul>
                 <li class="active"><a href="HomeMainPage3.html"> HOME </a></li>
-                <li><a href=""> ABOUT </a></li>
-                <li><a href=""> CONTACT US </a></li>
+                <li><a href="Home/About.html"> ABOUT </a></li>
+                <li><a href="Home/ContactUs.html"> CONTACT US </a></li>
 
             </ul>
         </div>
