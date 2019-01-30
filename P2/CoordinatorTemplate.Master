@@ -42,8 +42,7 @@
             font-size: large;
         }
         .auto-style4 {
-            font-size: large;
-            color: #FFFFFF;
+       
         }
 
          body {
@@ -51,6 +50,19 @@
                 background-size:cover;
                
             }
+
+        .auto-style6 {
+            position: relative;
+            width: 100%;
+            min-height: 1px;
+            -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+            max-width: 100%;
+            color: #FFFFFF;
+            padding-left: 15px;
+            padding-right: 15px;
+            
+        }
 
     </style>
 </head>
@@ -60,13 +72,14 @@
              <!-- 1st row-->
             <div class="row">
                 <div class="col-sm-12">
-                    <uc1:CoordinatorMenu runat="server" id="CoordinatorMenu" />
+                  
+                    <uc1:CoordinatorMenu runat="server" ID="CoordinatorMenu1" />
                 </div>
             </div>
             <!-- 2nd row-->
             <div class="row">
-                <div class="col-sm-12">
-                    <strong><em><span class="auto-style3"><span class="text-white">Welcome back,</span>
+                <div class="auto-style6">
+                    <strong><em><span ><span class="text-white">Welcome back,</span>
                 </span>
                 <asp:Label ID="lblLoginID" runat="server" Text="" CssClass="auto-style4"></asp:Label>
                     </em></strong>
@@ -76,13 +89,15 @@
             <div class="row">
                 <div class="col-sm-12">
                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        <p>
+                            &nbsp;</p>
                     </asp:ContentPlaceHolder>
                 </div>
             </div>
             <!-- 4th row-->
             <div class="row">
                 <div class="auto-style2">
-                    <asp:Label ID="lblCurrentUsers" runat="server" CssClass="bg-white"></asp:Label>
+                    <asp:Label ID="lblCurrentUsers" runat="server" CssClass="text-white" ></asp:Label>
                 </div>
             </div>
         </div>

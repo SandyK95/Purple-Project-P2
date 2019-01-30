@@ -4,12 +4,16 @@
         .auto-style3 {
             font-size: xx-large;
         }
+        .auto-style8 {
+            font-size: x-large;
+            color: #FFFFFF;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <table class="w-100">
         <tr>
-            <td class="auto-style3"><strong>View Elderlies</strong></td>
+            <td class="auto-style8" ><strong><em>View Elderlies</em></strong></td>
         </tr>
         <tr>
             <td>&nbsp;</td>
@@ -22,11 +26,11 @@
                         <asp:BoundField DataField="ElderID" HeaderText="ID" />
                         <asp:BoundField DataField="SerialNo" HeaderText="Serial No." />
                         <asp:BoundField DataField="Name" HeaderText="Full Name" />
-                        <asp:HyperLinkField DataNavigateUrlFields="ElderID" DataNavigateUrlFormatString="ElderUpdate.aspx?elderid={0}" Text="Update" />
+                        <asp:HyperLinkField DataNavigateUrlFields="ElderID" DataNavigateUrlFormatString="ElderUpdate.aspx?elderid={0}" Text="Update" ControlStyle-ForeColor="#CD5C5C" />
                     </Columns>
                     <EditRowStyle BackColor="#2461BF" />
                     <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                    <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                    <HeaderStyle BackColor="#D8BFD8" Font-Bold="True" ForeColor="black" />
                     <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
                     <RowStyle BackColor="#EFF3FB" />
                     <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />

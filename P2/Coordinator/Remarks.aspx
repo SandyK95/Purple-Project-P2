@@ -5,7 +5,11 @@
             margin-left: 40px;
         }
         .auto-style4 {
-            font-size: xx-large;
+            
+        }
+        .auto-style7 {
+            font-size: x-large;
+            color: #FFFFFF;
         }
     </style>
 </asp:Content>
@@ -13,15 +17,15 @@
     <table class="w-100">
         <tr>
             <td>&nbsp;</td>
-            <td class="auto-style4"><strong>Create Remarks</strong></td>
+            <td class="auto-style7"><strong><em>Create Remarks</em></strong></td>
         </tr>
         <tr>
-            <td><strong>From:&nbsp;</strong></td>
+            <td class="text-white"><strong>From:&nbsp;</strong></td>
             <td>
-                <asp:Label ID="lblCoordinatorEmail" runat="server"></asp:Label>
-                ,
-                <asp:Label ID="lblCoordinatorName" runat="server"></asp:Label>
-            &nbsp;<asp:Label ID="lblCoordinatorID" runat="server" Visible="False"></asp:Label>
+                <asp:Label ID="lblCoordinatorEmail" runat="server" CssClass="text-white"></asp:Label>
+                
+                <asp:Label ID="lblCoordinatorName" runat="server" CssClass="text-white"></asp:Label>
+            &nbsp;<asp:Label ID="lblCoordinatorID" runat="server" Visible="False" CssClass="text-white"></asp:Label>
             </td>
         </tr>
         <tr>
@@ -30,7 +34,7 @@
                 &nbsp;</td>
         </tr>
         <tr>
-            <td><strong>Elder:</strong></td>
+            <td class="text-white"><strong>Elder:</strong></td>
             <td>
                 <asp:DropDownList ID="ddlElders" runat="server">
                 </asp:DropDownList>
@@ -42,7 +46,7 @@
                 &nbsp;</td>
         </tr>
         <tr>
-            <td><strong>Remarks:</strong></td>
+            <td class="text-white"><strong>Remarks:</strong></td>
             <td>
                 <asp:TextBox ID="txtBox" runat="server" Height="127px" Width="633px"></asp:TextBox>
             &nbsp;</td>
@@ -58,15 +62,11 @@
                 <br />
             </td>
         </tr>
+        
         <tr>
             <td>&nbsp;</td>
             <td class="auto-style3">
-                &nbsp;</td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td class="auto-style3">
-                <asp:Label ID="lblError" CssClass="label label-info" runat="server"></asp:Label>
+                <asp:Label ID="lblError" CssClass="label label-info" runat="server" style="color: #FFFFFF"></asp:Label>
             </td>
         </tr>
     </table>
