@@ -6,12 +6,14 @@
         }
         .auto-style4 {
             font-size: xx-large;
-        }
+        color: #FFFFFF;
+    }
         .auto-style5 {
-            height: 76px;
-            font-size: large;
-            width: 177px;
-        }
+        height: 76px;
+        font-size: large;
+        width: 177px;
+        color: #FFFFFF;
+    }
         .auto-style6 {
             height: 76px;
             width: 177px;
@@ -19,7 +21,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-<table class="w-100">
+    <table class="w-100">
         <tr>
             <td class="auto-style6">
                 &nbsp;</td>
@@ -28,13 +30,13 @@
         <tr>
             <td class="auto-style5"><strong>Elder ID</strong></td>
             <td>
-                <asp:Label ID="lblId" runat="server"></asp:Label>
+                <asp:Label ID="lblId" runat="server" CssClass="text-white"></asp:Label>
             </td>
         </tr>
         <tr>
             <td class="auto-style5"><strong>Serial No</strong></td>
             <td>
-                <asp:Label ID="lblSerialNo" runat="server"></asp:Label>
+                <asp:Label ID="lblSerialNo" runat="server" CssClass="text-white"></asp:Label>
             </td>
         </tr>
         <tr>
