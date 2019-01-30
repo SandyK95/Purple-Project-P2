@@ -1,9 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/CoordinatorTemplate.Master" AutoEventWireup="true" CodeBehind="CoordinatorElder.aspx.cs" Inherits="P2.Coordinator.CoordinatorElder" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
-        .auto-style3 {
-            font-size: xx-large;
-        }
         .auto-style4 {
             font-size: x-large;
         }
@@ -14,6 +11,23 @@
         font-size: x-large;
         color: #FFFFFF;
     }
+        .auto-style10 {
+            color: #006600;
+        }
+        .auto-style11 {
+            color: #FF0000;
+            position: relative;
+            width: 100%;
+            min-height: 1px;
+            -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+            max-width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        .auto-style13 {
+            color: #FF3300
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -25,7 +39,7 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style4"><strong><span class="text-white">Status:</span> <span class="text-white">Delivered</span></strong></td>
+            <td class="auto-style4"><strong><span class="text-white">Status:</span> <span class="auto-style10">Delivered</span></strong></td>
         </tr>
         <tr>
             <td>&nbsp;</td>
@@ -51,7 +65,7 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style4"><strong><span class="text-white">Status: </span> <span class="auto-style6"><span class="text-white">Not Delivered</span></span></strong></td>
+            <td class="auto-style4"><strong><span class="text-white">Status: </span> <span class="auto-style11"><span class="text-red">Not Delivered</span></span></strong></td>
         </tr>
         <tr>
             <td class="auto-style4">&nbsp;</td>
@@ -77,7 +91,7 @@
             <td>&nbsp;</td>
         </tr>
          <tr>
-            <td class="auto-style4"><strong><span class="text-white">Status:</span> <span class="text-white">Pending</span></strong></td>
+            <td class="auto-style4"><strong><span class="text-white">Status:</span> <span class="auto-style13">Pending</span></strong></td>
         </tr>
          <tr>
             <td class="auto-style4">&nbsp;</td>

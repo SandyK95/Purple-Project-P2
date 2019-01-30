@@ -20,7 +20,6 @@
         .auto-style9 {
             font-size: large;
             width: 99%;
-            background-color: #D8BFD8;
         }
         .auto-style10 {
             font-size: large;
@@ -37,7 +36,6 @@
         .auto-style13 {
             font-size: large;
             color: #FFFFFF;
-            background-color: #D8BFD8;
         }
     </style>
 </asp:Content>
@@ -93,7 +91,7 @@
             </td>
         </tr>
         <tr>
-            <td class="auto-style10">&nbsp;</td>
+            <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
     </table>
