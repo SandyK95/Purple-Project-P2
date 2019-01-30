@@ -41,41 +41,34 @@
             .auto-style3 {
                 font-size: large;
             }
-
-        
-
-
-            .auto-style4 {
-                font-size: large;
-                color: #FFFFFF;
+            body {
+                background-image:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url("../Images/bgimg1.jpg");
+                background-size:cover;
+               
             }
-
-        
-
 
     </style>
 </head>
 <body>
-   
-
     <form id="form1" runat="server">
-        <div class="container" style="margin:auto;">
-            <div class="row">
+        <div class="container" style="margin:auto;" >
+        <div class="row">
             <div class="col-sm-12">
                 <uc1:adminMenu runat="server" id="adminMenu" />
             </div>
         </div>
         <div class="row">
             <div class="col-sm-12">
-                <strong><span class="auto-style3"><em><span class="text-white">Welcome back,</span>
+                <strong><span class="auto-style3"><em>Welcome back,
               </em></span><em>
-              <asp:Label ID="lblLoginID" runat="server" Text="" CssClass="auto-style4"></asp:Label>
+              <asp:Label ID="lblLoginID" runat="server" Text="" CssClass="auto-style3"></asp:Label>
                 </em></strong>
             </div>
         </div>
         <div class="row">
             <div class="col-sm-12">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                
             </asp:ContentPlaceHolder>
             </div>
         </div>
