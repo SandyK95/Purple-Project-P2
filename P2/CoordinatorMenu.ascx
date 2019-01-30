@@ -1,21 +1,19 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CoordinatorMenu.ascx.cs" Inherits="P2.CoordinatorMenu" %>
 <!-- A grey navbar that expands horizontally at medium device -->
     <style type="text/css">
-        .auto-style2 {
-            color: #999999;
-        }
-        .auto-style3 {
-            background-color: #D8BFD8;
-        }
+    .auto-style1 {
+        color: #666666;
+    }
         </style>
-    <nav class="auto-style3"background-color:#D8dfd8">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#D8bfd8">
             <!-- The brand (or icon) of the navbar -->
-            <span class="auto-style2">
+            <span class="auto-style1">
             <a class="navbar-brand" href="CoordinatorMain.aspx" style="font-size: 32px; font-weight:bold; ">
-                    Coordinator Menu</a></span><a class="navbar-brand" href="CoordinatorMain.aspx" style="font-size: 32px; font-weight:bold; color:gray;">
+                    Coordinator
+            </a></span><a class="navbar-brand" href="CoordinatorMain.aspx" style="font-size: 32px; font-weight:bold; color:gray;">
                     </a>
             <!-- Toggle/collapsible Button, also known as hamburger button -->
-            <button  type="button" data-toggle="collapse" data-target="#AdminMenu">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#CoordinatorMenu">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
