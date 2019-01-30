@@ -122,6 +122,8 @@
     <Content Include="Images\Purple Project 1.PNG" />
     <Content Include="Images\Purple Project 4 white.png" />
     <Content Include="Images\Purple Project 4.png" />
+    <Content Include="Images\adminback.jpeg" />
+    <Content Include="Images\WhatsApp Image 2019-01-30 at 14.44.21.jpeg" />
     <Content Include="Login.aspx" />
     <Content Include="LoginCoordinator.aspx" />
     <Content Include="loginVendor.aspx" />

@@ -41,6 +41,10 @@
             .auto-style3 {
                 font-size: large;
             }
+            .auto-style4 {
+                font-size: large;
+                color: #FFFFFF;
+            }
     </style>
 </head>
 <body>
@@ -55,9 +59,9 @@
         <!-- 2nd row-->
         <div class="row">
             <div class="col-sm-12">
-                <strong><em><span class="auto-style3">Welcome back,
+                <strong><em><span class="auto-style3"><span class="text-white">Welcome back,</span>
               </span>
-              <asp:Label ID="lblLoginID" runat="server" Text="" CssClass="auto-style3"></asp:Label>
+              <asp:Label ID="lblLoginID" runat="server" Text="" CssClass="auto-style4"></asp:Label>
                 </em></strong>
             </div>
         </div>
