@@ -47,6 +47,11 @@
                
             }
 
+            .auto-style4 {
+                font-size: large;
+                color: #FFFFFF;
+            }
+
     </style>
 </head>
 <body>
@@ -75,7 +80,7 @@
         <div class="row">
             <div class="auto-style2">
                 <strong>
-                <asp:Label ID="lblCurrentUsers" runat="server" CssClass="auto-style3"></asp:Label>
+                <asp:Label ID="lblCurrentUsers" runat="server" CssClass="auto-style4"></asp:Label>
                 </strong>
             </div>
         </div>

@@ -8,7 +8,7 @@
                     <table align="center" class="w-100">
                         <tr>
                             <td>&nbsp;</td>
-                            <td>Are you sure want to delete records for <strong>
+                            <td class="text-white">Are you sure want to delete records for <strong>
     <asp:Label ID="lblVendorID" runat="server" Text="ID"></asp:Label>
 &nbsp;-
     <asp:Label ID="lblName" runat="server" Text="Name"></asp:Label>
@@ -24,7 +24,7 @@
                         <tr>
                             <td>&nbsp;</td>
                             <td>
-            <asp:Button ID="btnYes" CssClass="btn btn-outline-danger" runat="server" OnClick="btnYes_Click" Text="Yes"/>
+            <asp:Button ID="btnYes" CssClass="btn btn-danger" runat="server" OnClick="btnYes_Click" Text="Yes"/>
 &nbsp;<asp:Button ID="btnNo" CssClass="btn btn-light" runat="server" Text="No" OnClick="btnNo_Click" />
                             </td>
                             <td>&nbsp;</td>

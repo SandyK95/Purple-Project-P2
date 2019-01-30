@@ -24,11 +24,23 @@
             padding-left: 15px;
             padding-right: 15px;
         }
+    .auto-style5 {
+        position: relative;
+        width: 100%;
+        min-height: 1px;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+        font-size: large;
+        color: #FFFFFF;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
         <div class ="row">
-        <div class ="auto-style3">
+        <div class ="auto-style5">
             <strong>View Coordinator Details
         </strong>
         </div>
@@ -40,18 +52,18 @@
     </div>
     <div class="row">
         <div class="col-sm-12">
-            <asp:GridView ID="gv_Coordinators" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Width="800px">
+            <asp:GridView ID="gv_Coordinators" runat="server" AutoGenerateColumns="False" CellPadding="10" ForeColor="#333333" GridLines="None" Width="800px" CellSpacing="10">
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
                     <asp:BoundField DataField="CoordinatorID" HeaderText="ID" />
                     <asp:BoundField DataField="Name" HeaderText="Name" />
-                    <asp:HyperLinkField DataNavigateUrlFields="CoordinatorID,Name" DataNavigateUrlFormatString="DeleteCoordinator.aspx?coordinatorid={0}&amp;name={1}" Text="Delete" />
+                    <asp:HyperLinkField DataNavigateUrlFields="CoordinatorID,Name" DataNavigateUrlFormatString="DeleteCoordinator.aspx?coordinatorid={0}&amp;name={1}" Text="Delete" ControlStyle-ForeColor="#CD5C5C"/>
                 </Columns>
                 <EditRowStyle BackColor="#2461BF" />
                 <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                <HeaderStyle BackColor="#D8BFD8" Font-Bold="True" ForeColor="Black" />
                 <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
-                <RowStyle BackColor="#EFF3FB" />
+                <RowStyle BackColor="#F5F5F5" />
                 <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
                 <SortedAscendingCellStyle BackColor="#F5F7FB" />
                 <SortedAscendingHeaderStyle BackColor="#6D95E1" />
@@ -65,7 +77,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="auto-style3">
+        <div class="auto-style5">
 
             <strong>View Vendor Details
         
@@ -76,25 +88,26 @@
     <div class="row">
         <div class="col-sm-12">
 
-            <asp:GridView ID="gv_Vendors" runat="server" CellPadding="4" ForeColor="Black" GridLines="Vertical" Width="800px" AutoGenerateColumns="False" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px">
+            <asp:GridView ID="gv_Vendors" runat="server" CellPadding="10" ForeColor="#333333" GridLines="None" Width="800px" AutoGenerateColumns="False" CellSpacing="10">
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
                     <asp:BoundField DataField="VendorID" HeaderText="ID" />
                     <asp:BoundField DataField="Name" HeaderText="Name" />
-                    <asp:HyperLinkField DataNavigateUrlFields="VendorID,Name" DataNavigateUrlFormatString="DeleteVendor.aspx?vendorid={0}&amp;name={1}" Text="Delete" />
+                    <asp:HyperLinkField DataNavigateUrlFields="VendorID,Name" DataNavigateUrlFormatString="DeleteVendor.aspx?vendorid={0}&amp;name={1}" Text="Delete" ControlStyle-ForeColor="#CD5C5C"/>
                 </Columns>
+                <EditRowStyle BackColor="#2461BF" />
                 <EmptyDataTemplate>
                     Please create new Vendor.
                 </EmptyDataTemplate>
-                <FooterStyle BackColor="#CCCC99" />
-                <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
-                <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
-                <RowStyle BackColor="#F7F7DE" />
-                <SelectedRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
-                <SortedAscendingCellStyle BackColor="#FBFBF2" />
-                <SortedAscendingHeaderStyle BackColor="#848384" />
-                <SortedDescendingCellStyle BackColor="#EAEAD3" />
-                <SortedDescendingHeaderStyle BackColor="#575357" />
+                <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                <HeaderStyle BackColor="#D8BFD8" Font-Bold="True" ForeColor="Black" />
+                <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                <RowStyle BackColor="#F5F5F5" />
+                <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                <SortedDescendingHeaderStyle BackColor="#4870BE" />
             </asp:GridView>
         </div>
     </div>

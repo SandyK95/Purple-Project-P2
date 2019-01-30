@@ -21,13 +21,13 @@
                     <Columns>
                         <asp:BoundField DataField="VolunteerID" HeaderText="ID" />
                         <asp:BoundField DataField="Name" HeaderText="Full Name" />
-                        <asp:HyperLinkField DataNavigateUrlFields="VolunteerID" DataNavigateUrlFormatString="VolunteerUpdate.aspx?volunteerid={0}" Text="Update" />
+                        <asp:HyperLinkField DataNavigateUrlFields="VolunteerID" DataNavigateUrlFormatString="VolunteerUpdate.aspx?volunteerid={0}" Text="Update" ControlStyle-ForeColor="#CD5C5C"/>
                     </Columns>
                     <EditRowStyle BackColor="#2461BF" />
                     <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                    <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                <HeaderStyle BackColor="#D8BFD8" Font-Bold="True" ForeColor="Black" />
                     <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
-                    <RowStyle BackColor="#EFF3FB" />
+                    <RowStyle BackColor="#F5F5F5" />
                     <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
                     <SortedAscendingCellStyle BackColor="#F5F7FB" />
                     <SortedAscendingHeaderStyle BackColor="#6D95E1" />
