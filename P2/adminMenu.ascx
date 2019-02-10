@@ -9,13 +9,11 @@
             <span class="auto-style1">
             <a class="navbar-brand" href="AdminMain.aspx" style="font-size: 32px; font-weight:bold; ">
                 Administrator
-            </a></span><a class="navbar-brand" href="AdminMain.aspx" style="font-size: 32px; font-weight:bold; color:blueviolet;">
-                    </a>
+            </a></span><a class="navbar-brand" href="AdminMain.aspx" style="font-size: 32px; font-weight: bold; color: blueviolet;"></a>
             <!-- Toggle/collapsible Button, also known as hamburger button -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#AdminMenu">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <!-- Links in the navbar, displayed as drop-down list whne collapsed -->
             <div class="collapse navbar-collapse" id="VolunteerMenu">
                 <!-- Links that are aligned to the left, mr-autoL right margin auto-adjuusted -->

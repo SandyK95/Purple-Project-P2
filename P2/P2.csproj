@@ -91,6 +91,7 @@
     <Content Include="Coordinator\ElderDetails.aspx" />
     <Content Include="Coordinator\ElderUpdate.aspx" />
     <Content Include="Coordinator\Remarks.aspx" />
+    <Content Include="Coordinator\UpdateDelivery.aspx" />
     <Content Include="Coordinator\ViewVolunteers.aspx" />
     <Content Include="css\AbtStyleSheet.css" />
     <Content Include="css\bootstrap-grid.css" />
@@ -314,6 +315,13 @@
     </Compile>
     <Compile Include="Coordinator\Remarks.aspx.designer.cs">
       <DependentUpon>Remarks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Coordinator\UpdateDelivery.aspx.cs">
+      <DependentUpon>UpdateDelivery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Coordinator\UpdateDelivery.aspx.designer.cs">
+      <DependentUpon>UpdateDelivery.aspx</DependentUpon>
     </Compile>
     <Compile Include="Coordinator\ViewVolunteers.aspx.cs">
       <DependentUpon>ViewVolunteers.aspx</DependentUpon>

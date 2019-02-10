@@ -11,7 +11,8 @@ namespace P2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            lblLoginID.Text = (string)Session["LoginID"];
+            lblCurrentUsers.Text = "There are currently \t" + Application["CurrentUsers"] + "\t users";
         }
     }
 }

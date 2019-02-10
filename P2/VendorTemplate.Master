@@ -27,33 +27,27 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
             <style type="text/css">
-                .auto-style3 {
-                    font-size: large;
-                }
-                .auto-style4 {
-                    font-size: large;
-                    color: #FFFFFF;
-                }
-
-                 body {
+        .auto-style2 {
+            position: relative;
+            width: 100%;
+            min-height: 1px;
+            -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+            max-width: 100%;
+            text-align: center;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+            body {
                 background-image:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url("../Images/bgimg1.jpg");
                 background-size:cover;
                
             }
-                .auto-style5 {
-                    position: relative;
-                    width: 100%;
-                    min-height: 1px;
-                    -ms-flex: 0 0 100%;
-                    flex: 0 0 100%;
-                    max-width: 100%;
-                    text-align: center;
-                    left: 0px;
-                    top: 0px;
-                    padding-left: 15px;
-                    padding-right: 15px;
-                    background-color: #D8DFD8;
-                }
+
+            .auto-style4 {
+                font-size: large;
+                color: #FFFFFF;
+            }
     </style>
 </head>
 <body>
@@ -69,7 +63,7 @@
         <!--2nd row-->
         <div class="row">
             <div class="col-sm-12">
-                <strong><em><span class="auto-style3"><span class="text-white">Welcome back,</span>
+                <strong><em><span class="auto-style4"><span class="text-white">Welcome back,</span>
                 </span>
                 <asp:Label ID="lblLoginID" runat="server" Text="" CssClass="auto-style4"></asp:Label>
                 </em></strong>
@@ -82,11 +76,10 @@
                 </asp:ContentPlaceHolder>
             </div>
         </div>
-
         <!--4th row-->
-        <div class="auto-style5">
-
-        </div>
+            <div class="auto-style2">
+                <asp:Label ID="lblCurrentUsers" runat="server" CssClass="text-white"></asp:Label>
+            </div>
         </div>       
     </form>
 </body>

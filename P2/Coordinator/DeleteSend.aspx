@@ -3,10 +3,10 @@
     <style type="text/css">
         .auto-style7 {
             color: #fff;
-            text-align: center;
+            align-content:center;
         }
         .text-center {
-            text-align:center;
+            align-content:center;
         }
     </style>
     </asp:Content>
@@ -31,7 +31,7 @@
             </tr>
             <tr>
                 <td class="text-center">&nbsp;</td>
-                <td>
+                <td class="text-center">
                     <asp:Button ID="btnYes" CssClass="btn btn-danger" runat="server" OnClick="btnYes_Click" Text="Yes" />
                     &nbsp;<asp:Button ID="btnNo" CssClass="btn btn-light" runat="server" Text="No" OnClick="btnNo_Click" />
                 </td>

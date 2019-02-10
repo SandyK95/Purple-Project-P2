@@ -1,17 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/VendorTemplate.Master" AutoEventWireup="true" CodeBehind="View_DietaryNeeds.aspx.cs" Inherits="P2.Vendor.View_DietaryNeeds" EnableEventValidation="false"%>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
-        .auto-style3 {
-            font-size: xx-large;
-        }
-        .auto-style5 {
-            font-size: x-large;
-            color: #FFFFFF;
-        }
         .auto-style6 {
             font-size: x-large;
             color: #FFFFFF;
-            text-align: center;
+            text-align: left;
         }
     </style>
 </asp:Content>

@@ -30,7 +30,7 @@ namespace P2
                 ["P2ConnectionString"].ToString();
 
             SqlConnection conn = new SqlConnection(strConn);
-            SqlCommand cmd = new SqlCommand("SELECT SerialNo, Name, ElderAddress, ContactNo, Dietary, " +
+            SqlCommand cmd = new SqlCommand("SELECT ElderID, SerialNo, Name, ElderAddress, ContactNo, Dietary, " +
                 "HealthCondition FROM Elder WHERE Status = 'Y' ORDER BY ElderID", conn);
 
             SqlDataAdapter daElders = new SqlDataAdapter(cmd);
@@ -49,7 +49,7 @@ namespace P2
                 ["P2ConnectionString"].ToString();
 
             SqlConnection conn = new SqlConnection(strConn);
-            SqlCommand cmd = new SqlCommand("SELECT SerialNo, Name, ElderAddress, ContactNo, Dietary, " +
+            SqlCommand cmd = new SqlCommand("SELECT ElderID, SerialNo, Name, ElderAddress, ContactNo, Dietary, " +
                 "HealthCondition, Timing FROM Elder WHERE Status = 'P' ORDER BY ElderID", conn);
 
             SqlDataAdapter daElders = new SqlDataAdapter(cmd);
@@ -69,7 +69,7 @@ namespace P2
 
             SqlConnection conn = new SqlConnection(strConn);
 
-            SqlCommand cmd = new SqlCommand("SELECT E.SerialNo, E.Name, E.ElderAddress, E.ContactNo, E.Dietary, " +
+            SqlCommand cmd = new SqlCommand("SELECT E.ElderID, E.SerialNo, E.Name, E.ElderAddress, E.ContactNo, E.Dietary, " +
                 "E.HealthCondition, F.Feedback FROM Elder E INNER JOIN Feedback F ON E.ElderID = F.ElderID WHERE Status = 'N'", conn);
 
             SqlDataAdapter daElders = new SqlDataAdapter(cmd);
@@ -215,6 +215,44 @@ namespace P2
             conn.Close();
 
             return status;
+        }
+
+        public int setStatus()
+        {
+            string strConn = ConfigurationManager.ConnectionStrings
+    ["P2ConnectionString"].ToString();
+
+            SqlConnection conn = new SqlConnection(strConn);
+            SqlCommand cmd = new SqlCommand("UPDATE Elder SET Status = 'P' WHERE ElderID =@elderID", conn);
+
+            cmd.Parameters.AddWithValue("@elderID", ElderID);
+
+            conn.Open();
+            int count = cmd.ExecuteNonQuery();
+            conn.Close();
+
+            if (count > 0)
+                return 0;
+            else
+                return -2;
+
+        }
+
+        public int deleteFeedback()
+        {
+            string strConn = ConfigurationManager.ConnectionStrings
+["P2ConnectionString"].ToString();
+
+            SqlConnection conn = new SqlConnection(strConn);
+
+            SqlCommand cmd = new SqlCommand("DELETE FROM ELDER WHERE ElderID =@elderID", conn);
+
+            cmd.Parameters.AddWithValue("@elderID", ElderID);
+
+            conn.Open();
+            conn.Close();
+
+            return 0;
         }
 
         public string setSuccess()

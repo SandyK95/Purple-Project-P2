@@ -98,8 +98,8 @@
         <tr>
             <td class="auto-style4">&nbsp;</td>
             <td class="auto-style5">
-                <asp:Button ID="btnSave" CssClass="btn btn-primary" runat="server" OnClick="btnSave_Click" Text="Save" Height="58px" Width="96px"/>
-                &nbsp;<asp:Button ID="btnBack" CssClass="btn btn-light" runat="server" OnClick="btnBack_Click" Text="Back" Height="61px" Width="113px"/>
+                <asp:Button ID="btnSave" CssClass="btn btn-primary" runat="server" OnClick="btnSave_Click" Text="Save" Height="46px" Width="90px" style="font-size: medium"/>
+                &nbsp;<asp:Button ID="btnBack" CssClass="btn btn-light" runat="server" OnClick="btnBack_Click" Text="Back" Height="40px" Width="90px" style="font-size: medium"/>
             </td>
         </tr>
         <tr>

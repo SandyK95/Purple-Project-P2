@@ -7,63 +7,54 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace P2 {
+namespace P2.Coordinator {
     
     
-    public partial class VendorTemplate {
+    public partial class UpdateDelivery {
         
         /// <summary>
-        /// head control.
+        /// lblName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.WebControls.Label lblName;
         
         /// <summary>
-        /// form1 control.
+        /// lblSerialNo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Label lblSerialNo;
         
         /// <summary>
-        /// VendorMenu control.
+        /// btn_Submit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::P2.VendorMenu VendorMenu;
+        protected global::System.Web.UI.WebControls.Button btn_Submit;
         
         /// <summary>
-        /// lblLoginID control.
+        /// btn_Back control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblLoginID;
+        protected global::System.Web.UI.WebControls.Button btn_Back;
         
         /// <summary>
-        /// ContentPlaceHolder1 control.
+        /// lblMessage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
-        
-        /// <summary>
-        /// lblCurrentUsers control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCurrentUsers;
+        protected global::System.Web.UI.WebControls.Label lblMessage;
     }
 }

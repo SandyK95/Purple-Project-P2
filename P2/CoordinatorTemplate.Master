@@ -7,7 +7,7 @@
 
 <html>
 <head runat="server">
-    <title>Purple Project Coordinator </title>
+    <title>Coordinator</title>
     <!-- Specify character encoding for the web pages -->
     <meta charset="utf-8" />
     <!-- Set the initial view zooming scale for mobile device to 1 -->
@@ -38,32 +38,16 @@
             padding-left: 15px;
             padding-right: 15px;
         }
-        .auto-style3 {
-            font-size: large;
-        }
-        .auto-style4 {
-       
-        }
-
-         body {
+            body {
                 background-image:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url("../Images/bgimg1.jpg");
                 background-size:cover;
                
             }
 
-        .auto-style6 {
-            position: relative;
-            width: 100%;
-            min-height: 1px;
-            -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
-            max-width: 100%;
-            color: #FFFFFF;
-            padding-left: 15px;
-            padding-right: 15px;
-            
-        }
-
+            .auto-style4 {
+                font-size: large;
+                color: #FFFFFF;
+            }
     </style>
 </head>
 <body>
@@ -78,12 +62,10 @@
             </div>
             <!-- 2nd row-->
             <div class="row">
-                <div class="auto-style6">
-                    <strong><em><span ><span class="text-white">Welcome back,</span>
+                <strong><em><span ><span class="text-white">Welcome back,</span>
                 </span>
                 <asp:Label ID="lblLoginID" runat="server" Text="" CssClass="auto-style4"></asp:Label>
-                    </em></strong>
-                </div>
+                </em></strong>
             </div>
             <!-- 3rd row -->
             <div class="row">

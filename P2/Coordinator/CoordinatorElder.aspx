@@ -48,6 +48,9 @@
             <td>
                 <asp:GridView ID="gvElderY" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Width="100%" Height="100%">
                     <AlternatingRowStyle BackColor="White" />
+                    <Columns>
+                        <asp:HyperLinkField DataNavigateUrlFields="ElderID" DataNavigateUrlFormatString="UpdateDelivery.aspx?elderid={0}" Text="Update" />
+                    </Columns>
                     <EditRowStyle BackColor="#2461BF" />
                     <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                    <HeaderStyle BackColor="#D8BFD8" Font-Bold="True" ForeColor="Black" />
@@ -74,6 +77,9 @@
             <td>
                 <asp:GridView ID="gvElderN" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Width="100%" Height="100%">
                     <AlternatingRowStyle BackColor="White" />
+                    <Columns>
+                        <asp:HyperLinkField DataNavigateUrlFields="ElderID" DataNavigateUrlFormatString="UpdateDelivery.aspx?elderid={0}" Text="Update" />
+                    </Columns>
                     <EditRowStyle BackColor="#2461BF" />
                     <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                     <HeaderStyle BackColor="#D8BFD8" Font-Bold="True" ForeColor="Black" />
