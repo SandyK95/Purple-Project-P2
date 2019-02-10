@@ -15,7 +15,7 @@
             color: #006600;
         }
         .auto-style11 {
-            color: #FF0000;
+            color: #FFFF00;
             position: relative;
             width: 100%;
             min-height: 1px;
