@@ -51,7 +51,7 @@ namespace P2.Coordinator
                 objelder.ElderID = Request.QueryString["elderID"];
                 int errorCode = objelder.setStatus();
                 int errorCode1 = objelder.deleteFeedback();
-                if (errorCode == 0 || errorCode1 == 0)
+                if (errorCode == 0)
                 {
                     lblMessage.Text = "Done Create Meal";
                 }
